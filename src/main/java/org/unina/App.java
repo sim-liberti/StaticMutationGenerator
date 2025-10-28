@@ -1,12 +1,10 @@
 package org.unina;
 
-/**
- * Hello world!
- */
+import org.unina.Utils.RandomSelector;
+
+
 public class App {
     public static void main(String[] args) {
-
-        System.out.println("Hello World!");
-
+        RandomSelector randomSelector = new RandomSelector(12345);
     }
 }

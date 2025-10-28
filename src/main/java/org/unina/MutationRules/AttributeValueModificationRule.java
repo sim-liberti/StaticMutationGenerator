@@ -4,6 +4,7 @@ import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Element;
 import org.unina.Data.MutationRuleId;
 import org.unina.Data.ObjectType;
+import org.unina.Utils.RandomSelector;
 
 import java.util.List;
 
@@ -15,15 +16,18 @@ public class AttributeValueModificationRule implements MutationRule {
         if (attributes.isEmpty())
             return false;
 
-        for (Attribute attribute : attributes){
-            String key = attribute.getKey();
-            String value = attribute.getValue();
+        attributes.removeIf(a -> a.getKey().equalsIgnoreCase("id") ||
+                a.getKey().equalsIgnoreCase("class") ||
+                a.getKey().startsWith("x-test-"));
 
-            if (!key.equalsIgnoreCase("id") && !key.equalsIgnoreCase("class") && !key.startsWith("x-text-"))
-                targetElement.attr(key, value + "_mutated");
-        }
+        if (attributes.isEmpty())
+            return false;
 
-        return false;
+        Attribute randomAttribute = RandomSelector.GetInstance().GetRandomItemFromCollection(attributes);
+
+        targetElement.attr(randomAttribute.getKey(),  randomAttribute.getValue() + "_mutated");
+
+        return true;
     }
 
     @Override

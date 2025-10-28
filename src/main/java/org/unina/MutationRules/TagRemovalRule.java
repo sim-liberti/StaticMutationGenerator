@@ -7,9 +7,22 @@ import org.unina.Data.ObjectType;
 public class TagRemovalRule  implements MutationRule {
     @Override
     public boolean ApplyMutation(Element targetElement) {
-        return false;
-    }
+        if (targetElement.parent() == null) {
+            return false;
+        }
 
+        String targetElementName = targetElement.tagName();
+
+        if (targetElementName.equalsIgnoreCase("html") ||
+            targetElementName.equalsIgnoreCase("body") ||
+            targetElementName.equalsIgnoreCase("head")){
+            return false;
+        }
+
+        targetElement.unwrap();
+
+        return true;
+    }
 
     @Override
     public ObjectType objectType() {

@@ -1,13 +1,33 @@
 package org.unina.MutationRules;
 
+import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Element;
 import org.unina.Data.MutationRuleId;
 import org.unina.Data.ObjectType;
+import org.unina.Utils.RandomSelector;
+
+import java.util.List;
 
 public class AttributeRemovalRule implements MutationRule {
     @Override
     public boolean ApplyMutation(Element targetElement) {
-        return false;
+        List<Attribute> attributes = targetElement.attributes().asList();
+
+        if (attributes.isEmpty())
+            return false;
+
+        attributes.removeIf(a -> a.getKey().equalsIgnoreCase("id") ||
+                a.getKey().equalsIgnoreCase("class") ||
+                a.getKey().startsWith("x-test-"));
+
+        if (attributes.isEmpty())
+            return false;
+
+        Attribute randomAttribute = RandomSelector.GetInstance().GetRandomItemFromCollection(attributes);
+
+        targetElement.attributes().remove(randomAttribute.getKey());
+
+        return true;
     }
 
     @Override
