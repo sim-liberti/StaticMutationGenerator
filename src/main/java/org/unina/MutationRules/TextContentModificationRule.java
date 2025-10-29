@@ -7,12 +7,13 @@ import org.unina.Data.MutationRuleId;
 import org.unina.Data.ObjectType;
 import org.unina.Utils.RandomSelector;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TextContentModificationRule  implements MutationRule {
     @Override
     public boolean ApplyMutation(Element targetElement) {
-        List<Node> children = targetElement.childNodes();
+        List<Node> children = new ArrayList<>(targetElement.childNodes());
 
         if (children.isEmpty()) {
             return false;

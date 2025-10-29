@@ -6,12 +6,13 @@ import org.unina.Data.MutationRuleId;
 import org.unina.Data.ObjectType;
 import org.unina.Utils.RandomSelector;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AttributeRemovalRule implements MutationRule {
     @Override
     public boolean ApplyMutation(Element targetElement) {
-        List<Attribute> attributes = targetElement.attributes().asList();
+        List<Attribute> attributes = new ArrayList<>(targetElement.attributes().asList());
 
         if (attributes.isEmpty())
             return false;

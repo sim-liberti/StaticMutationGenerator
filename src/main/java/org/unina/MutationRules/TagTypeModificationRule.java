@@ -21,22 +21,15 @@ public class TagTypeModificationRule  implements MutationRule {
     }
 
     private String GetNewElementTagName(Element element) {
-        switch (element.tagName().toLowerCase()) {
-            case "a":
-                return "button";
-            case "input":
-                return "div";
-            case "div":
-                return "span";
-            case "span":
-                return "div";
-            case "h1":
-                return "h2";
-            case "h2":
-                return "h3";
-            default:
-                return "div";
-        }
+        return switch (element.tagName().toLowerCase()) {
+            case "a" -> "button";
+            case "input" -> "div";
+            case "div" -> "span";
+            case "span" -> "div";
+            case "h1" -> "h2";
+            case "h2" -> "h3";
+            default -> "div";
+        };
     }
 
     @Override

@@ -5,13 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/Utils/ComponentMetadata.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/unina/MutationRulesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeIdentifierModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeIdentifierModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementBetweenTemplatesRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementBetweenTemplatesRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeValueModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeValueModificationRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Utils/FileBrowser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/Utils/FileBrowser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementWithinContainerRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementWithinContainerRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagTypeModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagTypeModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentRemovalRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Utils/RandomSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/Utils/RandomSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/unina/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +60,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
+    "JUnit.MutationRulesTest.executor": "Run",
+    "JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -72,6 +80,59 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.MutationRulesTest">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.unina.App" />
+      <module name="StaticMutationGenerator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.unina.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MutationRulesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StaticMutationGenerator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.unina.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.unina" />
+      <option name="MAIN_CLASS_NAME" value="org.unina.MutationRulesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StaticMutationGenerator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.unina.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.unina" />
+      <option name="MAIN_CLASS_NAME" value="org.unina.MutationRulesTest" />
+      <option name="METHOD_NAME" value="testApplyAttributeIdentifierModificationRule_shouldReturnTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MutationRulesTest" />
+        <item itemvalue="JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue" />
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

@@ -8,12 +8,24 @@ public class RandomSelector {
     private static RandomSelector instance;
     private final Random random;
 
-    public RandomSelector() {
+    private RandomSelector() {
         this.random = new Random();
     }
 
-    public RandomSelector(long seed){
+    private RandomSelector(long seed){
         this.random = new Random(seed);
+    }
+
+    public static void initialize() {
+        if (instance == null) {
+            instance = new RandomSelector();
+        }
+    }
+
+    public static void initialize(long seed) {
+        if (instance == null) {
+            instance = new RandomSelector(seed);
+        }
     }
 
     public static RandomSelector GetInstance() {
@@ -32,7 +44,7 @@ public class RandomSelector {
             throw new IllegalArgumentException("Collection cannot be null");
         }
 
-        List<T> items = new ArrayList<T>();
+        List<T> items = new ArrayList<>();
         for (T item : collection){
             items.add(item);
         }

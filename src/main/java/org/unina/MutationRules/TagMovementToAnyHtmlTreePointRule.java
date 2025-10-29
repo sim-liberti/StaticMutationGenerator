@@ -6,6 +6,7 @@ import org.unina.Data.MutationRuleId;
 import org.unina.Data.ObjectType;
 import org.unina.Utils.RandomSelector;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
@@ -28,17 +29,22 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
             return false;
         }
 
-        List<Element> allElements = document.getAllElements();
+        List<Element> allElements = new ArrayList<>(document.getAllElements());
         allElements.removeIf(candidate -> !isValidTarget(candidate, targetElement));
         if (allElements.isEmpty()) {
             return false;
         }
 
         Element randomCandidate = RandomSelector.GetInstance().GetRandomItemFromCollection(allElements);
-        List<Element> randomCandidateChildren = randomCandidate.children();
-        int randomInsertionIndex = RandomSelector.GetInstance().GetRandomItemFromCollection(randomCandidateChildren).elementSiblingIndex();
 
         targetElement.remove();
+
+        int randomInsertionIndex = 0;
+        List<Element> randomCandidateChildren = randomCandidate.children();
+        if (!randomCandidateChildren.isEmpty()) {
+            randomInsertionIndex = RandomSelector.GetInstance().GetRandomItemFromCollection(randomCandidateChildren).elementSiblingIndex();
+        }
+
         randomCandidate.insertChildren(randomInsertionIndex, targetElement);
 
         return true;

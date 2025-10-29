@@ -22,8 +22,6 @@ public class TagMovementWithinContainerRule  implements MutationRule {
             return false;
         }
 
-        int targetElementIndex = targetElement.elementSiblingIndex();
-
         int randomIndex = RandomSelector.GetInstance().GetRandomItemFromCollection(targetElement.siblingElements()).elementSiblingIndex();
 
         targetElement.remove();
