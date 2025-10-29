@@ -23,6 +23,10 @@ public class RandomSelector {
         return instance;
     }
 
+    public int GetRandomInt(int bound){
+        return random.nextInt(bound);
+    }
+
     public <T> T GetRandomItemFromCollection(Iterable<T> collection){
         if (collection == null){
             throw new IllegalArgumentException("Collection cannot be null");

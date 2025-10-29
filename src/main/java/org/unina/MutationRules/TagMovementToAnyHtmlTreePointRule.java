@@ -30,6 +30,9 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
 
         List<Element> allElements = document.getAllElements();
         allElements.removeIf(candidate -> !isValidTarget(candidate, targetElement));
+        if (allElements.isEmpty()) {
+            return false;
+        }
 
         Element randomCandidate = RandomSelector.GetInstance().GetRandomItemFromCollection(allElements);
         List<Element> randomCandidateChildren = randomCandidate.children();

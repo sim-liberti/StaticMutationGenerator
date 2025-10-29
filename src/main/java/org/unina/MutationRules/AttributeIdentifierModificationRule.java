@@ -9,8 +9,7 @@ import org.unina.Utils.RandomSelector;
 import java.util.List;
 
 public class AttributeIdentifierModificationRule implements MutationRule {
-
-
+    
     @Override
     public boolean ApplyMutation(Element targetElement) {
         Attribute attribute = targetElement.attribute("id");

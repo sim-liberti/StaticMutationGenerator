@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[feat] scaffolding of the mutation rules and other related objects">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/Utils/RandomSelector.java" afterDir="false" />
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/Utils/ComponentMetadata.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/FileBrowser/FileBrowser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/Utils/FileBrowser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeIdentifierModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeIdentifierModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeRemovalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeValueModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeValueModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagInsertionRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagInsertionRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementToRootRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementWithinContainerRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementWithinContainerRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagRemovalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagTypeModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagTypeModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementBetweenTemplatesRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementBetweenTemplatesRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Utils/FileBrowser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/Utils/FileBrowser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Utils/RandomSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/Utils/RandomSelector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sim-liberti&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sim-liberti/StaticMutationGenerator.git&quot;,
+    &quot;accountId&quot;: &quot;b1e0558f-6667-46e0-bb7f-91ca31c1b5f0&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -57,12 +62,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Errors",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -83,7 +89,9 @@
       <updated>1752484284463</updated>
       <workItem from="1752484285741" duration="11000" />
       <workItem from="1761653329046" duration="751000" />
-      <workItem from="1761654102595" duration="11254000" />
+      <workItem from="1761654102595" duration="11557000" />
+      <workItem from="1761689130495" duration="117000" />
+      <workItem from="1761747291081" duration="11462000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -101,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761660466633</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[feat] Mutations and RandomSelector&#10;Roughly implemented most of the mutations and added a RandomSelector that can be seeded to reproduce particular scenarios">
+      <option name="closed" value="true" />
+      <created>1761668527995</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761668527995</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +137,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="[initial] caricamento di file di progetto" />
     <MESSAGE value="[feat] scaffolding of the mutation rules and other related objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] scaffolding of the mutation rules and other related objects" />
+    <MESSAGE value="[feat] Mutations and RandomSelector&#10;Roughly implemented most of the mutations and added a RandomSelector that can be seeded to reproduce particular scenarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] Mutations and RandomSelector&#10;Roughly implemented most of the mutations and added a RandomSelector that can be seeded to reproduce particular scenarios" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
