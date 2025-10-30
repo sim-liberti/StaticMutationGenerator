@@ -4,15 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/AttributeMatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/CssClassMatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/IdentifierMatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TagMatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TagMatcherFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TextContentMatcher.java" afterDir="false" />
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[feat] tag matchers provided to expand the search capability of a target tag">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/cli/CliRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/cli/ConfigLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/cli/InteractivePrompt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/cli/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/example-config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Data/MutationRuleId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/MutationRuleId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Data/ObjectType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/ObjectType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Data/TargetElementMetadata.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeIdentifierModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeIdentifierModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeValueModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/MutationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagInsertionRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagInsertionRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementBetweenTemplatesRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementBetweenTemplatesRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementWithinContainerRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementWithinContainerRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagTypeModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagTypeModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/AttributeMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/AttributeMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/CssClassMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/CssClassMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/IdentifierMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/IdentifierMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TagMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/TagMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TagMatcherFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/TagMatcherFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TextContentMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/TextContentMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Utils/ComponentMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/ComponentMetadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Utils/FileBrowser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/util/FileBrowser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Utils/RandomSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/util/RandomSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/unina/MutationRulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/unina/MutationRulesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +99,7 @@
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator/src/main/java/org/unina",
     "last_opened_file_path": "/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -156,7 +184,7 @@
       <workItem from="1761654102595" duration="11557000" />
       <workItem from="1761689130495" duration="117000" />
       <workItem from="1761747291081" duration="11462000" />
-      <workItem from="1761814763753" duration="2194000" />
+      <workItem from="1761814763753" duration="5365000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -190,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761768406491</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[feat] tag matchers provided to expand the search capability of a target tag">
+      <option name="closed" value="true" />
+      <created>1761817364224</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761817364224</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +248,8 @@
     <MESSAGE value="[feat] scaffolding of the mutation rules and other related objects" />
     <MESSAGE value="[feat] Mutations and RandomSelector&#10;Roughly implemented most of the mutations and added a RandomSelector that can be seeded to reproduce particular scenarios" />
     <MESSAGE value="First batch of simple tests and major logic fixes&#10;[feat] implemented the first batch of tests (except movement between templates)&#10;[fix] fixed a bug in TagMovementToAnyHtmlTreePointRule to check if any child element was found&#10;[fix] fixed the RandomSelector singleton pattern which would not get initialized properly&#10;[fix] prevented modification of a final collection in some of the mutation rules" />
-    <option name="LAST_COMMIT_MESSAGE" value="First batch of simple tests and major logic fixes&#10;[feat] implemented the first batch of tests (except movement between templates)&#10;[fix] fixed a bug in TagMovementToAnyHtmlTreePointRule to check if any child element was found&#10;[fix] fixed the RandomSelector singleton pattern which would not get initialized properly&#10;[fix] prevented modification of a final collection in some of the mutation rules" />
+    <MESSAGE value="[feat] tag matchers provided to expand the search capability of a target tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] tag matchers provided to expand the search capability of a target tag" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

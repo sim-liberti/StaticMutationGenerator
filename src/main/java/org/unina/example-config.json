@@ -1,0 +1,10 @@
+{
+  "input": "index.html",
+  "output": "mutated.html",
+  "mutation": "TagMovementToAnyHtmlTreePoint",
+  "matcher": {
+    "type": "class",
+    "key": "",
+    "value": ".test-class"
+  }
+}

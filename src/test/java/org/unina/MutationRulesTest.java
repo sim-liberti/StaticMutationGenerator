@@ -7,8 +7,9 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.junit.jupiter.api.Test;
-import org.unina.MutationRules.*;
-import org.unina.Utils.RandomSelector;
+import org.unina.util.RandomSelector;
+import org.unina.core.MutationRule;
+import org.unina.core.rules.*;
 
 /**
  * Unit test for simple App.
