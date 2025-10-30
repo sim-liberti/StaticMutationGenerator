@@ -1,0 +1,10 @@
+{
+  "seed": "1234",
+  "inputFile": "index.html",
+  "outputDirectory": "mutations",
+  "matcher": {
+    "type": "class",
+    "key": "",
+    "value": "test-class"
+  }
+}

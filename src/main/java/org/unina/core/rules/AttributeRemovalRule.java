@@ -33,6 +33,9 @@ public class AttributeRemovalRule implements MutationRule {
     }
 
     @Override
+    public String mutationName() { return "attr_rem_mut"; }
+
+    @Override
     public ObjectType objectType() {
         return ObjectType.Attribute;
     }

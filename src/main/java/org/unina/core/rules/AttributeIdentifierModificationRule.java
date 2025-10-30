@@ -19,10 +19,12 @@ public class AttributeIdentifierModificationRule implements MutationRule {
         return true;
     }
 
+
     @Override
-    public ObjectType objectType() {
-        return ObjectType.Attribute;
-    }
+    public String mutationName() { return "attr_id_mut"; }
+
+    @Override
+    public ObjectType objectType() { return ObjectType.Attribute; }
 
     @Override
     public MutationRuleId mutationId() {

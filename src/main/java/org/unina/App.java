@@ -1,23 +1,23 @@
 package org.unina;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.unina.util.RandomSelector;
+import org.unina.core.MutationEngine;
+import org.unina.data.Config;
 
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Map;
+import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
+        Path jsonPath = Paths.get("config.json");
+        Config jsonConfig = Config.loadConfiguration(jsonPath);
+        if (jsonConfig == null) throw new RuntimeException("Error initializing configuration object");
 
+        try {
+            MutationEngine.Run(jsonConfig);
+        } catch(IOException e) {
+            System.err.println(e.getMessage());
+        }
     }
 
-    public Map<String, String> load(Path jsonPath) throws IOException {
-        String jsonContent = Files.readString(jsonPath);
-        ObjectMapper mapper = new ObjectMapper();
-
-        return mapper.readValue(jsonContent, new TypeReference<Map<String, String>>() {});
-    }
 }

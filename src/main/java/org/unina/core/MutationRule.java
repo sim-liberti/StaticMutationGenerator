@@ -6,7 +6,7 @@ import org.unina.data.ObjectType;
 
 public interface MutationRule {
     boolean ApplyMutation(Element targetElement);
-
+    String mutationName();
     ObjectType objectType();
     MutationRuleId mutationId();
 }

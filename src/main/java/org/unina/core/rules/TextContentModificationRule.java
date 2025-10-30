@@ -38,6 +38,8 @@ public class TextContentModificationRule  implements MutationRule {
         return true;
     }
 
+    @Override
+    public String mutationName() { return "text_cont_mod_mut"; }
 
     @Override
     public ObjectType objectType() {

@@ -39,6 +39,9 @@ public class TextContentRemovalRule  implements MutationRule {
     }
 
     @Override
+    public String mutationName() { return "text_cont_rem_mut"; }
+
+    @Override
     public ObjectType objectType() {
         return ObjectType.Text;
     }

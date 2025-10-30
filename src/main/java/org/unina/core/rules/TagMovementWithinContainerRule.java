@@ -31,6 +31,8 @@ public class TagMovementWithinContainerRule  implements MutationRule {
         return true;
     }
 
+    @Override
+    public String mutationName() { return "tag_mov_container_mut"; }
 
     @Override
     public ObjectType objectType() {

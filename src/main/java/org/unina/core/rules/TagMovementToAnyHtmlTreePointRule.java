@@ -63,6 +63,9 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
     }
 
     @Override
+    public String mutationName() { return "tag_mov_html_mut"; }
+
+    @Override
     public ObjectType objectType() {
         return ObjectType.Tag;
     }

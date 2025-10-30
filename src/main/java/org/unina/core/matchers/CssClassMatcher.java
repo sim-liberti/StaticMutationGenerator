@@ -12,6 +12,6 @@ public class CssClassMatcher implements TagMatcher {
 
     @Override
     public boolean matches(Element element) {
-        return element.className().contains(className);
+        return element.hasClass(className);
     }
 }

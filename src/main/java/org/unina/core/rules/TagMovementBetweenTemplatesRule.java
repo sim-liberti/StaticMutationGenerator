@@ -87,6 +87,9 @@ public class TagMovementBetweenTemplatesRule  implements MutationRule {
     }
 
     @Override
+    public String mutationName() { return "tag_mov_temp_mut"; }
+
+    @Override
     public ObjectType objectType() {
         return ObjectType.Tag;
     }

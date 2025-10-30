@@ -34,6 +34,9 @@ public class TagTypeModificationRule  implements MutationRule {
     }
 
     @Override
+    public String mutationName() { return "tag_type_mod_mut"; }
+
+    @Override
     public ObjectType objectType() {
         return ObjectType.Tag;
     }

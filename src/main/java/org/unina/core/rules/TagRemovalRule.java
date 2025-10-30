@@ -26,6 +26,9 @@ public class TagRemovalRule  implements MutationRule {
     }
 
     @Override
+    public String mutationName() { return "tag_rem_mut"; }
+
+    @Override
     public ObjectType objectType() {
         return ObjectType.Tag;
     }

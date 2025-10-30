@@ -4,41 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[feat] tag matchers provided to expand the search capability of a target tag">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/cli/CliRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/cli/ConfigLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/cli/InteractivePrompt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/cli/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/example-config.json" afterDir="false" />
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[misc] removed README.md">
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Data/MutationRuleId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/MutationRuleId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Data/ObjectType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/ObjectType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Data/TargetElementMetadata.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeIdentifierModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeIdentifierModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeRemovalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeValueModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/MutationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagInsertionRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagInsertionRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementBetweenTemplatesRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementBetweenTemplatesRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementWithinContainerRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementWithinContainerRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagRemovalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagTypeModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagTypeModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentRemovalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/AttributeMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/AttributeMatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/CssClassMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/CssClassMatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/IdentifierMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/IdentifierMatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TagMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/TagMatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TagMatcherFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/TagMatcherFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TextContentMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/TextContentMatcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Utils/ComponentMetadata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/ComponentMetadata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Utils/FileBrowser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/util/FileBrowser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Utils/RandomSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/util/RandomSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/cli/CliRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/cli/ConfigLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/cli/InteractivePrompt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/cli/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/CssClassMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/CssClassMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeIdentifierModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeIdentifierModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagInsertionRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagInsertionRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementBetweenTemplatesRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementBetweenTemplatesRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementWithinContainerRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementWithinContainerRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagTypeModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagTypeModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/data/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/example-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/unina/MutationRulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/unina/MutationRulesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +41,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -86,7 +76,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.executor": "Run",
+    "Application.App.executor": "Debug",
+    "DefaultHtmlFileTemplate": "HTML File",
     "JUnit.MutationRulesTest.executor": "Run",
     "JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
@@ -111,7 +102,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MutationRulesTest">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.unina.App" />
       <module name="StaticMutationGenerator" />
@@ -158,9 +154,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.MutationRulesTest" />
         <item itemvalue="JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue" />
-        <item itemvalue="Application.App" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +180,7 @@
       <workItem from="1761654102595" duration="11557000" />
       <workItem from="1761689130495" duration="117000" />
       <workItem from="1761747291081" duration="11462000" />
-      <workItem from="1761814763753" duration="5365000" />
+      <workItem from="1761814763753" duration="16495000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -226,7 +222,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761817364224</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactoring and start of user interaction&#10;[refactor] refactored folders and files to better divide the functionalities&#10;[feat] started implementing a cli tool to allow for user interaction using cmd parameters, an interactive prompt or a config file">
+      <option name="closed" value="true" />
+      <created>1761820665305</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1761820665305</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[misc] removed README.md">
+      <option name="closed" value="true" />
+      <created>1761824057512</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1761824057512</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +261,30 @@
     <MESSAGE value="[feat] Mutations and RandomSelector&#10;Roughly implemented most of the mutations and added a RandomSelector that can be seeded to reproduce particular scenarios" />
     <MESSAGE value="First batch of simple tests and major logic fixes&#10;[feat] implemented the first batch of tests (except movement between templates)&#10;[fix] fixed a bug in TagMovementToAnyHtmlTreePointRule to check if any child element was found&#10;[fix] fixed the RandomSelector singleton pattern which would not get initialized properly&#10;[fix] prevented modification of a final collection in some of the mutation rules" />
     <MESSAGE value="[feat] tag matchers provided to expand the search capability of a target tag" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] tag matchers provided to expand the search capability of a target tag" />
+    <MESSAGE value="Refactoring and start of user interaction&#10;[refactor] refactored folders and files to better divide the functionalities&#10;[feat] started implementing a cli tool to allow for user interaction using cmd parameters, an interactive prompt or a config file" />
+    <MESSAGE value="[misc] removed README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="[misc] removed README.md" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/unina/App.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

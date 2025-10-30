@@ -37,6 +37,7 @@ public class MutationRulesTest {
     public void testApplyAttributeIdentifierModificationRule_shouldReturnTrue() {
         // Arrange
         Document document = Jsoup.parse(htmlString);
+//        Element target = document.selectFirst(".test-class");
         Element target = document.selectFirst(".test-class");
         assertNotNull(target, "Target element should not be null");
 

@@ -33,6 +33,9 @@ public class AttributeValueModificationRule implements MutationRule {
     }
 
     @Override
+    public String mutationName() { return "attr_val_mod_mut"; }
+
+    @Override
     public ObjectType objectType() {
         return ObjectType.Attribute;
     }
