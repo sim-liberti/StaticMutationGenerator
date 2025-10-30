@@ -4,7 +4,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.nodes.Node;
 import org.jsoup.nodes.TextNode;
 import org.unina.data.MutationRuleId;
-import org.unina.data.ObjectType;
+import org.unina.data.MutationTagType;
 import org.unina.util.RandomSelector;
 import org.unina.core.MutationRule;
 
@@ -42,8 +42,8 @@ public class TextContentModificationRule  implements MutationRule {
     public String mutationName() { return "text_cont_mod_mut"; }
 
     @Override
-    public ObjectType objectType() {
-        return ObjectType.Text;
+    public MutationTagType objectType() {
+        return MutationTagType.Text;
     }
 
     @Override

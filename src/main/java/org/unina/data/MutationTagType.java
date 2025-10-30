@@ -1,6 +1,6 @@
 package org.unina.data;
 
-public enum ObjectType {
+public enum MutationTagType {
     Attribute,
     Text,
     Tag

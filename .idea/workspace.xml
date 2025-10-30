@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[misc] removed README.md">
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/TagMetadata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/cli/CliRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/cli/ConfigLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/cli/InteractivePrompt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/cli/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/CssClassMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/matchers/CssClassMatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeIdentifierModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeIdentifierModificationRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeRemovalRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java" afterDir="false" />
@@ -26,9 +21,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagTypeModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagTypeModificationRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentModificationRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentRemovalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/data/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/example-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/unina/MutationRulesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/unina/MutationRulesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/data/ObjectType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/MutationTagType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +69,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.executor": "Debug",
+    "Application.App.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
     "JUnit.MutationRulesTest.executor": "Run",
     "JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor": "Run",
@@ -91,7 +84,7 @@
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator/src/main/java/org/unina",
-    "last_opened_file_path": "/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator",
+    "last_opened_file_path": "/mnt/shared250/Projects/Tirocinio/Tesi Volpe-Paolella/AutomaticE2EWebTesting/mutation-generator",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -180,7 +173,9 @@
       <workItem from="1761654102595" duration="11557000" />
       <workItem from="1761689130495" duration="117000" />
       <workItem from="1761747291081" duration="11462000" />
-      <workItem from="1761814763753" duration="16495000" />
+      <workItem from="1761814763753" duration="20623000" />
+      <workItem from="1761844540598" duration="2233000" />
+      <workItem from="1761854888310" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -238,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761824057512</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="First working version of a cli tool&#10;[feat] implemented configuration loading from json&#10;[feat] created MutationEngine to run all the mutation rules&#10;[feat] added mutation names for file exporting">
+      <option name="closed" value="true" />
+      <created>1761836891471</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1761836891471</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,28 +266,8 @@
     <MESSAGE value="[feat] tag matchers provided to expand the search capability of a target tag" />
     <MESSAGE value="Refactoring and start of user interaction&#10;[refactor] refactored folders and files to better divide the functionalities&#10;[feat] started implementing a cli tool to allow for user interaction using cmd parameters, an interactive prompt or a config file" />
     <MESSAGE value="[misc] removed README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="[misc] removed README.md" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/unina/App.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="First working version of a cli tool&#10;[feat] implemented configuration loading from json&#10;[feat] created MutationEngine to run all the mutation rules&#10;[feat] added mutation names for file exporting" />
+    <option name="LAST_COMMIT_MESSAGE" value="First working version of a cli tool&#10;[feat] implemented configuration loading from json&#10;[feat] created MutationEngine to run all the mutation rules&#10;[feat] added mutation names for file exporting" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

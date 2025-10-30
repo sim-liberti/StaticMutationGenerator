@@ -3,7 +3,7 @@ package org.unina.core.rules;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.unina.data.MutationRuleId;
-import org.unina.data.ObjectType;
+import org.unina.data.MutationTagType;
 import org.unina.util.RandomSelector;
 import org.unina.core.MutationRule;
 
@@ -66,8 +66,8 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
     public String mutationName() { return "tag_mov_html_mut"; }
 
     @Override
-    public ObjectType objectType() {
-        return ObjectType.Tag;
+    public MutationTagType objectType() {
+        return MutationTagType.Tag;
     }
 
     @Override

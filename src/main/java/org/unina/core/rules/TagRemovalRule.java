@@ -2,7 +2,7 @@ package org.unina.core.rules;
 
 import org.jsoup.nodes.Element;
 import org.unina.data.MutationRuleId;
-import org.unina.data.ObjectType;
+import org.unina.data.MutationTagType;
 import org.unina.core.MutationRule;
 
 public class TagRemovalRule  implements MutationRule {
@@ -29,8 +29,8 @@ public class TagRemovalRule  implements MutationRule {
     public String mutationName() { return "tag_rem_mut"; }
 
     @Override
-    public ObjectType objectType() {
-        return ObjectType.Tag;
+    public MutationTagType objectType() {
+        return MutationTagType.Tag;
     }
 
     @Override
