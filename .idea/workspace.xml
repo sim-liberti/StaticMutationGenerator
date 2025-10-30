@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/unina/MutationRulesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/AttributeMatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/CssClassMatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/IdentifierMatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TagMatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TagMatcherFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/TagMatchers/TextContentMatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeRemovalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeValueModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/AttributeValueModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementWithinContainerRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagMovementWithinContainerRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagTypeModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TagTypeModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/MutationRules/TextContentRemovalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/Utils/RandomSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/Utils/RandomSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/unina/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -47,6 +43,9 @@
     &quot;accountId&quot;: &quot;b1e0558f-6667-46e0-bb7f-91ca31c1b5f0&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -68,7 +67,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator",
     "node.js.detected.package.eslint": "true",
@@ -77,6 +79,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -153,6 +156,7 @@
       <workItem from="1761654102595" duration="11557000" />
       <workItem from="1761689130495" duration="117000" />
       <workItem from="1761747291081" duration="11462000" />
+      <workItem from="1761814763753" duration="2194000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -178,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761668527995</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="First batch of simple tests and major logic fixes&#10;[feat] implemented the first batch of tests (except movement between templates)&#10;[fix] fixed a bug in TagMovementToAnyHtmlTreePointRule to check if any child element was found&#10;[fix] fixed the RandomSelector singleton pattern which would not get initialized properly&#10;[fix] prevented modification of a final collection in some of the mutation rules">
+      <option name="closed" value="true" />
+      <created>1761768406491</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761768406491</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +211,8 @@
     <MESSAGE value="[initial] caricamento di file di progetto" />
     <MESSAGE value="[feat] scaffolding of the mutation rules and other related objects" />
     <MESSAGE value="[feat] Mutations and RandomSelector&#10;Roughly implemented most of the mutations and added a RandomSelector that can be seeded to reproduce particular scenarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] Mutations and RandomSelector&#10;Roughly implemented most of the mutations and added a RandomSelector that can be seeded to reproduce particular scenarios" />
+    <MESSAGE value="First batch of simple tests and major logic fixes&#10;[feat] implemented the first batch of tests (except movement between templates)&#10;[fix] fixed a bug in TagMovementToAnyHtmlTreePointRule to check if any child element was found&#10;[fix] fixed the RandomSelector singleton pattern which would not get initialized properly&#10;[fix] prevented modification of a final collection in some of the mutation rules" />
+    <option name="LAST_COMMIT_MESSAGE" value="First batch of simple tests and major logic fixes&#10;[feat] implemented the first batch of tests (except movement between templates)&#10;[fix] fixed a bug in TagMovementToAnyHtmlTreePointRule to check if any child element was found&#10;[fix] fixed the RandomSelector singleton pattern which would not get initialized properly&#10;[fix] prevented modification of a final collection in some of the mutation rules" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
