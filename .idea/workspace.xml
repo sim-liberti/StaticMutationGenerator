@@ -5,23 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/TagMetadata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/ElementExtension.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeIdentifierModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeIdentifierModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeRemovalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagInsertionRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagInsertionRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementBetweenTemplatesRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementBetweenTemplatesRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementWithinContainerRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementWithinContainerRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagRemovalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagTypeModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagTypeModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentModificationRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentRemovalRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/data/ObjectType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/MutationTagType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutations/a_attr_val_mod_mut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutations/b_attr_rem_mut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutations/c_attr_id_mut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutations/d_text_cont_mod_mut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutations/e_text_cont_rem_mut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutations/f_tag_mov_container_mut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutations/g_tag_mov_html_mut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutations/i_tag_rem_mut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutations/j_tag_type_mod_mut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutations/k_tag_ins_mut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +30,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -76,6 +73,7 @@
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
@@ -175,7 +173,9 @@
       <workItem from="1761747291081" duration="11462000" />
       <workItem from="1761814763753" duration="20623000" />
       <workItem from="1761844540598" duration="2233000" />
-      <workItem from="1761854888310" duration="599000" />
+      <workItem from="1761854888310" duration="4483000" />
+      <workItem from="1761919510646" duration="1198000" />
+      <workItem from="1761920734022" duration="1426000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -241,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761836891471</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[refactor] renamed ObjectType into MutationTagType">
+      <option name="closed" value="true" />
+      <created>1761855569766</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1761855569766</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +275,8 @@
     <MESSAGE value="Refactoring and start of user interaction&#10;[refactor] refactored folders and files to better divide the functionalities&#10;[feat] started implementing a cli tool to allow for user interaction using cmd parameters, an interactive prompt or a config file" />
     <MESSAGE value="[misc] removed README.md" />
     <MESSAGE value="First working version of a cli tool&#10;[feat] implemented configuration loading from json&#10;[feat] created MutationEngine to run all the mutation rules&#10;[feat] added mutation names for file exporting" />
-    <option name="LAST_COMMIT_MESSAGE" value="First working version of a cli tool&#10;[feat] implemented configuration loading from json&#10;[feat] created MutationEngine to run all the mutation rules&#10;[feat] added mutation names for file exporting" />
+    <MESSAGE value="[refactor] renamed ObjectType into MutationTagType" />
+    <option name="LAST_COMMIT_MESSAGE" value="[refactor] renamed ObjectType into MutationTagType" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

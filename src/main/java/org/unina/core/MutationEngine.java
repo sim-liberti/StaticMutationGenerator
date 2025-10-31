@@ -6,6 +6,7 @@ import org.jsoup.nodes.Element;
 import org.unina.core.matchers.TagMatcherFactory;
 import org.unina.core.rules.*;
 import org.unina.data.Config;
+import org.unina.data.ElementExtension;
 import org.unina.util.RandomSelector;
 
 import java.io.IOException;
@@ -13,12 +14,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class MutationEngine {
 
     private static final List<MutationRule> mutationRules = new ArrayList<>();
+    private static final Map<String, Element> targetElements = new HashMap<>();
 
     public static void Run(Config jsonConfig) throws IOException {
         initializeRules();
@@ -29,22 +30,35 @@ public class MutationEngine {
             RandomSelector.initialize(Integer.parseInt(jsonConfig.seed));
 
         Document document = Jsoup.parse(Paths.get(jsonConfig.inputFile).toFile(), "UTF-8");
+        Element targetElement = findElement(jsonConfig, document);
 
         for (MutationRule mutation : mutationRules) {
-            Document cloneDocument = document.clone();
-            Element targetElement = findElement(jsonConfig, cloneDocument);
+            initializeTargets(targetElement);
+            for (Map.Entry<String, Element> entry : targetElements.entrySet()) {
+                Element targetElementClone = entry.getValue();
+                if (targetElementClone == null) {
+                    System.err.println("No target element for key: " + entry.getKey());
+                    continue;
+                }
 
-            String htmlBefore = cloneDocument.html();
-            boolean elementWasMutated = mutation.ApplyMutation(targetElement);
-            String htmlAfter = cloneDocument.html();
+                Document cloneDocument = targetElementClone.ownerDocument();
 
-            System.out.println("=== Mutation Applied: " + mutation.mutationId() + " ===");
-            System.out.println("Result: " + (elementWasMutated ? "Success" : "Failure"));
-            if (elementWasMutated && !htmlBefore.equals(htmlAfter)){
-                String fileName = String.format("%s_%s.html", mutation.mutationId().name(), mutation.mutationName());
-                saveMutationToFile(cloneDocument, fileName, jsonConfig.outputDirectory);
+                String htmlBefore = cloneDocument.html();
+                boolean elementWasMutated = mutation.ApplyMutation(targetElementClone);
+                String htmlAfter = cloneDocument.html();
+
+                System.out.println("=== Mutation Applied: " + mutation.mutationId() + " ===");
+                System.out.println("Target: " + entry.getKey());
+                System.out.println("Result: " + (elementWasMutated ? "Success" : "Failure"));
+                if (elementWasMutated && !htmlBefore.equals(htmlAfter)){
+                    String fileName = String.format("%s_%s_%s.html",
+                            mutation.mutationId().name(),
+                            entry.getKey(),
+                            mutation.mutationName());
+                    saveMutationToFile(cloneDocument, fileName, jsonConfig.outputDirectory);
+                }
+                System.out.println("===========================\n");
             }
-            System.out.println("===========================\n");
         }
     }
 
@@ -60,6 +74,19 @@ public class MutationEngine {
         mutationRules.add(new TagRemovalRule());
         mutationRules.add(new TagTypeModificationRule());
         mutationRules.add(new TagInsertionRule());
+    }
+
+    private static void initializeTargets(Element element) {
+        targetElements.clear();
+        targetElements.put("alpha", element.clone());
+        if (element.parent() != null)
+            targetElements.put("beta", element.parent().clone());
+        if (ElementExtension.getSibling(element) != null)
+            targetElements.put("delta", ElementExtension.getSibling(element).clone());
+        if (ElementExtension.getAncestor(element) != null)
+            targetElements.put("gamma", ElementExtension.getAncestor(element).clone());
+        if (ElementExtension.getContainingComponent(element) != null)
+            targetElements.put("epsilon", ElementExtension.getContainingComponent(element).clone());
     }
 
     private static Element findElement(Config config, Document document) {

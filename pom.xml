@@ -53,6 +53,13 @@
       <version>2.17.2</version>
     </dependency>
 
+    <dependency>
+      <groupId>systems.manifold</groupId>
+      <artifactId>manifold-ext</artifactId>
+      <version>2025.1.27</version>
+      <scope>provided</scope>
+    </dependency>
+
   </dependencies>
 
   <build>
