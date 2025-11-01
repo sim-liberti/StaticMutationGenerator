@@ -3,6 +3,7 @@ package org.unina.core;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.unina.core.matchers.TagMatcherFactory;
 import org.unina.core.rules.*;
 import org.unina.data.Config;
@@ -19,7 +20,7 @@ import java.util.*;
 public class MutationEngine {
 
     private static final List<MutationRule> mutationRules = new ArrayList<>();
-    private static final Map<String, Element> targetElements = new HashMap<>();
+    private static final Map<String, Integer> targetElements = new HashMap<>();
 
     public static void Run(Config jsonConfig) throws IOException {
         initializeRules();
@@ -34,20 +35,15 @@ public class MutationEngine {
 
         for (MutationRule mutation : mutationRules) {
             initializeTargets(targetElement);
-            for (Map.Entry<String, Element> entry : targetElements.entrySet()) {
-                Element targetElementClone = entry.getValue();
-                if (targetElementClone == null) {
-                    System.err.println("No target element for key: " + entry.getKey());
-                    continue;
-                }
-
-                Document cloneDocument = targetElementClone.ownerDocument();
+            for (Map.Entry<String, Integer> entry : targetElements.entrySet()) {
+                Document cloneDocument = document.clone();
+                Element targetElementClone = cloneDocument.getAllElements().get(entry.getValue());
 
                 String htmlBefore = cloneDocument.html();
                 boolean elementWasMutated = mutation.ApplyMutation(targetElementClone);
                 String htmlAfter = cloneDocument.html();
 
-                System.out.println("=== Mutation Applied: " + mutation.mutationId() + " ===");
+                System.out.println("====== Mutation Applied: " + mutation.mutationId() + " ======");
                 System.out.println("Target: " + entry.getKey());
                 System.out.println("Result: " + (elementWasMutated ? "Success" : "Failure"));
                 if (elementWasMutated && !htmlBefore.equals(htmlAfter)){
@@ -57,7 +53,7 @@ public class MutationEngine {
                             mutation.mutationName());
                     saveMutationToFile(cloneDocument, fileName, jsonConfig.outputDirectory);
                 }
-                System.out.println("===========================\n");
+                System.out.println("=================================\n");
             }
         }
     }
@@ -77,16 +73,20 @@ public class MutationEngine {
     }
 
     private static void initializeTargets(Element element) {
+        Elements elements = Objects.requireNonNull(element.ownerDocument()).getAllElements();
+        if (elements.isEmpty()) {
+            throw new RuntimeException("No elements found in target document.");
+        }
         targetElements.clear();
-        targetElements.put("alpha", element.clone());
+        targetElements.put("alpha", elements.indexOf(element));
         if (element.parent() != null)
-            targetElements.put("beta", element.parent().clone());
+            targetElements.put("beta", elements.indexOf(element.parent()));
         if (ElementExtension.getSibling(element) != null)
-            targetElements.put("delta", ElementExtension.getSibling(element).clone());
+            targetElements.put("delta", elements.indexOf(ElementExtension.getSibling(element)));
         if (ElementExtension.getAncestor(element) != null)
-            targetElements.put("gamma", ElementExtension.getAncestor(element).clone());
+            targetElements.put("gamma", elements.indexOf(ElementExtension.getAncestor(element)));
         if (ElementExtension.getContainingComponent(element) != null)
-            targetElements.put("epsilon", ElementExtension.getContainingComponent(element).clone());
+            targetElements.put("epsilon", elements.indexOf(ElementExtension.getContainingComponent(element)));
     }
 
     private static Element findElement(Config config, Document document) {

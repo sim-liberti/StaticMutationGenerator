@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/data/ElementExtension.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutations/a_attr_val_mod_mut.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutations/b_attr_rem_mut.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutations/c_attr_id_mut.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutations/d_text_cont_mod_mut.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutations/e_text_cont_rem_mut.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutations/f_tag_mov_container_mut.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutations/g_tag_mov_html_mut.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutations/i_tag_rem_mut.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutations/j_tag_type_mod_mut.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutations/k_tag_ins_mut.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,12 +54,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.executor": "Run",
+    "Application.App.executor": "Debug",
     "DefaultHtmlFileTemplate": "HTML File",
     "JUnit.MutationRulesTest.executor": "Run",
     "JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-ProfilerNotification": "Profiler issue",
+    "Notification.DoNotAsk-ProfilerNotification": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -82,7 +72,7 @@
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator/src/main/java/org/unina",
-    "last_opened_file_path": "/mnt/shared250/Projects/Tirocinio/Tesi Volpe-Paolella/AutomaticE2EWebTesting/mutation-generator",
+    "last_opened_file_path": "/home/simon/Documents/Projects/StaticMutationGenerator",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -176,6 +166,7 @@
       <workItem from="1761854888310" duration="4483000" />
       <workItem from="1761919510646" duration="1198000" />
       <workItem from="1761920734022" duration="1426000" />
+      <workItem from="1761999187853" duration="2322000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -277,6 +268,17 @@
     <MESSAGE value="First working version of a cli tool&#10;[feat] implemented configuration loading from json&#10;[feat] created MutationEngine to run all the mutation rules&#10;[feat] added mutation names for file exporting" />
     <MESSAGE value="[refactor] renamed ObjectType into MutationTagType" />
     <option name="LAST_COMMIT_MESSAGE" value="[refactor] renamed ObjectType into MutationTagType" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
