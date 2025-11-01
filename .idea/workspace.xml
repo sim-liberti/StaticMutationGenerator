@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="fixed bug in mutation logic&#10;[fix] the output html file now correctly prints the entire mutated html of the input file&#10;[fix] fixed element retrieval by using indexes to identify the target in the cloned document">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/MutationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeIdentifierModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeIdentifierModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagInsertionRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagInsertionRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementBetweenTemplatesRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementBetweenTemplatesRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementWithinContainerRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagMovementWithinContainerRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagTypeModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TagTypeModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/unina/core/rules/TextContentRemovalRule.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +45,12 @@
     &quot;assignee&quot;: &quot;sim-liberti&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/sim-liberti/StaticMutationGenerator.git&quot;,
-    &quot;accountId&quot;: &quot;b1e0558f-6667-46e0-bb7f-91ca31c1b5f0&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/sim-liberti/StaticMutationGenerator.git",
+    "accountId": "b1467c54-ebfe-40b0-aea5-29b9803c5584"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -54,7 +67,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.executor": "Debug",
+    "Application.App.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
     "JUnit.MutationRulesTest.executor": "Run",
     "JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor": "Run",
@@ -166,7 +179,7 @@
       <workItem from="1761854888310" duration="4483000" />
       <workItem from="1761919510646" duration="1198000" />
       <workItem from="1761920734022" duration="1426000" />
-      <workItem from="1761999187853" duration="2322000" />
+      <workItem from="1761999187853" duration="6018000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -240,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761855569766</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixed bug in mutation logic&#10;[fix] the output html file now correctly prints the entire mutated html of the input file&#10;[fix] fixed element retrieval by using indexes to identify the target in the cloned document">
+      <option name="closed" value="true" />
+      <created>1762001744702</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1762001744702</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +288,8 @@
     <MESSAGE value="[misc] removed README.md" />
     <MESSAGE value="First working version of a cli tool&#10;[feat] implemented configuration loading from json&#10;[feat] created MutationEngine to run all the mutation rules&#10;[feat] added mutation names for file exporting" />
     <MESSAGE value="[refactor] renamed ObjectType into MutationTagType" />
-    <option name="LAST_COMMIT_MESSAGE" value="[refactor] renamed ObjectType into MutationTagType" />
+    <MESSAGE value="fixed bug in mutation logic&#10;[fix] the output html file now correctly prints the entire mutated html of the input file&#10;[fix] fixed element retrieval by using indexes to identify the target in the cloned document" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug in mutation logic&#10;[fix] the output html file now correctly prints the entire mutated html of the input file&#10;[fix] fixed element retrieval by using indexes to identify the target in the cloned document" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

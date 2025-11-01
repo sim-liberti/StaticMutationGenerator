@@ -3,6 +3,8 @@ package org.unina.core.rules;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import org.unina.core.MutationResult;
 import org.unina.data.MutationRuleId;
 import org.unina.data.MutationTagType;
 import org.unina.data.ComponentMetadata;
@@ -19,10 +21,10 @@ import java.util.Set;
 
 public class TagMovementBetweenTemplatesRule  implements MutationRule {
     @Override
-    public boolean ApplyMutation(Element targetElement) {
+    public MutationResult ApplyMutation(Element targetElement) {
         Document ownerDocument = targetElement.ownerDocument();
         if (ownerDocument == null) {
-            return false;
+            return new MutationResult(false, "Target element has no document");
         }
 
         Path currentHtmlPath = Paths.get(ownerDocument.location());
@@ -30,14 +32,14 @@ public class TagMovementBetweenTemplatesRule  implements MutationRule {
         String componentName = fileName.replace(".html", "");
         Path currentTsPath = currentHtmlPath.resolveSibling(componentName + ".ts");
         if (!Files.exists(currentTsPath)) {
-            return false;
+            return new MutationResult(false, "Traget .ts file does not exist");
         }
 
         ComponentMetadata componentMetadata = new ComponentMetadata(currentTsPath, currentHtmlPath);
         try {
             componentMetadata.buildComponentMetadata();
         } catch (IOException e) {
-            return false;
+            return new  MutationResult(false, "Error building component metadata: " + e.getMessage());
         }
 
         Set<Path> candidateComponents = new HashSet<>();
@@ -45,7 +47,7 @@ public class TagMovementBetweenTemplatesRule  implements MutationRule {
         candidateComponents.addAll(componentMetadata.getParents());
         candidateComponents.addAll(componentMetadata.getSiblings());
         if (candidateComponents.isEmpty()) {
-            return false;
+            return new MutationResult(false, "No valid candidate component found");
         }
 
         Path randomComponent = RandomSelector.GetInstance().GetRandomItemFromCollection(candidateComponents);
@@ -56,23 +58,23 @@ public class TagMovementBetweenTemplatesRule  implements MutationRule {
         try{
              destinationDocument = Jsoup.parse(randomComponent.toFile(), "UTF-8");
         } catch (IOException e){
-            return false;
+            return new MutationResult(false, "Error parsing the destination document: " + e.getMessage());
         }
 
-        List<Element> allElements = destinationDocument.getAllElements();
+        Elements allElements = destinationDocument.getAllElements();
         allElements.removeIf(candidate -> !isValidTarget(candidate, targetElement));
         if (allElements.isEmpty()) {
-            return false;
+            return new MutationResult(false, "Destination document has no valid candidate elements");
         }
 
         Element randomCandidate = RandomSelector.GetInstance().GetRandomItemFromCollection(allElements);
-        List<Element> randomCandidateChildren = randomCandidate.children();
+        Elements randomCandidateChildren = randomCandidate.children();
         int randomInsertionIndex = RandomSelector.GetInstance().GetRandomItemFromCollection(randomCandidateChildren).elementSiblingIndex();
 
         targetElement.remove();
         randomCandidate.insertChildren(randomInsertionIndex, targetElement);
 
-        return true;
+        return new MutationResult(true, "");
     }
 
     private boolean isValidTarget(Element candidate, Element target) {

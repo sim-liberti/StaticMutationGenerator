@@ -30,8 +30,8 @@ public class MutationEngine {
         else
             RandomSelector.initialize(Integer.parseInt(jsonConfig.seed));
 
-        Document document = Jsoup.parse(Paths.get(jsonConfig.inputFile).toFile(), "UTF-8");
-        Element targetElement = findElement(jsonConfig, document);
+        final Document document = Jsoup.parse(Paths.get(jsonConfig.inputFile).toFile(), "UTF-8");
+        final Element targetElement = findElement(jsonConfig, document);
 
         for (MutationRule mutation : mutationRules) {
             initializeTargets(targetElement);
@@ -40,20 +40,22 @@ public class MutationEngine {
                 Element targetElementClone = cloneDocument.getAllElements().get(entry.getValue());
 
                 String htmlBefore = cloneDocument.html();
-                boolean elementWasMutated = mutation.ApplyMutation(targetElementClone);
+                MutationResult mutationResult = mutation.ApplyMutation(targetElementClone);
                 String htmlAfter = cloneDocument.html();
 
-                System.out.println("====== Mutation Applied: " + mutation.mutationId() + " ======");
+                System.out.println("============ Mutation Applied: " + mutation.mutationId() + " ============");
                 System.out.println("Target: " + entry.getKey());
-                System.out.println("Result: " + (elementWasMutated ? "Success" : "Failure"));
-                if (elementWasMutated && !htmlBefore.equals(htmlAfter)){
+                System.out.println("Result: " + (mutationResult.mutationApplied ? "Success" : "Failure"));
+                if (mutationResult.mutationApplied && !htmlBefore.equals(htmlAfter)){
                     String fileName = String.format("%s_%s_%s.html",
                             mutation.mutationId().name(),
                             entry.getKey(),
                             mutation.mutationName());
                     saveMutationToFile(cloneDocument, fileName, jsonConfig.outputDirectory);
+                } else {
+                    System.out.println("Error: " + mutationResult.failureMessage);
                 }
-                System.out.println("=================================\n");
+                System.out.println("=============================================\n");
             }
         }
     }
@@ -103,7 +105,7 @@ public class MutationEngine {
             Path outputPath = Paths.get(outputDirectory + "/" + filename);
             String content = document.html();
             Files.write(outputPath, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
-            System.out.println(" -> Saved: " + filename);
+            System.out.println("Saved: " + filename);
         } catch (IOException e) {
             System.err.println("Error saving mutant file " + filename + ": " + e.getMessage());
         }

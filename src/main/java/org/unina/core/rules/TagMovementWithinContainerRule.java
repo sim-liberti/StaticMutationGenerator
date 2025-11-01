@@ -1,6 +1,7 @@
 package org.unina.core.rules;
 
 import org.jsoup.nodes.Element;
+import org.unina.core.MutationResult;
 import org.unina.data.MutationRuleId;
 import org.unina.data.MutationTagType;
 import org.unina.util.RandomSelector;
@@ -8,11 +9,11 @@ import org.unina.core.MutationRule;
 
 public class TagMovementWithinContainerRule  implements MutationRule {
     @Override
-    public boolean ApplyMutation(Element targetElement) {
+    public MutationResult ApplyMutation(Element targetElement) {
         Element parent = targetElement.parent();
 
         if (parent == null || parent.childrenSize() <= 1) {
-            return false;
+            return new  MutationResult(false, "The parent is null or empty");
         }
 
         String targetElementName = targetElement.tagName();
@@ -20,7 +21,7 @@ public class TagMovementWithinContainerRule  implements MutationRule {
         if (targetElementName.equalsIgnoreCase("html") ||
                 targetElementName.equalsIgnoreCase("body") ||
                 targetElementName.equalsIgnoreCase("head")){
-            return false;
+            return new MutationResult(false, "Target element with " + targetElementName + " tag cannot be mutated" );
         }
 
         int randomIndex = RandomSelector.GetInstance().GetRandomItemFromCollection(targetElement.siblingElements()).elementSiblingIndex();
@@ -28,7 +29,7 @@ public class TagMovementWithinContainerRule  implements MutationRule {
         targetElement.remove();
         parent.insertChildren(randomIndex, targetElement);
 
-        return true;
+        return new MutationResult(true, "");
     }
 
     @Override

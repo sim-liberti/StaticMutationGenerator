@@ -2,6 +2,7 @@ package org.unina.core.rules;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.unina.core.MutationResult;
 import org.unina.data.MutationRuleId;
 import org.unina.data.MutationTagType;
 import org.unina.util.RandomSelector;
@@ -12,14 +13,14 @@ import java.util.List;
 
 public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
     @Override
-    public boolean ApplyMutation(Element targetElement) {
+    public MutationResult ApplyMutation(Element targetElement) {
         Document document = targetElement.ownerDocument();
         assert document != null;
 
         Element parent = targetElement.parent();
 
         if (parent == null || parent.childrenSize() <= 1) {
-            return false;
+            return new  MutationResult(false, "The parent is null or empty");
         }
 
         String targetElementName = targetElement.tagName();
@@ -27,13 +28,13 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
         if (targetElementName.equalsIgnoreCase("html") ||
                 targetElementName.equalsIgnoreCase("body") ||
                 targetElementName.equalsIgnoreCase("head")){
-            return false;
+            return new MutationResult(false, "Target element with " + targetElementName + " tag cannot be mutated" );
         }
 
         List<Element> allElements = new ArrayList<>(document.getAllElements());
         allElements.removeIf(candidate -> !isValidTarget(candidate, targetElement));
         if (allElements.isEmpty()) {
-            return false;
+            return new MutationResult(false, "No valid candidate elements have been found");
         }
 
         Element randomCandidate = RandomSelector.GetInstance().GetRandomItemFromCollection(allElements);
@@ -48,7 +49,7 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
 
         randomCandidate.insertChildren(randomInsertionIndex, targetElement);
 
-        return true;
+        return new  MutationResult(true, "");
     }
 
     private boolean isValidTarget(Element candidate, Element target) {
