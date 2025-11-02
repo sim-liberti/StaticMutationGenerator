@@ -68,7 +68,7 @@ public class MutationEngine {
         mutationRules.add(new TextContentRemovalRule());
         mutationRules.add(new TagMovementWithinContainerRule());
         mutationRules.add(new TagMovementToAnyHtmlTreePointRule());
-        // mutationRules.add(new TagMovementBetweenTemplatesRule());
+        mutationRules.add(new TagMovementBetweenTemplatesRule());
         mutationRules.add(new TagRemovalRule());
         mutationRules.add(new TagTypeModificationRule());
         mutationRules.add(new TagInsertionRule());
