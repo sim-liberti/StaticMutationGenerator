@@ -1,8 +1,12 @@
 package org.unina.util;
 
+import org.jsoup.nodes.Document;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.stream.Stream;
 
 public class FileBrowser {
@@ -42,4 +46,14 @@ public class FileBrowser {
         return dir;
     }
 
+    public static void saveMutationToFile(Document document, String filename, String outputDirectory){
+        try {
+            Path outputPath = Paths.get(outputDirectory + "/" + filename);
+            String content = document.html();
+            Files.write(outputPath, content.getBytes(), StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
+            System.out.println("Saved: " + filename);
+        } catch (IOException e) {
+            System.err.println("Error saving mutant file " + filename + ": " + e.getMessage());
+        }
+    }
 }

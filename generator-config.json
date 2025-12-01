@@ -1,10 +1,10 @@
 {
   "seed": "1234",
-  "inputFile": "index.html",
-  "outputDirectory": "mutations",
+  "inputFile": "/mnt/shared250/Projects/Tirocinio/angular-spotify/libs/web/playlist/feature/detail/src/lib/playlist.component.html",
+  "repositoryRootPath": "/mnt/shared250/Projects/Tirocinio/angular-spotify/",
   "matcher": {
     "type": "class",
     "key": "",
-    "value": "test-class"
+    "value": "ellipsis-one-line"
   }
 }

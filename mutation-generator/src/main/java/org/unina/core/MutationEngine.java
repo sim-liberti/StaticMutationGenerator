@@ -8,6 +8,7 @@ import org.unina.core.matchers.TagMatcherFactory;
 import org.unina.core.rules.*;
 import org.unina.data.Config;
 import org.unina.data.ElementExtension;
+import org.unina.util.FileBrowser;
 import org.unina.util.RandomSelector;
 
 import java.io.IOException;
@@ -23,7 +24,7 @@ public class MutationEngine {
     private static final Map<String, Integer> targetElements = new HashMap<>();
 
     public static void Run(Config jsonConfig) throws IOException {
-        initializeRules();
+        initializeRules(jsonConfig);
 
         if (jsonConfig.seed.isEmpty())
             RandomSelector.initialize();
@@ -33,45 +34,52 @@ public class MutationEngine {
         final Document document = Jsoup.parse(Paths.get(jsonConfig.inputFile).toFile(), "UTF-8");
         final Element targetElement = findElement(jsonConfig, document);
 
-        for (MutationRule mutation : mutationRules) {
-            initializeTargets(targetElement);
-            for (Map.Entry<String, Integer> entry : targetElements.entrySet()) {
-                Document cloneDocument = document.clone();
-                Element targetElementClone = cloneDocument.getAllElements().get(entry.getValue());
+        try {
+            for (MutationRule mutation : mutationRules) {
+                initializeTargets(targetElement);
+                for (Map.Entry<String, Integer> entry : targetElements.entrySet()) {
+                    Document cloneDocument = document.clone();
+                    Element targetElementClone = cloneDocument.getAllElements().get(entry.getValue());
 
-                String htmlBefore = cloneDocument.html();
-                MutationResult mutationResult = mutation.ApplyMutation(targetElementClone);
-                String htmlAfter = cloneDocument.html();
+                    String htmlBefore = cloneDocument.html();
+                    MutationResult mutationResult = mutation.ApplyMutation(targetElementClone);
+                    String htmlAfter = cloneDocument.html();
 
-                System.out.println("============ Mutation Applied: " + mutation.mutationId() + " ============");
-                System.out.println("Target: " + entry.getKey());
-                System.out.println("Result: " + (mutationResult.mutationApplied ? "Success" : "Failure"));
-                if (mutationResult.mutationApplied && !htmlBefore.equals(htmlAfter)){
-                    String fileName = String.format("%s_%s_%s.html",
-                            mutation.mutationId().name(),
-                            entry.getKey(),
-                            mutation.mutationName());
-                    saveMutationToFile(cloneDocument, fileName, jsonConfig.outputDirectory);
-                } else {
-                    System.out.println("Error: " + mutationResult.failureMessage);
+                    System.out.println("============ Mutation Applied: " + mutation.mutationId() + " ============");
+                    System.out.println("Target: " + entry.getKey());
+                    System.out.println("Result: " + (mutationResult.mutationApplied ? "Success" : "Failure"));
+                    if (mutationResult.mutationApplied && !htmlBefore.equals(htmlAfter)){
+                        String fileName = String.format("%s_%s_%s.html",
+                                mutation.mutationId().name(),
+                                entry.getKey(),
+                                mutation.mutationName());
+                        FileBrowser.saveMutationToFile(cloneDocument, fileName, jsonConfig.outputDirectory);
+                    } else {
+                        System.out.println("Error: " + mutationResult.failureMessage);
+                    }
+                    System.out.println("=============================================\n");
                 }
-                System.out.println("=============================================\n");
             }
+        } catch(Exception e) {
+
+        } finally {
+
         }
+
     }
 
-    private static void initializeRules(){
-        mutationRules.add(new AttributeValueModificationRule());
-        mutationRules.add(new AttributeRemovalRule());
-        mutationRules.add(new AttributeIdentifierModificationRule());
-        mutationRules.add(new TextContentModificationRule());
-        mutationRules.add(new TextContentRemovalRule());
-        mutationRules.add(new TagMovementWithinContainerRule());
-        mutationRules.add(new TagMovementToAnyHtmlTreePointRule());
-        mutationRules.add(new TagMovementBetweenTemplatesRule());
-        mutationRules.add(new TagRemovalRule());
-        mutationRules.add(new TagTypeModificationRule());
-        mutationRules.add(new TagInsertionRule());
+    private static void initializeRules(Config config){
+//        mutationRules.add(new AttributeValueModificationRule());
+//        mutationRules.add(new AttributeRemovalRule());
+//        mutationRules.add(new AttributeIdentifierModificationRule());
+//        mutationRules.add(new TextContentModificationRule());
+//        mutationRules.add(new TextContentRemovalRule());
+//        mutationRules.add(new TagMovementWithinContainerRule());
+//        mutationRules.add(new TagMovementToAnyHtmlTreePointRule());
+          mutationRules.add(new TagMovementBetweenTemplatesRule(Paths.get(config.repositoryRootPath)));
+//        mutationRules.add(new TagRemovalRule());
+//        mutationRules.add(new TagTypeModificationRule());
+//        mutationRules.add(new TagInsertionRule());
     }
 
     private static void initializeTargets(Element element) {
@@ -98,17 +106,6 @@ public class MutationEngine {
                 .filter(matcher::matches)
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("No target tag found"));
-    }
-
-    private static void saveMutationToFile(Document document, String filename, String outputDirectory){
-        try {
-            Path outputPath = Paths.get(outputDirectory + "/" + filename);
-            String content = document.html();
-            Files.write(outputPath, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
-            System.out.println("Saved: " + filename);
-        } catch (IOException e) {
-            System.err.println("Error saving mutant file " + filename + ": " + e.getMessage());
-        }
     }
 }
 
