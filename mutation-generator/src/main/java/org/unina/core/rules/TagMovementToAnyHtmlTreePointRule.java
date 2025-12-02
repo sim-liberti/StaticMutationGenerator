@@ -20,7 +20,7 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
         Element parent = targetElement.parent();
 
         if (parent == null || parent.childrenSize() <= 1) {
-            return new  MutationResult(false, "The parent is null or empty");
+            return new  MutationResult(false, "The parent is null or empty", null);
         }
 
         String targetElementName = targetElement.tagName();
@@ -28,13 +28,13 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
         if (targetElementName.equalsIgnoreCase("html") ||
                 targetElementName.equalsIgnoreCase("body") ||
                 targetElementName.equalsIgnoreCase("head")){
-            return new MutationResult(false, "Target element with " + targetElementName + " tag cannot be mutated" );
+            return new MutationResult(false, "Target element with " + targetElementName + " tag cannot be mutated", null);
         }
 
         List<Element> allElements = new ArrayList<>(document.getAllElements());
         allElements.removeIf(candidate -> !isValidTarget(candidate, targetElement));
         if (allElements.isEmpty()) {
-            return new MutationResult(false, "No valid candidate elements have been found");
+            return new MutationResult(false, "No valid candidate elements have been found", null);
         }
 
         Element randomCandidate = RandomSelector.GetInstance().GetRandomItemFromCollection(allElements);
@@ -49,7 +49,10 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
 
         randomCandidate.insertChildren(randomInsertionIndex, targetElement);
 
-        return new  MutationResult(true, "");
+        List<Document> mutatedDocuments = new ArrayList<>();
+        mutatedDocuments.add(targetElement.ownerDocument());
+
+        return new MutationResult(true, "", mutatedDocuments);
     }
 
     private boolean isValidTarget(Element candidate, Element target) {

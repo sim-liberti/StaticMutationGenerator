@@ -8,14 +8,11 @@ import org.unina.core.matchers.TagMatcherFactory;
 import org.unina.core.rules.*;
 import org.unina.data.Config;
 import org.unina.data.ElementExtension;
-import org.unina.util.FileBrowser;
+import org.unina.data.MutationDatabase;
 import org.unina.util.RandomSelector;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 public class MutationEngine {
@@ -24,6 +21,8 @@ public class MutationEngine {
     private static final Map<String, Integer> targetElements = new HashMap<>();
 
     public static void Run(Config jsonConfig) throws IOException {
+        MutationDatabase db = new MutationDatabase();
+
         initializeRules(jsonConfig);
 
         if (jsonConfig.seed.isEmpty())
@@ -34,52 +33,42 @@ public class MutationEngine {
         final Document document = Jsoup.parse(Paths.get(jsonConfig.inputFile).toFile(), "UTF-8");
         final Element targetElement = findElement(jsonConfig, document);
 
-        try {
-            for (MutationRule mutation : mutationRules) {
-                initializeTargets(targetElement);
-                for (Map.Entry<String, Integer> entry : targetElements.entrySet()) {
-                    Document cloneDocument = document.clone();
-                    Element targetElementClone = cloneDocument.getAllElements().get(entry.getValue());
+        for (MutationRule mutation : mutationRules) {
+            initializeTargets(targetElement);
+            for (Map.Entry<String, Integer> entry : targetElements.entrySet()) {
+                Document cloneDocument = document.clone();
+                Element targetElementClone = cloneDocument.getAllElements().get(entry.getValue());
 
-                    String htmlBefore = cloneDocument.html();
-                    MutationResult mutationResult = mutation.ApplyMutation(targetElementClone);
-                    String htmlAfter = cloneDocument.html();
+                String htmlBefore = cloneDocument.html();
+                MutationResult mutationResult = mutation.ApplyMutation(targetElementClone);
+                String htmlAfter = cloneDocument.html();
 
-                    System.out.println("============ Mutation Applied: " + mutation.mutationId() + " ============");
-                    System.out.println("Target: " + entry.getKey());
-                    System.out.println("Result: " + (mutationResult.mutationApplied ? "Success" : "Failure"));
-                    if (mutationResult.mutationApplied && !htmlBefore.equals(htmlAfter)){
-                        String fileName = String.format("%s_%s_%s.html",
-                                mutation.mutationId().name(),
-                                entry.getKey(),
-                                mutation.mutationName());
-                        FileBrowser.saveMutationToFile(cloneDocument, fileName, jsonConfig.outputDirectory);
-                    } else {
-                        System.out.println("Error: " + mutationResult.failureMessage);
-                    }
-                    System.out.println("=============================================\n");
+                System.out.println("============ Mutation Applied: " + mutation.mutationId() + " ============");
+                System.out.println("Target: " + entry.getKey());
+                System.out.println("Result: " + (mutationResult.mutationApplied ? "Success" : "Failure"));
+                if (mutationResult.mutationApplied && !htmlBefore.equals(htmlAfter)){
+                    db.saveMutation(entry.getKey(), mutation.mutationName(), mutation.mutationId().name(), mutationResult.mutatedDocuments);
+                } else {
+                    System.out.println("Error: " + mutationResult.failureMessage);
                 }
+                System.out.println("=============================================\n");
             }
-        } catch(Exception e) {
-
-        } finally {
-
         }
 
     }
 
     private static void initializeRules(Config config){
-//        mutationRules.add(new AttributeValueModificationRule());
-//        mutationRules.add(new AttributeRemovalRule());
-//        mutationRules.add(new AttributeIdentifierModificationRule());
-//        mutationRules.add(new TextContentModificationRule());
-//        mutationRules.add(new TextContentRemovalRule());
-//        mutationRules.add(new TagMovementWithinContainerRule());
-//        mutationRules.add(new TagMovementToAnyHtmlTreePointRule());
-          mutationRules.add(new TagMovementBetweenTemplatesRule(Paths.get(config.repositoryRootPath)));
-//        mutationRules.add(new TagRemovalRule());
-//        mutationRules.add(new TagTypeModificationRule());
-//        mutationRules.add(new TagInsertionRule());
+        mutationRules.add(new AttributeValueModificationRule());
+        mutationRules.add(new AttributeRemovalRule());
+        mutationRules.add(new AttributeIdentifierModificationRule());
+        mutationRules.add(new TextContentModificationRule());
+        mutationRules.add(new TextContentRemovalRule());
+        mutationRules.add(new TagMovementWithinContainerRule());
+//        mutationRules.add(new TagMovementToAnyHtmlTreePointRule()); // Does not work as intended
+        mutationRules.add(new TagMovementBetweenTemplatesRule(Paths.get(config.repositoryRootPath)));
+        mutationRules.add(new TagRemovalRule());
+        mutationRules.add(new TagTypeModificationRule());
+        mutationRules.add(new TagInsertionRule());
     }
 
     private static void initializeTargets(Element element) {

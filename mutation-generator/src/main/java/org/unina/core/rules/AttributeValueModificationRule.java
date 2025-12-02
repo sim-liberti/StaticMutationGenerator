@@ -1,6 +1,7 @@
 package org.unina.core.rules;
 
 import org.jsoup.nodes.Attribute;
+import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.unina.core.MutationResult;
 import org.unina.data.MutationRuleId;
@@ -17,20 +18,23 @@ public class AttributeValueModificationRule implements MutationRule {
         List<Attribute> attributes = new ArrayList<>(targetElement.attributes().asList());
 
         if (attributes.isEmpty())
-            return new MutationResult(false, "Target element has no attributes");
+            return new MutationResult(false, "Target element has no attributes", null);
 
         attributes.removeIf(a -> a.getKey().equalsIgnoreCase("id") ||
                 a.getKey().equalsIgnoreCase("class") ||
                 a.getKey().startsWith("x-test-"));
 
         if (attributes.isEmpty())
-            return new  MutationResult(false, "Target element has no attributes");
+            return new  MutationResult(false, "Target element has no attributes", null);
 
         Attribute randomAttribute = RandomSelector.GetInstance().GetRandomItemFromCollection(attributes);
 
         targetElement.attr(randomAttribute.getKey(),  randomAttribute.getValue() + "_mutated");
 
-        return new MutationResult(true, "");
+        List<Document> mutatedDocuments = new ArrayList<>();
+        mutatedDocuments.add(targetElement.ownerDocument());
+
+        return new MutationResult(true, "", mutatedDocuments);
     }
 
     @Override

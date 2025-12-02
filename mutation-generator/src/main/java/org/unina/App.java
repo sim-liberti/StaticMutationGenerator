@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class App {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Path jsonPath = Paths.get("generator-config.json");
         if (args.length > 0 && args[0].startsWith("--config="))
             jsonPath = Paths.get(args[0].substring("--config=".length()));
@@ -22,10 +22,16 @@ public class App {
         Config jsonConfig = Config.loadConfiguration(jsonPath);
         if (jsonConfig == null) throw new RuntimeException("Error initializing configuration object");
 
-        FileUtils.copyDirectory(
-            new File(jsonConfig.repositoryRootPath),
-            new File("tmp/mutation-generator-output"));
-        jsonConfig.outputDirectory = "tmp/mutation-generator-output";
+        Path dbPath = Paths.get("mutations.db");
+        try {
+            if (!dbPath.toFile().exists()) {
+                File templateDb = new File("mutations.db");
+                if (!templateDb.createNewFile()) throw new IOException("Failed to create the database file.");
+            }
+        } catch (IOException e) {
+            System.err.println("Error creating the database file: " + e.getMessage());
+            return;
+        }
 
         System.out.println("Configuration loaded. Running the mutation engine.\n");
 
