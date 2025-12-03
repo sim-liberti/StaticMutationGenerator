@@ -1,69 +1,71 @@
 package org.unina.core.rules;
 
+import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import org.unina.core.MutationResult;
+import org.unina.data.Component;
+import org.unina.data.ElementExtension;
 import org.unina.data.MutationRuleId;
 import org.unina.data.MutationTagType;
 import org.unina.util.RandomSelector;
 import org.unina.core.MutationRule;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.*;
 
 public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
     @Override
     public MutationResult ApplyMutation(Element targetElement) {
-        Document document = targetElement.ownerDocument();
-        assert document != null;
-
-        Element parent = targetElement.parent();
-
-        if (parent == null || parent.childrenSize() <= 1) {
-            return new  MutationResult(false, "The parent is null or empty", null);
+        Set<Component> candidateComponents = new HashSet<>();
+        candidateComponents.addAll(findChildrenRecursive(ElementExtension.getComponent(targetElement)));
+        candidateComponents.addAll(findParentsRecursive(ElementExtension.getComponent(targetElement)));
+        if (candidateComponents.isEmpty()) {
+            return new MutationResult(false, "No candidate components found", null);
         }
 
-        String targetElementName = targetElement.tagName();
+        Component randomComponent = RandomSelector.getInstance().GetRandomItemFromCollection(candidateComponents);
 
-        if (targetElementName.equalsIgnoreCase("html") ||
-                targetElementName.equalsIgnoreCase("body") ||
-                targetElementName.equalsIgnoreCase("head")){
-            return new MutationResult(false, "Target element with " + targetElementName + " tag cannot be mutated", null);
+        final Document destinationDocument;
+        try{
+            destinationDocument = Jsoup.parse(randomComponent.path.toFile(), "UTF-8");
+        } catch (IOException e){
+            return new MutationResult(false, "Error parsing the destination document: " + e.getMessage(), null);
         }
 
-        List<Element> allElements = new ArrayList<>(document.getAllElements());
-        allElements.removeIf(candidate -> !isValidTarget(candidate, targetElement));
-        if (allElements.isEmpty()) {
-            return new MutationResult(false, "No valid candidate elements have been found", null);
+        List<Document> mutatedDocuments = ElementExtension.moveToNewComponent(targetElement, destinationDocument);
+        if (mutatedDocuments.isEmpty()) {
+            return new MutationResult(false, "Destination document has no valid candidate elements", null);
         }
-
-        Element randomCandidate = RandomSelector.GetInstance().GetRandomItemFromCollection(allElements);
-
-        targetElement.remove();
-
-        int randomInsertionIndex = 0;
-        List<Element> randomCandidateChildren = randomCandidate.children();
-        if (!randomCandidateChildren.isEmpty()) {
-            randomInsertionIndex = RandomSelector.GetInstance().GetRandomItemFromCollection(randomCandidateChildren).elementSiblingIndex();
-        }
-
-        randomCandidate.insertChildren(randomInsertionIndex, targetElement);
-
-        List<Document> mutatedDocuments = new ArrayList<>();
-        mutatedDocuments.add(targetElement.ownerDocument());
 
         return new MutationResult(true, "", mutatedDocuments);
     }
 
-    private boolean isValidTarget(Element candidate, Element target) {
-        String name = candidate.tagName().toLowerCase();
 
-        if (name.equals("html") || name.equals("head")) return false;
-        if (candidate == target) return false;
-        if (candidate == target.parent()) return false;
-        if (candidate.parents().contains(target)) return false;
+    private Set<Component> findChildrenRecursive(Component component){
+        Set<Component> result = new HashSet<>();
 
-        return true;
+        if (component == null) return result;
+        Set<Component> children = component.getChildren();
+        if (children.isEmpty()) return result;
+        for (Component child : children) {
+            result.add(child);
+            result.addAll(findChildrenRecursive(child));
+        }
+        return result;
+    }
+
+    private Set<Component> findParentsRecursive(Component component){
+        Set<Component> result = new HashSet<>();
+
+        if (component == null) return result;
+        Component randomParent = RandomSelector.getInstance().GetRandomItemFromCollection(component.getParents());
+        if (randomParent == null) return result;
+        result.add(randomParent);
+        result.addAll(findParentsRecursive(randomParent));
+        return result;
     }
 
     @Override

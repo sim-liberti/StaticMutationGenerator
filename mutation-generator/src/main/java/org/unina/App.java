@@ -1,8 +1,9 @@
 package org.unina;
 
-import org.apache.commons.io.FileUtils;
 import org.unina.core.MutationEngine;
 import org.unina.data.Config;
+import org.unina.util.ComponentIndexer;
+import org.unina.util.RandomSelector;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +12,7 @@ import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
+        // Load configuration
         Path jsonPath = Paths.get("generator-config.json");
         if (args.length > 0 && args[0].startsWith("--config="))
             jsonPath = Paths.get(args[0].substring("--config=".length()));
@@ -22,6 +24,7 @@ public class App {
         Config jsonConfig = Config.loadConfiguration(jsonPath);
         if (jsonConfig == null) throw new RuntimeException("Error initializing configuration object");
 
+        // Ensure the database file exists
         Path dbPath = Paths.get("mutations.db");
         try {
             if (!dbPath.toFile().exists()) {
@@ -30,6 +33,20 @@ public class App {
             }
         } catch (IOException e) {
             System.err.println("Error creating the database file: " + e.getMessage());
+            return;
+        }
+
+        // Initialize utilities
+        if (jsonConfig.seed.isEmpty())
+            RandomSelector.initialize();
+        else
+            RandomSelector.initialize(Integer.parseInt(jsonConfig.seed));
+
+        ComponentIndexer.initialize();
+        try {
+            ComponentIndexer.getInstance().buildSelectorMap(new File(jsonConfig.repositoryRootPath).toPath());
+        } catch (IOException e) {
+            System.err.println("Error initializing Component Indexer: " + e.getMessage());
             return;
         }
 

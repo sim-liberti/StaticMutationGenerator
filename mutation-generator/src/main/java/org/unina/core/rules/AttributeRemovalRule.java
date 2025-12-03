@@ -27,7 +27,7 @@ public class AttributeRemovalRule implements MutationRule {
         if (attributes.isEmpty())
             return new MutationResult(false, "Target element has no valid candidate attributes", null);
 
-        Attribute randomAttribute = RandomSelector.GetInstance().GetRandomItemFromCollection(attributes);
+        Attribute randomAttribute = RandomSelector.getInstance().GetRandomItemFromCollection(attributes);
 
         targetElement.attributes().remove(randomAttribute.getKey());
 

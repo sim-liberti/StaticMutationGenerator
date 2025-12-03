@@ -25,11 +25,6 @@ public class MutationEngine {
 
         initializeRules(jsonConfig);
 
-        if (jsonConfig.seed.isEmpty())
-            RandomSelector.initialize();
-        else
-            RandomSelector.initialize(Integer.parseInt(jsonConfig.seed));
-
         final Document document = Jsoup.parse(Paths.get(jsonConfig.inputFile).toFile(), "UTF-8");
         final Element targetElement = findElement(jsonConfig, document);
 
@@ -64,8 +59,8 @@ public class MutationEngine {
         mutationRules.add(new TextContentModificationRule());
         mutationRules.add(new TextContentRemovalRule());
         mutationRules.add(new TagMovementWithinContainerRule());
-//        mutationRules.add(new TagMovementToAnyHtmlTreePointRule()); // Does not work as intended
-        mutationRules.add(new TagMovementBetweenTemplatesRule(Paths.get(config.repositoryRootPath)));
+        mutationRules.add(new TagMovementToAnyHtmlTreePointRule()); // Does not work as intended
+        mutationRules.add(new TagMovementBetweenTemplatesRule());
         mutationRules.add(new TagRemovalRule());
         mutationRules.add(new TagTypeModificationRule());
         mutationRules.add(new TagInsertionRule());

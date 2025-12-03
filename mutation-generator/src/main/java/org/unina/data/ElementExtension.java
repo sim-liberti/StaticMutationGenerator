@@ -1,6 +1,17 @@
 package org.unina.data;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import org.unina.core.MutationResult;
+import org.unina.util.ComponentIndexer;
+import org.unina.util.RandomSelector;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 public class ElementExtension {
@@ -29,5 +40,49 @@ public class ElementExtension {
             temp = temp.parent();
         }
         return temp;
+    }
+
+    public static Component getComponent(Element element){
+        for (Component component : ComponentIndexer.getInstance().getAllComponents()) {
+            if (component.htmlContent == null || component.htmlContent.isEmpty()) continue;
+
+            Document document = Jsoup.parseBodyFragment(component.htmlContent);
+            Elements allElements = document.select(element.html());
+            if (!allElements.isEmpty()) return component;
+        }
+        return null;
+    }
+
+    public static List<Document> moveToNewComponent(Element element, Document destinationDocument) {
+        Elements allElements = destinationDocument.getAllElements();
+        allElements.clone().removeIf(candidate -> !isValidTarget(candidate, element));
+        if (allElements.isEmpty()) {
+            return Collections.emptyList();
+        }
+
+        Element randomCandidate = RandomSelector.getInstance().GetRandomItemFromCollection(allElements);
+        Elements randomCandidateChildren = randomCandidate.children();
+        int randomInsertionIndex = 0;
+        if (!randomCandidateChildren.isEmpty()) {
+            randomInsertionIndex = RandomSelector.getInstance().GetRandomItemFromCollection(randomCandidateChildren).elementSiblingIndex();
+        }
+
+        element.remove();
+        randomCandidate.insertChildren(randomInsertionIndex, element);
+
+        List<Document> mutatedDocuments = new ArrayList<>();
+        mutatedDocuments.add(element.ownerDocument());
+        mutatedDocuments.add(randomCandidate.ownerDocument());
+
+        return mutatedDocuments;
+    }
+
+    private static boolean isValidTarget(Element candidate, Element target) {
+        String name = candidate.tagName().toLowerCase();
+
+        return !name.equals("html") && !name.equals("head")
+                && candidate != target
+                && candidate != target.parent()
+                && !candidate.parents().contains(target);
     }
 }

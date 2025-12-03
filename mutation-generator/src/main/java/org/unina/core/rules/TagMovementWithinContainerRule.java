@@ -28,7 +28,7 @@ public class TagMovementWithinContainerRule  implements MutationRule {
             return new MutationResult(false, "Target element with " + targetElementName + " tag cannot be mutated", null);
         }
 
-        int randomIndex = RandomSelector.GetInstance().GetRandomItemFromCollection(targetElement.siblingElements()).elementSiblingIndex();
+        int randomIndex = RandomSelector.getInstance().GetRandomItemFromCollection(targetElement.siblingElements()).elementSiblingIndex();
 
         targetElement.remove();
         parent.insertChildren(randomIndex, targetElement);

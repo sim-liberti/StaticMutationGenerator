@@ -28,7 +28,7 @@ public class TextContentRemovalRule implements MutationRule {
             return new MutationResult(false, "Target element has no child text nodes", null);
         }
 
-        Node randomNode = RandomSelector.GetInstance().GetRandomItemFromCollection(children);
+        Node randomNode = RandomSelector.getInstance().GetRandomItemFromCollection(children);
         String existingText = ((TextNode) randomNode).getWholeText();
 
         if (existingText.trim().isEmpty()) {

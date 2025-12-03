@@ -28,7 +28,7 @@ public class RandomSelector {
         }
     }
 
-    public static RandomSelector GetInstance() {
+    public static RandomSelector getInstance() {
         if (instance == null) {
             throw new IllegalStateException("RandomSelector has not been initialized");
         }

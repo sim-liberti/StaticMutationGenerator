@@ -27,7 +27,7 @@ public class AttributeValueModificationRule implements MutationRule {
         if (attributes.isEmpty())
             return new  MutationResult(false, "Target element has no attributes", null);
 
-        Attribute randomAttribute = RandomSelector.GetInstance().GetRandomItemFromCollection(attributes);
+        Attribute randomAttribute = RandomSelector.getInstance().GetRandomItemFromCollection(attributes);
 
         targetElement.attr(randomAttribute.getKey(),  randomAttribute.getValue() + "_mutated");
 
