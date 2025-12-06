@@ -3,7 +3,7 @@ package org.unina.core.rules;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
+import org.jsoup.parser.Parser;
 import org.unina.core.MutationResult;
 import org.unina.data.Component;
 import org.unina.data.ElementExtension;
@@ -13,15 +13,26 @@ import org.unina.util.RandomSelector;
 import org.unina.core.MutationRule;
 
 import java.io.IOException;
-import java.nio.file.Path;
 import java.util.*;
 
 public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
     @Override
     public MutationResult ApplyMutation(Element targetElement) {
+        Component targetComponent;
+        try {
+            targetComponent = ElementExtension.getComponent(targetElement);
+            if (targetComponent == null) {
+                return new MutationResult(false, "Target element does not belong to any component", null);
+            }
+        } catch(IOException e){
+            return new MutationResult(false, "Error retrieving component information: " + e.getMessage(), null);
+        }
+
         Set<Component> candidateComponents = new HashSet<>();
-        candidateComponents.addAll(findChildrenRecursive(ElementExtension.getComponent(targetElement)));
-        candidateComponents.addAll(findParentsRecursive(ElementExtension.getComponent(targetElement)));
+        Set<Component> children = findChildrenRecursive(targetComponent);
+        Set<Component> parents = findParentsRecursive(targetComponent);
+        candidateComponents.addAll(children);
+        candidateComponents.addAll(parents);
         if (candidateComponents.isEmpty()) {
             return new MutationResult(false, "No candidate components found", null);
         }
@@ -29,11 +40,7 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
         Component randomComponent = RandomSelector.getInstance().GetRandomItemFromCollection(candidateComponents);
 
         final Document destinationDocument;
-        try{
-            destinationDocument = Jsoup.parse(randomComponent.path.toFile(), "UTF-8");
-        } catch (IOException e){
-            return new MutationResult(false, "Error parsing the destination document: " + e.getMessage(), null);
-        }
+        destinationDocument = Jsoup.parse(randomComponent.htmlContent, Parser.xmlParser());
 
         List<Document> mutatedDocuments = ElementExtension.moveToNewComponent(targetElement, destinationDocument);
         if (mutatedDocuments.isEmpty()) {
@@ -61,10 +68,12 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
         Set<Component> result = new HashSet<>();
 
         if (component == null) return result;
-        Component randomParent = RandomSelector.getInstance().GetRandomItemFromCollection(component.getParents());
-        if (randomParent == null) return result;
-        result.add(randomParent);
-        result.addAll(findParentsRecursive(randomParent));
+        Set<Component> parents = component.getChildren();
+        if (parents.isEmpty()) return result;
+        for (Component parent : parents) {
+            result.add(parent);
+            result.addAll(findParentsRecursive(parent));
+        }
         return result;
     }
 

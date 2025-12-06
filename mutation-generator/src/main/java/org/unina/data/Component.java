@@ -3,6 +3,7 @@ package org.unina.data;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.Parser;
 import org.jsoup.select.Elements;
 import org.unina.util.ComponentIndexer;
 
@@ -25,7 +26,7 @@ public class Component {
     public Set<Component> getChildren(){
         Set<Component> children = new HashSet<>();
 
-        Document doc = Jsoup.parseBodyFragment(htmlContent);
+        Document doc = Jsoup.parse(htmlContent, Parser.xmlParser());
         Elements allElements = doc.getAllElements();
 
         for (Element element : allElements) {
@@ -52,7 +53,7 @@ public class Component {
             if (candidateParent.htmlContent == null || !candidateParent.htmlContent.contains(this.selector)) {
                 continue;
             }
-            Document doc = Jsoup.parseBodyFragment(candidateParent.htmlContent);
+            Document doc = Jsoup.parse(candidateParent.htmlContent, Parser.xmlParser());
             if (!doc.select(this.selector).isEmpty()) {
                 parents.add(candidateParent);
             }

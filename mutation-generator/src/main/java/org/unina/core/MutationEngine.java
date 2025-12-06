@@ -3,6 +3,7 @@ package org.unina.core;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.Parser;
 import org.jsoup.select.Elements;
 import org.unina.core.matchers.TagMatcherFactory;
 import org.unina.core.rules.*;
@@ -12,6 +13,7 @@ import org.unina.data.MutationDatabase;
 import org.unina.util.RandomSelector;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
@@ -24,8 +26,8 @@ public class MutationEngine {
         MutationDatabase db = new MutationDatabase();
 
         initializeRules(jsonConfig);
-
-        final Document document = Jsoup.parse(Paths.get(jsonConfig.inputFile).toFile(), "UTF-8");
+        final String docBaseUri = Paths.get(jsonConfig.inputFile).toAbsolutePath().toString();
+        final Document document = Jsoup.parse(Files.readString(Paths.get(jsonConfig.inputFile)), docBaseUri, Parser.xmlParser());
         final Element targetElement = findElement(jsonConfig, document);
 
         for (MutationRule mutation : mutationRules) {
@@ -59,7 +61,7 @@ public class MutationEngine {
         mutationRules.add(new TextContentModificationRule());
         mutationRules.add(new TextContentRemovalRule());
         mutationRules.add(new TagMovementWithinContainerRule());
-        mutationRules.add(new TagMovementToAnyHtmlTreePointRule()); // Does not work as intended
+        mutationRules.add(new TagMovementToAnyHtmlTreePointRule());
         mutationRules.add(new TagMovementBetweenTemplatesRule());
         mutationRules.add(new TagRemovalRule());
         mutationRules.add(new TagTypeModificationRule());

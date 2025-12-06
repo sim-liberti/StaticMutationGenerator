@@ -1,17 +1,19 @@
 package org.unina.data;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import org.unina.core.MutationResult;
 import org.unina.util.ComponentIndexer;
 import org.unina.util.RandomSelector;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Set;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ElementExtension {
@@ -42,15 +44,20 @@ public class ElementExtension {
         return temp;
     }
 
-    public static Component getComponent(Element element){
-        for (Component component : ComponentIndexer.getInstance().getAllComponents()) {
-            if (component.htmlContent == null || component.htmlContent.isEmpty()) continue;
+    public static Component getComponent(Element element) throws IOException {
+        Pattern pattern = Pattern.compile("selector:\\s*['\"]([^'\"]+)['\"]");
 
-            Document document = Jsoup.parseBodyFragment(component.htmlContent);
-            Elements allElements = document.select(element.html());
-            if (!allElements.isEmpty()) return component;
-        }
-        return null;
+        Document doc = element.ownerDocument();
+        if (doc == null) return null;
+        Path docPath = Paths.get(doc.baseUri());
+        String tsFileName = docPath.getFileName().toString().replace(".component.html", ".component.ts");
+        Path tsFile = docPath.resolveSibling(tsFileName);
+
+        Matcher matcher = pattern.matcher(Files.readString(tsFile));
+        if (!matcher.find()) return null;
+
+        String selector = matcher.group(1);
+        return ComponentIndexer.getInstance().getComponentBySelector(selector);
     }
 
     public static List<Document> moveToNewComponent(Element element, Document destinationDocument) {

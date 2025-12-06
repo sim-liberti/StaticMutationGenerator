@@ -3,7 +3,7 @@ package org.unina.core.rules;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
+import org.jsoup.parser.Parser;
 import org.unina.core.MutationResult;
 import org.unina.data.Component;
 import org.unina.data.ElementExtension;
@@ -13,14 +13,7 @@ import org.unina.util.ComponentIndexer;
 import org.unina.util.RandomSelector;
 import org.unina.core.MutationRule;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Stream;
 
 public class TagMovementBetweenTemplatesRule implements MutationRule {
 
@@ -31,11 +24,7 @@ public class TagMovementBetweenTemplatesRule implements MutationRule {
         );
 
         final Document destinationDocument;
-        try{
-            destinationDocument = Jsoup.parse(randomComponent.path.toFile(), "UTF-8");
-        } catch (IOException e){
-            return new MutationResult(false, "Error parsing the destination document: " + e.getMessage(), null);
-        }
+        destinationDocument = Jsoup.parse(randomComponent.htmlContent, Parser.xmlParser());
 
         List<Document> mutatedDocuments = ElementExtension.moveToNewComponent(targetElement, destinationDocument);
         if (mutatedDocuments.isEmpty()) {
