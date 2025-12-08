@@ -15,7 +15,9 @@
         <module>mutation-generator</module>
         <module>hook-injector</module>
         <module>hook-injector</module>
-<!--        <module>selenium-test-runner</module>-->
+        <module>custom-locators</module>
+        <module>mutation-tester</module>
+        <!--        <module>selenium-test-runner</module>-->
     </modules>
 
     <properties>

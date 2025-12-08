@@ -5,13 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom-locators/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/hooklocators/hook-based.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/XPath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom-locators/src/test/java/org/unina/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mutation-tester/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mutation-tester/src/test/java/org/unina/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/Injector.java" beforeDir="false" afterPath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/Injector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/MutationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/MutationEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagMovementBetweenTemplatesRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagMovementBetweenTemplatesRule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/data/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/data/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/data/ElementExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/data/ElementExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +38,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
@@ -35,6 +50,8 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -62,47 +79,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App.executor&quot;: &quot;Debug&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JUnit.MutationRulesTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator/src/main/java/org/unina&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Debug",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.MutationRulesTest.executor": "Run",
+    "JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor": "Run",
+    "JUnit.UntitledTestCase.testUntitledTestCase.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator/src/main/java/org/unina",
+    "last_opened_file_path": "/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/hooklocators" />
       <recent name="$PROJECT_DIR$/mutation-generator" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.UntitledTestCase.testUntitledTestCase">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
         <env name="--enable-native-access" value="ALL-UNNAMED" />
@@ -150,13 +169,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UntitledTestCase.testUntitledTestCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mutation-tester" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.unina.CustomTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.unina.CustomTests" />
+      <option name="MAIN_CLASS_NAME" value="org.unina.CustomTests.UntitledTestCase" />
+      <option name="METHOD_NAME" value="testUntitledTestCase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.UntitledTestCase.testUntitledTestCase" />
       <item itemvalue="JUnit.MutationRulesTest" />
       <item itemvalue="JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UntitledTestCase.testUntitledTestCase" />
         <item itemvalue="Application.App" />
         <item itemvalue="JUnit.MutationRulesTest" />
         <item itemvalue="JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue" />
@@ -195,7 +232,11 @@
       <workItem from="1764670205117" duration="3470000" />
       <workItem from="1764775105093" duration="11351000" />
       <workItem from="1764952272879" duration="233000" />
-      <workItem from="1765013595378" duration="5944000" />
+      <workItem from="1765013595378" duration="6289000" />
+      <workItem from="1765035542871" duration="1466000" />
+      <workItem from="1765107613373" duration="6861000" />
+      <workItem from="1765122140232" duration="1023000" />
+      <workItem from="1765200372136" duration="8785000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -293,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764786437119</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="[feat] re-implemented TagMovementToAnyHtmlTreePointRule&#10;[fix] fixed jsoup document parsing with xmlParser">
+      <option name="closed" value="true" />
+      <created>1765024777746</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1765024777746</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,25 +372,16 @@
     <MESSAGE value="feat: implementato spostamento target tra template e inizio modifiche per la gestione dei test" />
     <MESSAGE value="[feat] implemented sqlite database for mutations" />
     <MESSAGE value="[feat] Added indexing of components at the start of the program and modified ComponentMetadata.java into Component.java&#10;[misc] Refactored some of the rules" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] Added indexing of components at the start of the program and modified ComponentMetadata.java into Component.java&#10;[misc] Refactored some of the rules" />
+    <MESSAGE value="[feat] re-implemented TagMovementToAnyHtmlTreePointRule&#10;[fix] fixed jsoup document parsing with xmlParser" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] re-implemented TagMovementToAnyHtmlTreePointRule&#10;[fix] fixed jsoup document parsing with xmlParser" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/util/FileBrowser.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java</url>
           <line>36</line>
           <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,6 +4,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.Parser;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,7 +22,7 @@ public class Injector {
         int max_hook_id = 0;
 
         for (Path file : sourceFiles) {
-            Document document = Jsoup.parse(file);
+            Document document = Jsoup.parse(file, "UTF-8", "", Parser.xmlParser());
             for (Element element : document.getAllElements()) {
                 Attribute hook = getHook(element);
                 if (hook == null) continue;
@@ -30,7 +31,7 @@ public class Injector {
             }
         }
         for (Path file : sourceFiles) {
-            Document document = Jsoup.parse(file);
+            Document document = Jsoup.parse(file, "UTF-8", "", Parser.xmlParser());
             for (Element element : document.getAllElements()) {
                 Attribute hook = getHook(element);
                 if (hook != null) continue;

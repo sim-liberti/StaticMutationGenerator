@@ -10,13 +10,17 @@ import org.unina.core.MutationRule;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TagRemovalRule  implements MutationRule {
+public class TagRemovalRule implements MutationRule {
     @Override
     public MutationResult ApplyMutation(Element targetElement) {
         if (targetElement.parent() == null) {
             return new  MutationResult(false, "The parent is null", null);
         }
 
+        Document targetDocument = targetElement.ownerDocument();
+        if (targetDocument == null) {
+            return new MutationResult(false, "The owner document is null", null);
+        }
         String targetElementName = targetElement.tagName();
 
         if (targetElementName.equalsIgnoreCase("html") ||
@@ -28,7 +32,7 @@ public class TagRemovalRule  implements MutationRule {
         targetElement.unwrap();
 
         List<Document> mutatedDocuments = new ArrayList<>();
-        mutatedDocuments.add(targetElement.ownerDocument());
+        mutatedDocuments.add(targetDocument);
 
         return new MutationResult(true, "", mutatedDocuments);
     }

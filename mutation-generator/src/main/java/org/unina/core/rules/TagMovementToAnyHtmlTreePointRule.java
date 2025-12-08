@@ -68,7 +68,7 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
         Set<Component> result = new HashSet<>();
 
         if (component == null) return result;
-        Set<Component> parents = component.getChildren();
+        Set<Component> parents = component.getParents();
         if (parents.isEmpty()) return result;
         for (Component parent : parents) {
             result.add(parent);

@@ -10,7 +10,6 @@ import org.unina.core.rules.*;
 import org.unina.data.Config;
 import org.unina.data.ElementExtension;
 import org.unina.data.MutationDatabase;
-import org.unina.util.RandomSelector;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -25,7 +24,7 @@ public class MutationEngine {
     public static void Run(Config jsonConfig) throws IOException {
         MutationDatabase db = new MutationDatabase();
 
-        initializeRules(jsonConfig);
+        initializeRules();
         final String docBaseUri = Paths.get(jsonConfig.inputFile).toAbsolutePath().toString();
         final Document document = Jsoup.parse(Files.readString(Paths.get(jsonConfig.inputFile)), docBaseUri, Parser.xmlParser());
         final Element targetElement = findElement(jsonConfig, document);
@@ -54,7 +53,7 @@ public class MutationEngine {
 
     }
 
-    private static void initializeRules(Config config){
+    private static void initializeRules(){
         mutationRules.add(new AttributeValueModificationRule());
         mutationRules.add(new AttributeRemovalRule());
         mutationRules.add(new AttributeIdentifierModificationRule());
