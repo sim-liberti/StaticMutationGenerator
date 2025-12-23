@@ -5,26 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/custom-locators/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/hooklocators/hook-based.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/XPath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-locators/src/test/java/org/unina/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TestRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/test/java/org/unina/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mutation-generator/common/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mutation-generator/llm-generator/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mutation-generator/static-generator/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8598b012-1b1e-4ffb-880b-27208bb83878.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8598b012-1b1e-4ffb-880b-27208bb83878.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/Injector.java" beforeDir="false" afterPath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/Injector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/MutationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/MutationEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/MutationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/MutationEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/MutationResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/core/MutationResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/MutationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/core/MutationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/TagMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/core/TagMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/matchers/AttributeMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/matchers/AttributeMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/matchers/CssClassMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/matchers/CssClassMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/matchers/IdentifierMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/matchers/IdentifierMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/matchers/TagMatcherFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/matchers/TagMatcherFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/matchers/TextContentMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/matchers/TextContentMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/AttributeIdentifierModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/AttributeIdentifierModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/AttributeRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/AttributeRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/AttributeValueModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagInsertionRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TagInsertionRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagMovementBetweenTemplatesRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TagMovementBetweenTemplatesRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagMovementWithinContainerRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TagMovementWithinContainerRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TagRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TagTypeModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TagTypeModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TextContentModificationRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TextContentModificationRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/TextContentRemovalRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TextContentRemovalRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/data/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/data/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/data/ElementExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/ElementExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/data/MutationDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/data/MutationRuleId.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationRuleId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/data/MutationTagType.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationTagType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/util/ComponentIndexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/util/ComponentIndexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/util/FileBrowser.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/util/FileBrowser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/util/RandomSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/util/RandomSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/src/test/java/org/unina/MutationRulesTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,6 +112,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
@@ -98,13 +120,16 @@
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator/src/main/java/org/unina",
-    "last_opened_file_path": "/mnt/shared250/Projects/Tirocinio/StaticMutationGenerator",
+    "last_opened_file_path": "/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-generator/common/src/main/java/org/unina",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   },
@@ -115,7 +140,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java" />
       <recent name="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/hooklocators" />
       <recent name="$PROJECT_DIR$/mutation-generator" />
       <recent name="$PROJECT_DIR$" />
@@ -185,6 +214,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="mutation-tester" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="mutation-tester" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.App" />
       <item itemvalue="JUnit.UntitledTestCase.testUntitledTestCase" />
@@ -203,8 +243,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
-        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
       </set>
     </attachedChunks>
   </component>
@@ -237,6 +277,7 @@
       <workItem from="1765107613373" duration="6861000" />
       <workItem from="1765122140232" duration="1023000" />
       <workItem from="1765200372136" duration="8785000" />
+      <workItem from="1766517266291" duration="3307000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -379,7 +420,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mutation-generator/src/main/java/org/unina/core/rules/AttributeValueModificationRule.java</url>
+          <url>file://$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/AttributeValueModificationRule.java</url>
           <line>36</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>

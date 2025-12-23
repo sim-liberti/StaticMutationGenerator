@@ -9,7 +9,12 @@
   </parent>
 
   <artifactId>mutation-generator</artifactId>
+  <packaging>pom</packaging>
   <name>mutation-generator</name>
+  <modules>
+    <module>static-generator</module>
+    <module>common</module>
+  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
