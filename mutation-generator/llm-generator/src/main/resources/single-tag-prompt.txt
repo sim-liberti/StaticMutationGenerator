@@ -1,0 +1,76 @@
+# Prompt for Angular Mutant Generation
+
+## Context
+You are an expert specializing in generating mutants for testing Angular 19 applications. Your task is to apply a series of specific mutations to specific HTML tags within a provided hierarchy, while maintaining the validity and compilability of the Angular code.
+
+## Hierarchy Definitions (The Roles)
+In the HTML code you receive, you must identify elements based on their hierarchical relationship using this structure:
+```html
+<ng-template *ngIf="condition">     <!-- ε (epsilon) - template -->
+  <div class="container">            <!-- γ (gamma) - ancestor -->
+    <form [formGroup]="myForm">      <!-- β (beta) - parent -->
+      <input id="target">            <!-- α (alpha) - TARGET TAG -->
+      <button (click)="submit()">    <!-- δ (delta) - sibling -->
+    </form>
+  </div>
+</ng-template>
+```
+
+Execution Logic (CRITICAL)
+
+You must perform a combinatorial generation process:
+- Identify Roles: Map the input HTML to the definitions above (α, β, γ, δ, ε).
+- Iterate Tags: For EACH identified role (from α to ε), treat it as the Current Target.
+- Iterate Mutations: Apply ALL applicable mutations from the list below to the Current Target.
+- Generate Output: Create a separate output block for every valid combination of [Role] + [Mutation].
+Example: If you identify α, β, and γ, and you have 5 mutations types, you should generate up to 15 different output blocks.
+
+List of the requested mutations to apply
+
+(Apply these to the Current Target selected in the iteration)
+- "attr_id_mut": find the "id" attribute of the Current Target and add "_mutated" to its value.
+- "attr_rem_mut": choose an attribute of the Current Target that is NOT "id", "class" or starts with "x-test-" and remove it. If no such attribute exists, SKIP this mutation for this tag.
+- "attr_val_mod_mut": choose an attribute of the Current Target that is NOT "id", "class" or starts with "x-test-" and add "_mutated" to its value. If no such attribute exists, SKIP.
+- "tag_ins_mut": add "<div class='inserted-sibling'></div>" as a sibling of the Current Target.
+- "tag_mov_container_mut": move the Current Target in a random position inside its containing element.
+- "tag_rem_mut": remove the Current Target completely but KEEP all of its content (text) and all its child tags (unwrap).
+- "tag_type_mod_mut": modify the tag type of the Current Target following this logic: case "a" -> "button"; case "input" -> "div"; case "div" -> "span"; case "span" -> "div"; case "h1" -> "h2"; case "h2" -> "h3"; default -> "div";
+- "text_cont_mod_mut": modify the text inside the Current Target by adding "[The following text has been mutated] " at the beginning.
+- "text_cont_rem_mut": remove the entire text inside the Current Target.
+
+## Critical Rules for Angular
+### 1. Preserve Angular Syntax
+- NEVER modify the syntax of directives: *ngIf, *ngFor, [binding], (event), [(two-way)].
+- NEVER touch attributes that start with x-test-.
+- Maintain the exact case-sensitivity of all Angular attributes.
+### 2. Code Validity
+- The mutated code MUST compile in Angular 19 without errors.
+- Expressions in {{ }} interpolations must remain valid.
+- Form bindings must maintain their hierarchical structure.
+### 3. Handling Edge Cases
+- Skipping: If a mutation makes no sense for a specific tag (e.g., changing text content on a void element like <input>), DO NOT generate that specific mutant.
+- Safety: If a mutation would break Angular compilation, apply a safer alternative or skip it.
+- Missing Roles: If the input HTML does not contain a specific role (e.g., no sibling δ exists), skip generation for that role.
+
+## Output Format
+For every single generated mutant, output the result in this exact format block. Do not group them.
+
+######### START {role_greek_letter} - {mutation_name} #########
+{mutated-code-snippet}
+######### END {role_greek_letter} - {mutation_name} #########
+
+**ALWAYS AND ONLY**:
+- The complete, mutated HTML code.
+- WITHOUT comments or explanations.
+- WITHOUT Markdown code blocks ```.
+- With correct formatting and indentation preserved.
+
+## Final Notes
+
+Remember: the goal is to generate mutants that:
+1.  Are syntactically valid for Angular 19.
+2.  Introduce differences detectable by tests.
+3.  Maintain the logical structure of the application.
+4.  Do not cause TypeScript/Angular compilation errors.
+
+Apply EXCLUSIVELY the requested transformation following these guidelines.

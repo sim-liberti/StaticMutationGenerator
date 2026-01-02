@@ -3,8 +3,7 @@ package org.unina.data;
 import org.jsoup.nodes.Document;
 
 import java.sql.*;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class MutationDatabase {
     private static final String DB_URL = "jdbc:sqlite:mutations.db";
@@ -15,13 +14,21 @@ public class MutationDatabase {
                 "element TEXT, " +
                 "mutation_type TEXT, " +
                 "mutation_id TEXT, " +
-                "status TEXT DEFAULT 'PENDING', " + // PENDING, RUNNING, KILLED, SURVIVED, ERROR
-                "error_log TEXT)";
+                "status TEXT DEFAULT 'PENDING')"; // PENDING, RUNNING, COMPLETED
+//                "error_log TEXT)";
 
         String filesTableSQL = "CREATE TABLE IF NOT EXISTS mutated_files (" +
                 "uuid TEXT PRIMARY KEY, " +
                 "target_file_path TEXT NOT NULL, " +
                 "mutated_code TEXT NOT NULL, " +
+                "mutation_uuid TEXT NOT NULL, " +
+                "FOREIGN KEY(mutation_uuid) REFERENCES mutants(uuid) ON DELETE CASCADE)";
+
+        String testResultTableSQL = "CREATE TABLE IF NOT EXISTS test_results (" +
+                "uuid TEXT PRIMARY KEY, " +
+                "test_name TEXT NOT NULL, " +
+                "status TEXT NOT NULL, " + // PASSED, FAILED, BROKEN
+                "error_log TEXT NOT NULL, " +
                 "mutation_uuid TEXT NOT NULL, " +
                 "FOREIGN KEY(mutation_uuid) REFERENCES mutants(uuid) ON DELETE CASCADE)";
 
@@ -34,6 +41,7 @@ public class MutationDatabase {
                 stmt.execute("PRAGMA foreign_keys = ON;");
                 stmt.execute(masterTableSQL);
                 stmt.execute(filesTableSQL);
+                stmt.execute(testResultTableSQL);
                 connection.commit();
             } catch (SQLException e) {
                 connection.rollback();
@@ -42,6 +50,65 @@ public class MutationDatabase {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void resetMutations() {
+        String sql = "UPDATE mutants SET status = 'PENDING'";
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Set<Mutation> getPendingMutations() {
+        Set<Mutation> mutations = new HashSet<>();
+
+        String sql = "SELECT * FROM mutations";
+
+        try (Connection conn = DriverManager.getConnection(DB_URL);
+             PreparedStatement pstmt = conn.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
+
+            while (rs.next()) {
+                mutations.add(new Mutation(
+                    rs.getString("uuid"),
+                    rs.getString("element"),
+                    rs.getString("mutation_type"),
+                    rs.getString("mutation_id"),
+                    rs.getString("error_log")
+                ));
+            }
+        } catch (SQLException e) {
+            System.out.println("Errore durante il recupero dati: " + e.getMessage());
+        }
+
+        return mutations;
+    }
+
+    public List<MutatedFile> getMutatedFiles(String uuid){
+        List<MutatedFile> mutatedFiles = new ArrayList<>();
+
+        String sql = "SELECT target_file_path, mutated_code FROM mutated_files WHERE mutation_uuid = ?";
+
+        try {
+            Connection conn = DriverManager.getConnection(DB_URL);
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, uuid);
+
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                MutatedFile mut = new MutatedFile();
+                mut.filePath = rs.getString("target_file_path");
+                mut.mutatedCode = rs.getString("mutated_code");
+                mutatedFiles.add(mut);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return mutatedFiles;
     }
 
     public void saveMutation(String element, String mutation_type, String mutation_id, List<Document> mutatedDocuments) {
@@ -81,55 +148,4 @@ public class MutationDatabase {
         }
     }
 
-    public record MutantTask(int id, String filePath, String code) {}
-
-    public synchronized Optional<MutantTask> getNextTask() {
-        String selectSql = "SELECT id, target_file_path, mutated_code FROM mutants WHERE status = 'PENDING' LIMIT 1";
-        String updateSql = "UPDATE mutants SET status = 'RUNNING' WHERE id = ?";
-
-        try (Connection conn = DriverManager.getConnection(DB_URL)) {
-            conn.setAutoCommit(false); // Inizia transazione
-
-            try (Statement stmt = conn.createStatement();
-                 ResultSet rs = stmt.executeQuery(selectSql)) {
-
-                if (rs.next()) {
-                    int id = rs.getInt("id");
-                    String path = rs.getString("target_file_path");
-                    String code = rs.getString("mutated_code");
-
-                    // Segnalo subito come in esecuzione
-                    try (PreparedStatement updateStmt = conn.prepareStatement(updateSql)) {
-                        updateStmt.setInt(1, id);
-                        updateStmt.executeUpdate();
-                    }
-
-                    conn.commit(); // Conferma transazione
-                    return Optional.of(new MutantTask(id, path, code));
-                }
-            } catch (SQLException e) {
-                conn.rollback(); // Se qualcosa va storto, annulla tutto
-                throw e;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return Optional.empty(); // Nessun mutante rimasto
-    }
-
-    public void updateResult(int id, String newStatus, String errorLog) {
-        String sql = "UPDATE mutants SET status = ?, error_log = ? WHERE id = ?";
-
-        try (Connection conn = DriverManager.getConnection(DB_URL);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, newStatus);
-            pstmt.setString(2, errorLog); // Può essere null
-            pstmt.setInt(3, id);
-            pstmt.executeUpdate();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 }
