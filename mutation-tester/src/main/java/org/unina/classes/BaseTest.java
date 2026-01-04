@@ -22,10 +22,10 @@ public abstract class BaseTest {
         this.baseUrl = baseUrl;
         this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        authenticate();
     }
 
-    public void authenticate() throws Exception {
+    public void authenticate() throws RuntimeException {
+        driver.get(baseUrl);
         try {
             // Username
             WebElement element = wait.until(
@@ -33,7 +33,7 @@ public abstract class BaseTest {
             );
             element.click();
             element.clear();
-            element.sendKeys("redacted");
+            element.sendKeys("sim.liberti@gmail.com");
 
             // Continue
             element = wait.until(
@@ -53,11 +53,16 @@ public abstract class BaseTest {
             );
             element.click();
             element.clear();
-            element.sendKeys("redacted");
+            element.sendKeys("Nuovospotify.cucci01");
 
             // Submit
             element = wait.until(
                     ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(., 'Log in')]"))
+            );
+            element.click();
+
+            element = wait.until(
+                    ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(., 'Agree')]"))
             );
             element.click();
         } catch (TimeoutException e) {

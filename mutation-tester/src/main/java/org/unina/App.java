@@ -1,11 +1,6 @@
 package org.unina;
 
-import org.openqa.selenium.TimeoutException;
-import org.reflections.Reflections;
-import org.unina.classes.BaseTest;
 import org.unina.data.Config;
-import org.unina.data.MutatedFile;
-import org.unina.data.Mutation;
 import org.unina.data.MutationDatabase;
 import org.unina.util.ComponentIndexer;
 
@@ -13,7 +8,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Set;
 
 public class App 
 {

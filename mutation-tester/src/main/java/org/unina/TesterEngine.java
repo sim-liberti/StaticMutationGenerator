@@ -12,10 +12,21 @@ import java.util.*;
 
 public class TesterEngine {
 
-    public static void runTests(MutationDatabase db, Config config) throws IOException {
+    public static void runTests(MutationDatabase db, Config config) throws IOException, InterruptedException {
+        NxConsoleWrapper nx = new NxConsoleWrapper(false);
+        nx.start(config.repositoryRootPath);
+
+        System.out.println("Starting TypeScript Application (npm start - nx serve)...");
+        if (!nx.waitForRebuild(120)) {
+            System.err.println("Cannot start Angular application. Exiting...");
+            nx.stop();
+            return;
+        }
+        System.out.println("Angular application started...");
+
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments(
-                "--headless",
+                //"--headless",
                 "--disable-gpu",
                 "--window-size=1920,1200",
                 "--no-sandbox",
@@ -38,6 +49,16 @@ public class TesterEngine {
             batch.batchId = String.format("mutation_%s_%s_%s", mut.mutation_id, mut.mutation_type, mut.element);
             mut.mutatedFiles = db.getMutatedFiles(mut.uuid);
             mut.applyMutationToRepository();
+            System.out.println("Mutation applied.");
+            nx.resetForNextBuild();
+
+            System.out.println("Waiting for the target application to recompile (40s).");
+            if (!nx.waitForRebuild(40)) {
+                System.err.println("Cannot recompile Angular application. Exiting...");
+                driver.quit();
+                nx.stop();
+                return;
+            }
 
             for (Class<? extends BaseTest> classe : classes) {
                 TestExecution execution = new TestExecution(classe.getSimpleName(), mut.element);
@@ -62,9 +83,9 @@ public class TesterEngine {
         }
 
         driver.quit();
+        nx.stop();
         saveTestResult(history);
     }
-
 
     private static void saveTestResult(List<MutationBatch> batches) {
         Map<String, LocatorStats> statsMap = new HashMap<>();
@@ -101,4 +122,6 @@ public class TesterEngine {
             System.out.println(stats.toString());
         }
     }
+
+
 }

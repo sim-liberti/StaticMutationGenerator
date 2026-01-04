@@ -76,8 +76,7 @@ public class MutationDatabase {
                     rs.getString("uuid"),
                     rs.getString("element"),
                     rs.getString("mutation_type"),
-                    rs.getString("mutation_id"),
-                    rs.getString("error_log")
+                    rs.getString("mutation_id")
                 ));
             }
         } catch (SQLException e) {
