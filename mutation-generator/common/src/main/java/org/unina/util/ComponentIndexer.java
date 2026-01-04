@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ComponentIndexer {
@@ -39,6 +40,11 @@ public class ComponentIndexer {
         return componentList;
     }
 
+    public List<Component> getAllHtmlComponents() {
+        return componentList.stream()
+                .filter(comp -> comp.path.endsWith(".html")).collect(Collectors.toList());
+    }
+
     public void buildSelectorMap(Path rootDir) throws IOException {
         try (Stream<Path> stream = Files.walk(rootDir)) {
             stream.filter(Files::isRegularFile)
@@ -64,7 +70,7 @@ public class ComponentIndexer {
                 if (Files.exists(htmlFile)) {
                     htmlContent = Files.readString(htmlFile);
                 }
-                Component component = new Component(file, selector, htmlContent);
+                Component component = new Component(htmlFile, selector, htmlContent);
                 componentList.add(component);
                 selectorToComponentMap.put(selector, component);
             }

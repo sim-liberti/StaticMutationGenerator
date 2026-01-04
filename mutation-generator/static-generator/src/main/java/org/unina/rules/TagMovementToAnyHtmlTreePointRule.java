@@ -18,10 +18,10 @@ import java.util.*;
 public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
     @Override
     public MutationResult ApplyMutation(Element targetElement) {
-        Component targetComponent;
+        Component sourceComponent;
         try {
-            targetComponent = ElementExtension.getComponent(targetElement);
-            if (targetComponent == null) {
+            sourceComponent = ElementExtension.getComponent(targetElement);
+            if (sourceComponent == null) {
                 return new MutationResult(false, "Target element does not belong to any component", null);
             }
         } catch(IOException e){
@@ -29,8 +29,8 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
         }
 
         Set<Component> candidateComponents = new HashSet<>();
-        Set<Component> children = findChildrenRecursive(targetComponent);
-        Set<Component> parents = findParentsRecursive(targetComponent);
+        Set<Component> children = findChildrenRecursive(sourceComponent);
+        Set<Component> parents = findParentsRecursive(sourceComponent);
         candidateComponents.addAll(children);
         candidateComponents.addAll(parents);
         if (candidateComponents.isEmpty()) {
@@ -40,7 +40,7 @@ public class TagMovementToAnyHtmlTreePointRule implements MutationRule {
         Component randomComponent = RandomSelector.getInstance().GetRandomItemFromCollection(candidateComponents);
 
         final Document destinationDocument;
-        destinationDocument = Jsoup.parse(randomComponent.htmlContent, Parser.xmlParser());
+        destinationDocument = Jsoup.parse(randomComponent.htmlContent, randomComponent.path.toString(), Parser.xmlParser());
 
         List<Document> mutatedDocuments = ElementExtension.moveToNewComponent(targetElement, destinationDocument);
         if (mutatedDocuments.isEmpty()) {

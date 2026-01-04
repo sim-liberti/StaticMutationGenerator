@@ -1,7 +1,9 @@
 package org.unina.data;
 
+import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.Parser;
 import org.jsoup.select.Elements;
 import org.unina.util.ComponentIndexer;
 import org.unina.util.RandomSelector;
@@ -74,11 +76,12 @@ public class ElementExtension {
             randomInsertionIndex = RandomSelector.getInstance().GetRandomItemFromCollection(randomCandidateChildren).elementSiblingIndex();
         }
 
+        Document modifiedSourceDocument = element.ownerDocument();
         element.remove();
         randomCandidate.insertChildren(randomInsertionIndex, element);
 
         List<Document> mutatedDocuments = new ArrayList<>();
-        mutatedDocuments.add(element.ownerDocument());
+        mutatedDocuments.add(modifiedSourceDocument);
         mutatedDocuments.add(randomCandidate.ownerDocument());
 
         return mutatedDocuments;

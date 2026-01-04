@@ -13,18 +13,29 @@ import org.unina.util.ComponentIndexer;
 import org.unina.util.RandomSelector;
 import org.unina.core.MutationRule;
 
+import java.io.IOException;
 import java.util.List;
 
 public class TagMovementBetweenTemplatesRule implements MutationRule {
 
     @Override
     public MutationResult ApplyMutation(Element targetElement) {
+        Component sourceComponent;
+        try {
+            sourceComponent = ElementExtension.getComponent(targetElement);
+            if (sourceComponent == null) {
+                return new MutationResult(false, "Target element does not belong to any component", null);
+            }
+        } catch(IOException e){
+            return new MutationResult(false, "Error retrieving component information: " + e.getMessage(), null);
+        }
+
         Component randomComponent = RandomSelector.getInstance().GetRandomItemFromCollection(
                 ComponentIndexer.getInstance().getAllComponents()
         );
 
         final Document destinationDocument;
-        destinationDocument = Jsoup.parse(randomComponent.htmlContent, Parser.xmlParser());
+        destinationDocument = Jsoup.parse(randomComponent.htmlContent, randomComponent.path.toString(), Parser.xmlParser());
 
         List<Document> mutatedDocuments = ElementExtension.moveToNewComponent(targetElement, destinationDocument);
         if (mutatedDocuments.isEmpty()) {
