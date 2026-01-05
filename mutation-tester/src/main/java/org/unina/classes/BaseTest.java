@@ -1,32 +1,52 @@
 package org.unina.classes;
 
+import org.junit.After;
+import org.junit.Before;
+import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.unina.data.WebDriverFactory;
+
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import static org.junit.Assert.fail;
 
-public abstract class BaseTest {
-    protected WebDriver driver;
-    protected String baseUrl;
-    protected JavascriptExecutor js;
-    WebDriverWait wait;
+public class BaseTest {
+    public WebDriver driver;
+    public String baseUrl;
+    public boolean acceptNextAlert = true;
+    public StringBuffer verificationErrors = new StringBuffer();
+    public WebDriverWait wait;
 
-    public BaseTest() {}
+    @Before
+    public void setUp() throws Exception {
+        driver = WebDriverFactory.getDriver();
+        if (driver == null) {
+            WebDriverFactory.init();
+            driver = WebDriverFactory.getDriver();
+            authenticate();
+        }
+        driver.get(baseUrl);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
 
-    public void init(String baseUrl, WebDriver driver) throws Exception {
-        this.driver = driver;
-        this.baseUrl = baseUrl;
-        this.driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    @After
+    public void tearDown() throws Exception {
+        String verificationErrorString = verificationErrors.toString();
+        if (!"".equals(verificationErrorString)) {
+            fail(verificationErrorString);
+        }
     }
 
     public void authenticate() throws RuntimeException {
-        driver.get(baseUrl);
         try {
+            driver.get(baseUrl);
             // Username
             WebElement element = wait.until(
                     ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='username']"))
@@ -71,6 +91,4 @@ public abstract class BaseTest {
             throw new RuntimeException(e);
         }
     }
-
-    public void runTest() throws RuntimeException {}
 }

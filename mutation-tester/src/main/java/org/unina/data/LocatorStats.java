@@ -1,7 +1,7 @@
 package org.unina.data;
 
 public class LocatorStats {
-    private final String locatorName;
+    public final String locatorName;
     public int totalTests = 0;
     public int successCount = 0;
     public int fragilityFailureCount = 0;
@@ -13,7 +13,7 @@ public class LocatorStats {
 
     @Override
     public String toString() {
-        return String.format("%s | %d | %d | %d | %d",
+        return String.format("%s;%d;%d;%d;%d",
                 locatorName, totalTests, successCount, fragilityFailureCount, obsolescenceFailureCount);
     }
 }
