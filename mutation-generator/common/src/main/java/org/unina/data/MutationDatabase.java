@@ -65,7 +65,7 @@ public class MutationDatabase {
     public Set<Mutation> getPendingMutations() {
         Set<Mutation> mutations = new HashSet<>();
 
-        String sql = "SELECT * FROM mutations";
+        String sql = "SELECT * FROM mutations LIMIT 1";
 
         try (Connection conn = DriverManager.getConnection(DB_URL);
              PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -128,7 +128,7 @@ public class MutationDatabase {
                 for (Document doc : mutatedDocuments) {
                     try (PreparedStatement pstmtFile = conn.prepareStatement(insertFile)) {
                         String filePath = doc.baseUri();
-                        String code = doc.html();
+                        String code = doc.body().html();
 
                         pstmtFile.setString(1, java.util.UUID.randomUUID().toString());
                         pstmtFile.setString(2, filePath);

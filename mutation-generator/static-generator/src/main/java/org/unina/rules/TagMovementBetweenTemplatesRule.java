@@ -3,6 +3,7 @@ package org.unina.rules;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.ParseSettings;
 import org.jsoup.parser.Parser;
 import org.unina.core.MutationResult;
 import org.unina.data.Component;
@@ -20,6 +21,9 @@ public class TagMovementBetweenTemplatesRule implements MutationRule {
 
     @Override
     public MutationResult ApplyMutation(Element targetElement) {
+        final Parser parser = Parser.htmlParser();
+        parser.settings(new ParseSettings(true, true));
+
         Component sourceComponent;
         try {
             sourceComponent = ElementExtension.getComponent(targetElement);
@@ -35,7 +39,7 @@ public class TagMovementBetweenTemplatesRule implements MutationRule {
         );
 
         final Document destinationDocument;
-        destinationDocument = Jsoup.parse(randomComponent.htmlContent, randomComponent.path.toString(), Parser.xmlParser());
+        destinationDocument = Jsoup.parse(randomComponent.htmlContent, randomComponent.path.toString(), parser);
 
         List<Document> mutatedDocuments = ElementExtension.moveToNewComponent(targetElement, destinationDocument);
         if (mutatedDocuments.isEmpty()) {

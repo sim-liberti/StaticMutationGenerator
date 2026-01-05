@@ -3,6 +3,7 @@ package org.unina;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.ParseSettings;
 import org.jsoup.parser.Parser;
 import org.jsoup.select.Elements;
 import org.unina.matchers.TagMatcherFactory;
@@ -26,8 +27,11 @@ public class MutationEngine {
         MutationDatabase db = new MutationDatabase();
 
         initializeRules();
+        final Parser parser = Parser.htmlParser();
+        parser.settings(new ParseSettings(true, true));
         final String docBaseUri = Paths.get(jsonConfig.inputFile).toAbsolutePath().toString();
-        final Document document = Jsoup.parse(Files.readString(Paths.get(jsonConfig.inputFile)), docBaseUri, Parser.xmlParser());
+        final Document document = Jsoup.parse(Files.readString(Paths.get(jsonConfig.inputFile)), docBaseUri, parser);
+        document.outputSettings().prettyPrint(false);
         final Element targetElement = findElement(jsonConfig, document);
 
         for (MutationRule mutation : mutationRules) {
