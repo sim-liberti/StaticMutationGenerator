@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[feat] fixed location bug in mutation rules">
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SearchSongTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/WebDriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/MutationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/MutationEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TagMovementBetweenTemplatesRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TagMovementBetweenTemplatesRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TagMovementToAnyHtmlTreePointRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/rules/TagMovementToAnyHtmlTreePointRule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SearchSong.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/LocatorStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/LocatorStats.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,9 +236,9 @@
       <item itemvalue="Application.App" />
       <item itemvalue="Application.MutationTester" />
       <item itemvalue="Application.StaticMutationGenerator" />
-      <item itemvalue="JUnit.UntitledTestCase.testUntitledTestCase" />
       <item itemvalue="JUnit.MutationRulesTest" />
       <item itemvalue="JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue" />
+      <item itemvalue="JUnit.UntitledTestCase.testUntitledTestCase" />
     </list>
     <recent_temporary>
       <list>
@@ -306,7 +296,7 @@
       <workItem from="1767527040368" duration="19628000" />
       <workItem from="1767611720889" duration="4092000" />
       <workItem from="1767631796426" duration="5814000" />
-      <workItem from="1767642374317" duration="3454000" />
+      <workItem from="1767642374317" duration="4485000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -436,7 +426,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767551641448</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="[fix] fixed HTML content bug in mutated files using htmlParser() and saving only .body() in the db">
+      <option name="closed" value="true" />
+      <created>1767646076893</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1767646076893</updated>
+    </task>
+    <task id="LOCAL-00018" summary="[feat] reimplemented the tester engine main loop and refactored the tests classes to use JUnit4 and assertions">
+      <option name="closed" value="true" />
+      <created>1767646145971</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1767646145971</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +476,9 @@
     <MESSAGE value="[feat] added the classes and package to run the tests dynamically, as well as a basic printing of the results" />
     <MESSAGE value="[feat] implemented testing loop in mutation-tester" />
     <MESSAGE value="[feat] fixed location bug in mutation rules" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] fixed location bug in mutation rules" />
+    <MESSAGE value="[fix] fixed HTML content bug in mutated files using htmlParser() and saving only .body() in the db" />
+    <MESSAGE value="[feat] reimplemented the tester engine main loop and refactored the tests classes to use JUnit4 and assertions" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] reimplemented the tester engine main loop and refactored the tests classes to use JUnit4 and assertions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
