@@ -236,9 +236,9 @@
       <item itemvalue="Application.App" />
       <item itemvalue="Application.MutationTester" />
       <item itemvalue="Application.StaticMutationGenerator" />
+      <item itemvalue="JUnit.UntitledTestCase.testUntitledTestCase" />
       <item itemvalue="JUnit.MutationRulesTest" />
       <item itemvalue="JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue" />
-      <item itemvalue="JUnit.UntitledTestCase.testUntitledTestCase" />
     </list>
     <recent_temporary>
       <list>

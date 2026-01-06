@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.unina.data.WebDriverFactory;
@@ -24,7 +23,7 @@ public class BaseTest {
     public WebDriverWait wait;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         driver = WebDriverFactory.getDriver();
         if (driver == null) {
             WebDriverFactory.init();
@@ -37,9 +36,9 @@ public class BaseTest {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         String verificationErrorString = verificationErrors.toString();
-        if (!"".equals(verificationErrorString)) {
+        if (!verificationErrorString.isEmpty()) {
             fail(verificationErrorString);
         }
     }
@@ -53,7 +52,7 @@ public class BaseTest {
             );
             element.click();
             element.clear();
-            element.sendKeys("sim.liberti@gmail.com");
+            element.sendKeys("redacted");
 
             // Continue
             element = wait.until(
@@ -73,7 +72,7 @@ public class BaseTest {
             );
             element.click();
             element.clear();
-            element.sendKeys("Nuovospotify.cucci01");
+            element.sendKeys("redacted");
 
             // Submit
             element = wait.until(
