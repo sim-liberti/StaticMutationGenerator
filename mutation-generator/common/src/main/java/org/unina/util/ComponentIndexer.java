@@ -69,10 +69,10 @@ public class ComponentIndexer {
 
                 if (Files.exists(htmlFile)) {
                     htmlContent = Files.readString(htmlFile);
+                    Component component = new Component(htmlFile, selector, htmlContent);
+                    componentList.add(component);
+                    selectorToComponentMap.put(selector, component);
                 }
-                Component component = new Component(htmlFile, selector, htmlContent);
-                componentList.add(component);
-                selectorToComponentMap.put(selector, component);
             }
         } catch (IOException e) {
             System.err.println("Cannot read file: " + file);

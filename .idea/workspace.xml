@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SearchSongTest.java" afterDir="false" />
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[fix] Major bug fixes&#10;- fixed BaseTest setUp function&#10;- fixed bug in ComponentIndexer for non-existent HTML component files&#10;- other minor fixes">
+      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/hooklocators/hook-based.js" beforeDir="false" afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/hooklocators/hook-based.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hook-injector/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/Component.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/Injector.java" beforeDir="false" afterPath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/Injector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/util/ComponentIndexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/util/ComponentIndexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SearchSongTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SearchSongTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/WebDriverFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,48 +70,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.App (1).executor&quot;: &quot;Debug&quot;,
-    &quot;Application.App.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.MutationTester.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.StaticMutationGenerator.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JUnit.MutationRulesTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UntitledTestCase.testUntitledTestCase.executor&quot;: &quot;Run&quot;,
-    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-tester/src/main/java/org/unina&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-tester/src/main/java/org/unina/classes&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App (1).executor": "Debug",
+    "Application.App.executor": "Debug",
+    "Application.MutationTester.executor": "Debug",
+    "Application.StaticMutationGenerator.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JUnit.MutationRulesTest.executor": "Run",
+    "JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor": "Run",
+    "JUnit.SearchSongTest.testSearchSong.executor": "Debug",
+    "JUnit.UntitledTestCase.testUntitledTestCase.executor": "Run",
+    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-tester/src/main/java/org/unina",
+    "last_opened_file_path": "/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-tester/src/main/java/org/unina/classes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes" />
@@ -118,16 +129,13 @@
       <recent name="org.unina.data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MutationTester">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <envs>
-        <env name="--enable-native-access" value="ALL-UNNAMED" />
-      </envs>
+  <component name="RunManager" selected="Application.App (1)">
+    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.unina.App" />
-      <module name="mutation-generator" />
+      <module name="hook-injector" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.unina.classes.AngularSpotifyPlayPauseSectionTest" />
+          <option name="PATTERN" value="org.unina.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -174,48 +182,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MutationRulesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StaticMutationGenerator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.unina.classes.AngularSpotifyPlayPauseSectionTest" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.unina" />
-      <option name="MAIN_CLASS_NAME" value="org.unina.MutationRulesTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StaticMutationGenerator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.unina.classes.AngularSpotifyPlayPauseSectionTest" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.unina" />
-      <option name="MAIN_CLASS_NAME" value="org.unina.MutationRulesTest" />
-      <option name="METHOD_NAME" value="testApplyAttributeIdentifierModificationRule_shouldReturnTrue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UntitledTestCase.testUntitledTestCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchSongTest.testSearchSong" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mutation-tester" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.unina.CustomTests.*" />
+          <option name="PATTERN" value="org.unina.classes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.unina.CustomTests" />
-      <option name="MAIN_CLASS_NAME" value="org.unina.CustomTests.UntitledTestCase" />
-      <option name="METHOD_NAME" value="testUntitledTestCase" />
+      <option name="PACKAGE_NAME" value="org.unina.classes" />
+      <option name="MAIN_CLASS_NAME" value="org.unina.classes.SearchSongTest" />
+      <option name="METHOD_NAME" value="testSearchSong" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -234,19 +211,17 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
+      <item itemvalue="Application.App (1)" />
       <item itemvalue="Application.MutationTester" />
       <item itemvalue="Application.StaticMutationGenerator" />
-      <item itemvalue="JUnit.UntitledTestCase.testUntitledTestCase" />
-      <item itemvalue="JUnit.MutationRulesTest" />
-      <item itemvalue="JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue" />
+      <item itemvalue="JUnit.SearchSongTest.testSearchSong" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App (1)" />
+        <item itemvalue="JUnit.SearchSongTest.testSearchSong" />
         <item itemvalue="Application.MutationTester" />
         <item itemvalue="Application.StaticMutationGenerator" />
-        <item itemvalue="JUnit.UntitledTestCase.testUntitledTestCase" />
-        <item itemvalue="JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue" />
-        <item itemvalue="JUnit.MutationRulesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -297,6 +272,8 @@
       <workItem from="1767611720889" duration="4092000" />
       <workItem from="1767631796426" duration="5814000" />
       <workItem from="1767642374317" duration="4485000" />
+      <workItem from="1767708331467" duration="952000" />
+      <workItem from="1767798824914" duration="20602000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -448,6 +425,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:junit:junit" />
+    <option featureType="dependencySupport" implementationName="java:org.seleniumhq.selenium:selenium-java" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -478,7 +459,29 @@
     <MESSAGE value="[feat] fixed location bug in mutation rules" />
     <MESSAGE value="[fix] fixed HTML content bug in mutated files using htmlParser() and saving only .body() in the db" />
     <MESSAGE value="[feat] reimplemented the tester engine main loop and refactored the tests classes to use JUnit4 and assertions" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] reimplemented the tester engine main loop and refactored the tests classes to use JUnit4 and assertions" />
+    <MESSAGE value="[fix] Major bug fixes&#10;- fixed BaseTest setUp function&#10;- fixed bug in ComponentIndexer for non-existent HTML component files&#10;- other minor fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] Major bug fixes&#10;- fixed BaseTest setUp function&#10;- fixed bug in ComponentIndexer for non-existent HTML component files&#10;- other minor fixes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hook-injector/src/main/java/org/unina/Injector.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hook-injector/src/main/java/org/unina/Injector.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

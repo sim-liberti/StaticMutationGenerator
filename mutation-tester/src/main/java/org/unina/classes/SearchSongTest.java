@@ -7,17 +7,34 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 public class SearchSongTest extends BaseTest {
     @Test
     public void testSearchSong() throws Exception {
         driver.get(baseUrl);
-        driver.findElement(By.linkText("Search")).click();
-        driver.findElement(By.xpath("//input")).clear();
-        driver.findElement(By.xpath("//input")).sendKeys("Michael Jackson");
-        driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Title'])[1]/following::*[name()='svg'][2]")).click();
-        driver.findElement(By.linkText("Home")).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Search"))).click();
+        WebElement searchInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input")));
+        searchInput.clear();
+        searchInput.sendKeys("Billie Jean");
+        Thread.sleep(1000);
+        WebElement hoverTarget = driver.findElement(By.xpath("(//as-media-order//div[contains(@class, 'group')])[1]"));
+        Actions action = new Actions(driver);
+        action.moveToElement(hoverTarget).perform();
+
+        WebElement icon = wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("(.//*[normalize-space(text())='Title'])[1]/following::*[name()='svg'][2]")
+        ));
+        icon.click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Home"))).click();
+
+        String text = driver.findElement(
+                By.xpath("//as-now-playing-bar//as-track-current-info//a[contains(@class, 'text-white')]")
+        ).getText();
+
+        assertEquals("Billie Jean", text);
     }
 
     private boolean isElementPresent(By by) {

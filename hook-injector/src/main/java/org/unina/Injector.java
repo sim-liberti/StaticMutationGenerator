@@ -4,7 +4,10 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.ParseSettings;
 import org.jsoup.parser.Parser;
+import org.unina.data.Component;
+import org.unina.util.ComponentIndexer;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -18,11 +21,11 @@ public class Injector {
 
     final static Pattern componentTagPattern = Pattern.compile("<([a-z][a-z0-9]*(?:-[a-z0-9]+)+)");
 
-    public static void injectHooks(Set<Path> sourceFiles) throws IOException {
+    public static void injectHooks() throws IOException {
         int max_hook_id = 0;
 
-        for (Path file : sourceFiles) {
-            Document document = Jsoup.parse(file, "UTF-8", "", Parser.xmlParser());
+        for (Component component : ComponentIndexer.getInstance().getAllComponents()) {
+            Document document = Jsoup.parse(component.path, "UTF-8", "", Parser.xmlParser());
             for (Element element : document.getAllElements()) {
                 Attribute hook = getHook(element);
                 if (hook == null) continue;
@@ -30,20 +33,29 @@ public class Injector {
                 if (hook_id > max_hook_id) max_hook_id = hook_id;
             }
         }
-        for (Path file : sourceFiles) {
-            Document document = Jsoup.parse(file, "UTF-8", "", Parser.xmlParser());
+        for (Component component : ComponentIndexer.getInstance().getAllComponents()) {
+            boolean hasHtmlMainTags = false;
+            String regex = "(?i).*<\\s*(html|head|body|!DOCTYPE).*";
+            if (java.util.regex.Pattern.compile(regex).matcher(Files.readString(component.path)).matches()) {
+                hasHtmlMainTags = true;
+            }
+
+            Parser parser = Parser.htmlParser();
+            parser.settings(new ParseSettings(true, true));
+            Document document = Jsoup.parse(component.path, "UTF-8", "", parser);
+
             for (Element element : document.getAllElements()) {
                 Attribute hook = getHook(element);
                 if (hook != null) continue;
                 max_hook_id += 1;
                 if (componentTagPattern.matcher(element.tagName()).matches()) {
-                    element.attr("x-test-tpl-" + max_hook_id);
+                    element.attr("x-test-tpl-" + max_hook_id, "");
                 } else {
-                    element.attr("x-test-hook-" + max_hook_id);
+                    element.attr("x-test-hook-" + max_hook_id, "");
                 }
             }
-            String content = document.html();
-            Files.write(file, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+            String content = hasHtmlMainTags ? document.html() : document.body().html();
+            Files.write(component.path, content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
         }
     }
 

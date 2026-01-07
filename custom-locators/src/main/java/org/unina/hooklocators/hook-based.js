@@ -1,78 +1,94 @@
+
+//*[contains(@class, 'x-test-hook-36')]//*[contains(@class, 'x-test-hook-37') and contains(text(),'val')]
+
+console.log("Selenium: attribute-hooks-locators.js loaded.")
+//debugger;
+
+
 const hookPrefix = 'x-test-hook-';
 const templatePrefix = 'x-test-tpl-';
-const hookRegex = new RegExp(`^(${hookPrefix}|${templatePrefix})[a-z0-9\\-]+?-\\d+$`);
+const hookRegex = new RegExp(`^(${hookPrefix}|${templatePrefix})\\d+$`);
 
-const elementLocator = (hookName, index) => {
-    return `[@${hookName}]` + (index > 0 ? `[${index}]` : '');
+function myLocatorBuilder(builder) {
+
+    return (elem) => {
+        //debugger;
+        let locator = null;
+
+        let templateRootParent = false;
+
+        while (elem !== document) {
+
+            let hookName = getAttributeHook(elem);
+            if (hookName) {
+                console.log("Hook found: ", hookName);
+                //console.warn('Cannot find hook for element', elem)
+                //break;
+                //throw new Error('Cannot find hook for element', elem)
+
+                const templateRoot = hookName.indexOf(templatePrefix) >= 0;
+
+                const siblings = getAllSiblings(elem, sameHookFilter(hookName));
+
+                const index = siblings.length > 1 ? siblings.indexOf(elem) + 1 : 0;
+
+                if (!locator || siblings.length > 1 || templateRoot || templateRootParent) { //first loop (target element) or more siblings found
+                    locator = builder.elementLocator(hookName, index) + (locator || '');
+                    templateRootParent = !!templateRoot;
+                }
+            } else {
+                throw new Error('Cannot find hook for element', elem)
+            }
+            elem = elem.parentNode;
+        }
+        //console.log('locator', locator);
+        return builder.prefix + locator;
+    }
 }
 
-LocatorBuilders.add('HookBased', function(element)  {
-    let pathLocator = '';
 
-    function getIndex(node) {
-        let index = 1;
-        let sibling = node.previousElementSibling;
-        while (sibling) {
-            if (sibling.tagName === node.tagName) {
-                index++;
-            }
-            sibling = sibling.previousElementSibling;
+const cssBuilders = {
+    elementLocator: (hookName, index) => {
+        return '[' + hookName + ']' + (index > 0 ? ':nth-of-type(' + index + ')' : '') + ' ';
+    },
+    prefix: 'css='
+}
+
+const xpathBuilders = {
+    elementLocator: (hookName, index) => {
+        return `//*[@${hookName}]` + (index > 0 ? `[${index}]` : '');
+    },
+    prefix: ''
+}
+
+LocatorBuilders.add('myCss', myLocatorBuilder(cssBuilders));
+LocatorBuilders.add('myXPath', myLocatorBuilder(xpathBuilders));
+
+LocatorBuilders.setPreferredOrder(['myXPath', 'myCss']);
+
+function getAttributeHook(elem) {
+    for (var i = 0, l = elem.attributes.length; i < l; ++i) {
+        let match = elem.attributes[i].name.match(hookRegex);
+        if (match) {
+            return match[0];
         }
-        return index;
     }
+}
 
-    function getHook(elem) {
-        for (let i = 0, l = elem.attributes.length; i < l; ++i) {
-            let match = elem.attributes[i].name.match(hookRegex);
-            if (match) {
-                return match[0];
-            }
-        }
-        return null;
-    }
-
-    function hasSiblings(node) {
-        let sibling = node.parentNode ? node.parentNode.firstElementChild : null;
-        while (sibling) {
-            if (sibling !== node && sibling.tagName === node.tagName) {
-                return true;
-            }
-            sibling = sibling.nextElementSibling;
-        }
-        return false;
-    }
-
-    function isTemplate(elem) {
-        for (let i = 0, l = elem.attributes.length; i < l; ++i) {
-            if (elem.attributes[i].name.startsWith(templatePrefix)) {
-                return true;
+// get all sibilings and filter
+function getAllSiblings(elem, filter) {
+    var siblings = [];
+    elem = elem.parentNode.firstChild;
+    do {
+        if (elem.nodeType === 1) {
+            if (!filter || filter(elem)) {
+                siblings.push(elem);
             }
         }
-        return false;
-    }
+    } while ((elem = elem.nextSibling))
+    return siblings;
+}
 
-    function includesTemplates(elem) {
-        let sibling = elem.parentNode ? elem.parentNode.firstElementChild : null;
-        while (sibling) {
-            if (sibling !== elem && isTemplate(sibling)) {
-                return true;
-            }
-            sibling = sibling.nextElementSibling;
-        }
-        return false;
-    }
-
-    while (element !== document) {
-        let pathElement = '';
-        let hook = getHook(element);
-        if (pathLocator === '' || hasSiblings(element) || isTemplate(element) || includesTemplates(element)) {
-            if (hasSiblings(element)) {
-                pathElement = elementLocator(hook, getIndex(element));
-            } else {
-                pathElement = elementLocator(hook);
-            }
-            pathLocator = pathElement + pathLocator;
-        }
-        element = element.parentNode;
-    }
-})
+function sameHookFilter(hookName) {
+    return e => e.hasAttribute(hookName);
+}

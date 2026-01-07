@@ -28,6 +28,8 @@ public class BaseTest {
         if (driver == null) {
             WebDriverFactory.init();
             driver = WebDriverFactory.getDriver();
+            baseUrl = "https://192.168.20.4:4200";
+            wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             authenticate();
         }
         driver.get(baseUrl);
@@ -84,6 +86,7 @@ public class BaseTest {
                     ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(., 'Agree')]"))
             );
             element.click();
+            Thread.sleep(1000);
         } catch (TimeoutException e) {
             throw new TimeoutException(e);
         } catch (Exception e) {
