@@ -4,115 +4,117 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[feat] First tests and custom locators generation&#10;- implemented the ROBULA+ algorithm&#10;- added the correct hook xpath locator extention for Katalon&#10;- removed the previous hook injection and added the correct one from another repo&#10;- created tests for Absolute, Relative and Hook based locators">
-      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/Transformations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/hookInjection.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/hookInjection.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-freemarker/index.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/directives.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/lib/angular-ui-router.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/lib/angular-ui-router.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/lib/angular.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/lib/angular.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/notes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/calendarDirective.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/embeddedTemplate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/mainState.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/taskEditState.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/tasksState.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/usersState.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-smarty/cart-detailed-product-line.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-smarty/order-detail.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-smarty/payment.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-smarty/product.tpl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/bootstrap_4_layout.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/combinations.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/config.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/form_seo.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/list.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/paragraph.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/sample.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/subfolder/form_edit_dropdown.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/controllers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/directives.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/lib/angular-ui-router.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/lib/angular-ui-router.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/lib/angular.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/lib/angular.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/services.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/notes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/calendarDirective.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/embeddedTemplate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/mainState.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/taskEditState.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/tasksState.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/usersState.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/selenium/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/selenium/attributeHooksLocators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/selenium/classHooksLocators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/baseHtmlCrawler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/htmlAttributeCrawler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/htmlClassCrawler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/htmlTestSuiteCrawler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/jsdomProcessor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/textMateCrawler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/textMateProcessor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/angularjs/angularjs.cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/angularjs/grammar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/freemarker/freemarker.cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/freemarker/grammar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/html/grammar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/html/html.cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/php/grammar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/php/html-php.cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/php/php.cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/smarty/grammar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/smarty/smarty.cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/JSON (twig).cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/css (twig).cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/grammar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/html (twig).cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/javascript (twig).cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/twig.cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/xml (twig).cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/yaml (twig).cson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/test-script-splitter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/test-script-splitter_vPorfirio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hook-injector/test-hooks/test/TreTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/AbsoluteXPathTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/HookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/KatalonXPathTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RelativeXPathTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RobulaXPathTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SeleniumXPathTest.java" afterDir="false" />
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/resources/artist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/resources/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/custom-locators/src/main/resources/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-locators/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/custom-locators/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/hooklocators/hook-based.js" beforeDir="false" afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/hooklocators/attributeHooksLocators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/XPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/XPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/Injector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/Repository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/.mvn/jvm.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/.mvn/maven.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/hookInjection.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/hookInjection.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/src/main/java/org/unina/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/src/test/java/org/unina/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-freemarker/index.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/css/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/controllers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/directives.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/lib/angular-ui-router.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/lib/angular-ui-router.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/lib/angular.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/lib/angular.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/js/services.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/calendarDirective.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/embeddedTemplate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/mainState.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/taskEditState.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/tasksState.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-hook/templates/usersState.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-smarty/cart-detailed-product-line.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-smarty/order-detail.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-smarty/payment.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-smarty/product.tpl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/bootstrap_4_layout.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/combinations.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/config.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/form_seo.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/list.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/paragraph.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/sample.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend-twig/subfolder/form_edit_dropdown.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/css/custom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/controllers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/directives.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/lib/angular-ui-router.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/lib/angular-ui-router.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/lib/angular.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/lib/angular.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/js/services.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/calendarDirective.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/embeddedTemplate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/mainState.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/taskEditState.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/tasksState.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/frontend/templates/usersState.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/selenium/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/selenium/attributeHooksLocators.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/selenium/classHooksLocators.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/baseHtmlCrawler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/htmlAttributeCrawler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/htmlClassCrawler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/htmlTestSuiteCrawler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/jsdomProcessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/textMateCrawler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/textMateProcessor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/crawlers/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/angularjs/angularjs.cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/angularjs/grammar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/freemarker/freemarker.cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/freemarker/grammar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/html/grammar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/html/html.cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/php/grammar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/php/html-php.cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/php/php.cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/smarty/grammar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/smarty/smarty.cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/JSON (twig).cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/css (twig).cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/grammar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/html (twig).cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/javascript (twig).cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/twig.cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/xml (twig).cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/grammars/twig/yaml (twig).cson" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/test-script-splitter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test-guard/test-script-splitter_vPorfirio.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hook-injector/test-hooks/test/TreTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/AbsoluteXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/AbsoluteXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/HookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/HookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/KatalonXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/KatalonXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RelativeXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RelativeXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RobulaXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RobulaXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,10 +125,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -166,49 +168,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App (1).executor": "Debug",
-    "Application.App.executor": "Debug",
-    "Application.MutationTester.executor": "Debug",
-    "Application.StaticMutationGenerator.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JUnit.MutationRulesTest.executor": "Run",
-    "JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor": "Run",
-    "JUnit.SearchSongTest.testSearchSong.executor": "Debug",
-    "JUnit.UntitledTestCase.testUntitledTestCase.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-tester/src/main/java/org/unina",
-    "last_opened_file_path": "/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/custom-locators/src/main/java/org/unina/robulaplus",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Application.App.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.MutationTester.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.RobulaPlus.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StaticMutationGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JUnit.MutationRulesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SearchSongTest.testSearchSong.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.UntitledTestCase.testUntitledTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-tester/src/main/java/org/unina&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/custom-locators/src/main/java/org/unina/robulaplus&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus" />
@@ -227,7 +230,7 @@
       <recent name="org.unina.data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.RobulaPlus">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.unina.App" />
       <module name="mutation-tester" />
@@ -260,6 +263,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.unina.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RobulaPlus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.unina.robulaplus.RobulaPlus" />
+      <module name="custom-locators" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.unina.robulaplus.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -308,6 +324,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.RobulaPlus" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.MutationTester" />
       <item itemvalue="Application.StaticMutationGenerator" />
@@ -315,6 +332,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RobulaPlus" />
         <item itemvalue="JUnit.SearchSongTest.testSearchSong" />
         <item itemvalue="Application.MutationTester" />
         <item itemvalue="Application.StaticMutationGenerator" />
@@ -373,7 +391,8 @@
       <workItem from="1767866324682" duration="2706000" />
       <workItem from="1767968632105" duration="13000" />
       <workItem from="1767976719124" duration="9056000" />
-      <workItem from="1768038390493" duration="3428000" />
+      <workItem from="1768038390493" duration="11875000" />
+      <workItem from="1768056596079" duration="5940000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -527,7 +546,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767821429108</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="[feat] First tests and custom locators generation&#10;- implemented the ROBULA+ algorithm&#10;- added the correct hook xpath locator extention for Katalon&#10;- removed the previous hook injection and added the correct one from another repo&#10;- created tests for Absolute, Relative and Hook based locators">
+      <option name="closed" value="true" />
+      <created>1768042003396</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1768042003396</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,6 +605,16 @@
           <url>file://$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java</url>
           <line>63</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

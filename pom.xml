@@ -13,8 +13,6 @@
 
     <modules>
         <module>mutation-generator</module>
-        <module>hook-injector</module>
-        <module>hook-injector</module>
         <module>custom-locators</module>
         <module>mutation-tester</module>
         <module>mutation-generator/llm-generator</module>

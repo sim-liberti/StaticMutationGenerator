@@ -1,4 +1,42 @@
 package org.unina.classes;
 
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import static org.junit.Assert.assertEquals;
+
 public class KatalonXPathTest extends BaseTest {
+
+    @Test
+    public void testSearchSong() throws Exception {
+        driver.get(baseUrl);
+        // Search link in sidebar
+        wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::a[1]"))
+        ).click();
+
+        // Search input
+        WebElement searchInput = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        By.xpath("//input")
+                )
+        );
+        searchInput.clear();
+        searchInput.sendKeys("Billie Jean");
+        Thread.sleep(1000);
+
+        // Click the artist
+        wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//a/div/as-media-cover")
+        )).click();
+
+        // Assert that the text of the current artist is the correct one
+        String text = driver.findElement(
+                By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Artist'])[1]/following::h2[1]")
+        ).getText();
+        assertEquals("Michael Jackson", text);
+    }
+
 }

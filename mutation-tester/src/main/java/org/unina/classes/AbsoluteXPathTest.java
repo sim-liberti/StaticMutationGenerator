@@ -27,26 +27,19 @@ public class AbsoluteXPathTest extends BaseTest {
             )
         );
         searchInput.clear();
-        searchInput.sendKeys("Billie Jean");
+        searchInput.sendKeys("Michael Jackson");
         Thread.sleep(1000);
 
-        // Click the play button
-        WebElement icon = wait.until(ExpectedConditions.elementToBeClickable(
-            By.xpath("/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[2]/div/as-album-track[1]/as-media-table-row/as-media-order/div/as-play-button/button/svg-icon/svg")
-        ));
-        icon.click();
-        Thread.sleep(500);
+        // Click the artist
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[3]/div/as-card[1]/a")
+        )).click();
 
-        // Go back to home
-        driver.findElement(
-                By.xpath("/html/body/angular-spotify-root/as-layout/as-nav-bar/ul/li[1]/a")
-        ).click();
-
-        // Assert that the text of the current playing song is the correct one
+        // Assert that the text of the current artist is the correct one
         String text = driver.findElement(
-            By.xpath("/html/body/angular-spotify-root/as-layout/as-now-playing-bar/footer/div[1]/as-track-current-info/div[2]/div[1]/a")
+                By.xpath("/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-artist/div/as-media-summary/div/h2")
         ).getText();
-        assertEquals("Billie Jean", text);
+        assertEquals("Michael Jackson", text);
     }
 
 }

@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static org.junit.Assert.assertEquals;
 
 public class RelativeXPathTest extends BaseTest {
+
     @Test
     public void testSearchSong() throws Exception {
         driver.get(baseUrl);
@@ -23,26 +24,18 @@ public class RelativeXPathTest extends BaseTest {
             )
         );
         searchInput.clear();
-        searchInput.sendKeys("Billie Jean");
+        searchInput.sendKeys("Michael Jackson");
         Thread.sleep(1000);
 
-        // Click the play button
-        WebElement icon = wait.until(
-            ExpectedConditions.elementToBeClickable(
-                By.xpath("//as-media-order//div[contains(@class, 'flex group')]//*[local-name()='svg']")
-            )
-        );
-        icon.click();
+        // Click the artist
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//as-card[@ng-reflect-title='Michael Jackson']//a[@class='card']")
+        )).click();
 
-        // Go back to home
-        driver.findElement(
-            By.xpath("//a[normalize-space()='Home']")
-        ).click();
-
-        // Assert that the text of the current playing song is the correct one
+        // Assert that the text of the current artist is the correct one
         String text = driver.findElement(
-                By.xpath("//as-now-playing-bar//as-track-current-info//a[contains(@class, 'text-white')]")
+                By.xpath("//h2[normalize-space()='Michael Jackson']")
         ).getText();
-        assertEquals("Billie Jean", text);
+        assertEquals("Michael Jackson", text);
     }
 }
