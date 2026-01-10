@@ -5,9 +5,11 @@ console.log("Selenium: attribute-hooks-locators.js loaded.")
 //debugger;
 
 
+
 const hookPrefix = 'x-test-hook-';
 const templatePrefix = 'x-test-tpl-';
-const hookRegex = new RegExp(`^(${hookPrefix}|${templatePrefix})\\d+$`);
+const hookRegex = new RegExp(`^(${hookPrefix}|${templatePrefix})[a-z0-9\\-]+?-\\d+$`);
+
 
 function myLocatorBuilder(builder) {
 
@@ -21,7 +23,6 @@ function myLocatorBuilder(builder) {
 
             let hookName = getAttributeHook(elem);
             if (hookName) {
-                console.log("Hook found: ", hookName);
                 //console.warn('Cannot find hook for element', elem)
                 //break;
                 //throw new Error('Cannot find hook for element', elem)
@@ -36,8 +37,6 @@ function myLocatorBuilder(builder) {
                     locator = builder.elementLocator(hookName, index) + (locator || '');
                     templateRootParent = !!templateRoot;
                 }
-            } else {
-                throw new Error('Cannot find hook for element', elem)
             }
             elem = elem.parentNode;
         }
