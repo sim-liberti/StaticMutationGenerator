@@ -2,7 +2,6 @@ package org.unina.data;
 
 public class LocatorStats {
     public final String locatorName;
-    public int totalTests = 0;
     public int successCount = 0;
     public int fragilityFailureCount = 0;
     public int obsolescenceFailureCount = 0;
@@ -11,9 +10,13 @@ public class LocatorStats {
         this.locatorName = locatorName;
     }
 
+    public int getTotalTests() {
+        return successCount + fragilityFailureCount + obsolescenceFailureCount;
+    }
+
     @Override
     public String toString() {
         return String.format("%s;%d;%d;%d;%d",
-                locatorName, totalTests, successCount, fragilityFailureCount, obsolescenceFailureCount);
+                locatorName, getTotalTests(), successCount, fragilityFailureCount, obsolescenceFailureCount);
     }
 }

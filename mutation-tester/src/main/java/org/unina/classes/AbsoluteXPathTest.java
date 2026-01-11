@@ -2,6 +2,7 @@ package org.unina.classes;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
@@ -30,9 +31,11 @@ public class AbsoluteXPathTest extends BaseTest {
         Thread.sleep(1000);
 
         // Click the artist
-        wait.until(ExpectedConditions.elementToBeClickable(
+        WebElement artistCardLink = wait.until(ExpectedConditions.presenceOfElementLocated(
                 By.xpath("/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[3]/div/as-card[1]/a")
-        )).click();
+        ));
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", artistCardLink);
 
         // Assert that the text of the current artist is the correct one
         String text = driver.findElement(

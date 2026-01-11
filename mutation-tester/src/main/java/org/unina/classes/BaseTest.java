@@ -24,17 +24,17 @@ public class BaseTest {
 
     @Before
     public void setUp() {
+        baseUrl = "https://192.168.20.4:4200";
         driver = WebDriverFactory.getDriver();
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         if (driver == null) {
             WebDriverFactory.init();
             driver = WebDriverFactory.getDriver();
-            baseUrl = "https://192.168.20.4:4200";
             wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             authenticate();
         }
         driver.get(baseUrl);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @After

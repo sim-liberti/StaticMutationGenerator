@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[fix] Changed the test suite and deleted the hook-injection package">
-      <change afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[feat] Added js as non-detectable language">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/AbsoluteXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/AbsoluteXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/HookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/HookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/KatalonXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/KatalonXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RelativeXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RelativeXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RobulaXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RobulaXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SearchSongTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SeleniumXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SeleniumXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/LocatorStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/LocatorStats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/WebDriverFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,16 +126,17 @@
       <recent name="$PROJECT_DIR$/custom-locators/src/main/java/org/unina" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes" />
+      <recent name="$PROJECT_DIR$/tmp" />
       <recent name="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java" />
       <recent name="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/hooklocators" />
       <recent name="$PROJECT_DIR$/mutation-generator" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.unina.data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RobulaPlus">
+  <component name="RunManager" selected="Application.MutationTester">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.unina.App" />
       <module name="mutation-tester" />
@@ -225,10 +238,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RobulaPlus" />
-        <item itemvalue="JUnit.SearchSongTest.testSearchSong" />
         <item itemvalue="Application.MutationTester" />
         <item itemvalue="Application.StaticMutationGenerator" />
+        <item itemvalue="Application.RobulaPlus" />
+        <item itemvalue="JUnit.SearchSongTest.testSearchSong" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +298,8 @@
       <workItem from="1767968632105" duration="13000" />
       <workItem from="1767976719124" duration="9056000" />
       <workItem from="1768038390493" duration="11875000" />
-      <workItem from="1768056596079" duration="6537000" />
+      <workItem from="1768056596079" duration="7018000" />
+      <workItem from="1768129069535" duration="12392000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -455,7 +469,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768062971213</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="[feat] Added .gitattributes">
+      <option name="closed" value="true" />
+      <created>1768063599740</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1768063599740</updated>
+    </task>
+    <task id="LOCAL-00023" summary="[feat] Added js as non-detectable language">
+      <option name="closed" value="true" />
+      <created>1768063658540</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1768063658540</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,16 +528,13 @@
     <MESSAGE value="[fix] Major bug fixes&#10;- fixed BaseTest setUp function&#10;- fixed bug in ComponentIndexer for non-existent HTML component files&#10;- other minor fixes" />
     <MESSAGE value="[feat] First tests and custom locators generation&#10;- implemented the ROBULA+ algorithm&#10;- added the correct hook xpath locator extention for Katalon&#10;- removed the previous hook injection and added the correct one from another repo&#10;- created tests for Absolute, Relative and Hook based locators" />
     <MESSAGE value="[fix] Changed the test suite and deleted the hook-injection package" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] Changed the test suite and deleted the hook-injection package" />
+    <MESSAGE value="[feat] Added .gitattributes" />
+    <MESSAGE value="[feat] Added js as non-detectable language" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] Added js as non-detectable language" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java</url>
-          <line>63</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java</url>
           <line>27</line>
@@ -517,6 +544,21 @@
           <url>file://$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java</url>
           <line>60</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java</url>
+          <line>145</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

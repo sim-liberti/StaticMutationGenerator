@@ -1,14 +1,20 @@
 package org.unina;
 
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
-import org.openqa.selenium.WebDriverException;
+import org.junit.platform.launcher.Launcher;
+import org.junit.platform.launcher.LauncherDiscoveryRequest;
+import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;
+import org.junit.platform.launcher.core.LauncherFactory;
+import org.junit.platform.launcher.listeners.SummaryGeneratingListener;
+import org.junit.platform.engine.discovery.DiscoverySelectors;
 import org.reflections.Reflections;
 import org.unina.classes.BaseTest;
 import org.unina.data.*;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class TesterEngine {
@@ -44,7 +50,7 @@ public class TesterEngine {
             mut.applyMutationToRepository();
             nx.resetForNextBuild();
 
-            System.out.println("Mutation applied.");
+            System.out.println("Mutation " + batch.batchId + " applied.");
             System.out.println("Waiting for the target application to recompile (max 20s)...");
 
             boolean recompiledOk = nx.waitForRebuild(20);
@@ -61,22 +67,33 @@ public class TesterEngine {
                 }
 
                 System.out.println("Starting test for: " + testClass.getSimpleName());
-                Result testResult = JUnitCore.runClasses(testClass);
-                if (testResult.wasSuccessful()) {
+
+                LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
+                        .selectors(DiscoverySelectors.selectClass(testClass))
+                        .build();
+                Launcher launcher = LauncherFactory.create();
+                SummaryGeneratingListener listener = new SummaryGeneratingListener();
+                launcher.registerTestExecutionListeners(listener);
+                launcher.execute(request);
+                var summary = listener.getSummary();
+
+                if (summary.getTestsFailedCount() == 0) {
                     execution.status = TestStatus.PASSED;
                     batch.addExecution(execution);
                     System.out.println("Test ended: " + testClass.getSimpleName());
                     continue;
                 }
 
-                Failure failure = testResult.getFailures().get(0);
-                Throwable exception = failure.getException();
-                execution.errorMessage = failure.getDescription().toString();
-                execution.status = (exception instanceof java.lang.AssertionError ||
-                        exception instanceof WebDriverException)
-                        ? TestStatus.FAILED
-                        : TestStatus.BROKEN;
-
+                var failures = summary.getFailures();
+                if (!failures.isEmpty()) {
+                    var failure = failures.get(0);
+                    Throwable exception = failure.getException();
+                    execution.errorMessage = exception.getMessage();
+                    execution.status = (exception instanceof java.lang.AssertionError ||
+                            exception instanceof org.openqa.selenium.WebDriverException)
+                            ? TestStatus.FAILED
+                            : TestStatus.BROKEN;
+                }
                 batch.addExecution(execution);
                 System.out.println("Test ended: " + testClass.getSimpleName());
             }
@@ -91,13 +108,14 @@ public class TesterEngine {
 
     private static void saveTestResult(List<MutationBatch> batches) {
         Map<String, LocatorStats> statsMap = new HashMap<>();
+        StringBuilder batchCsv = new StringBuilder();
 
         for (MutationBatch batch : batches) {
             BatchStatus status = batch.getBatchStatus();
 
             for (TestExecution exec : batch.getExecutions()) {
-                String batchCsvRecord = String.format("%s;%s;%s;%s;%s",
-                    batch.batchId, exec.locatorName, exec.mutatedTag, exec.status.toString(), exec.errorMessage);
+                batchCsv.append(String.format("%s;%s;%s;%s;%s\n",
+                        batch.batchId, exec.locatorName, exec.mutatedTag, exec.status.toString(), exec.errorMessage));
 
                 LocatorStats stats = statsMap.computeIfAbsent(
                         exec.locatorName,
@@ -121,13 +139,29 @@ public class TesterEngine {
             }
         }
 
-        System.out.println("-------------------------------------------");
-        System.out.println("Type | Total | Success | Fragile | Obsolete");
-        System.out.println("-------------------------------------------");
+        StringBuilder statsCsv = new StringBuilder();
         for (LocatorStats stats : statsMap.values()) {
-            System.out.println(stats.toString());
+            statsCsv.append(stats.toString());
         }
+        System.out.println("Executed batches:");
+        System.out.println(batchCsv);
+        System.out.println("\nTest results:");
+        System.out.println(statsCsv);
+
+        saveCsv(batchCsv, Paths.get("output/batches.csv").toString());
+        saveCsv(statsCsv, Paths.get("output/stats.csv").toString());
     }
 
+    private static void saveCsv(StringBuilder content, String path) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(path, StandardCharsets.UTF_8))) {
+
+            writer.write(content.toString());
+            System.out.println("File saved: " + path);
+
+        } catch (IOException e) {
+            System.err.println("Error while saving " + path);
+            e.printStackTrace();
+        }
+    }
 
 }

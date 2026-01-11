@@ -39,5 +39,6 @@ build/
 .DS_Store
 
 ### Custom ###
+output/
 tmp/
 mutations.db

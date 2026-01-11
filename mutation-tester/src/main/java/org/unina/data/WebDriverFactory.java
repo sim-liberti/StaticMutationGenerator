@@ -36,12 +36,12 @@ public class WebDriverFactory {
             devTools.send(Network.setBlockedURLs(ImmutableList.of("*sentry*", "*ingest.sentry.io*")));
 
             // Aggiunge un hook per chiudere il driver quando la JVM termina (tutti i test finiti)
-            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-                if (driver != null) {
-                    driver.quit();
-                    driver = null;
-                }
-            }));
+//            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+//                if (driver != null) {
+//                    driver.quit();
+//                    driver = null;
+//                }
+//            }));
         }
     }
 
