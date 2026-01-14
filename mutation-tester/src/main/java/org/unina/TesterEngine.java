@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class TesterEngine {
 
@@ -60,14 +62,15 @@ public class TesterEngine {
             for (Class<? extends BaseTest> testClass : classes) {
                 TestExecution execution = new TestExecution(testClass.getSimpleName(), mut.element);
                 if (!recompiledOk){
-                    execution.status = TestStatus.BROKEN;
-                    execution.errorMessage = "Application did not recompile. Marking test as broken.";
+                    execution.status = TestStatus.NOT_APPLICABLE;
+                    execution.errorMessage = "Application did not recompile. Marking test as not applicable.";
                     batch.addExecution(execution);
                     continue;
                 }
 
                 System.out.println("Starting test for: " + testClass.getSimpleName());
 
+                Logger.getLogger("org.junit").setLevel(Level.OFF);
                 LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
                         .selectors(DiscoverySelectors.selectClass(testClass))
                         .build();
@@ -135,13 +138,16 @@ public class TesterEngine {
                     case ROBUST:
                         stats.successCount++;
                         break;
+                    case NOT_TESTED:
+                        stats.notTestedCount++;
+                        break;
                 }
             }
         }
 
         StringBuilder statsCsv = new StringBuilder();
         for (LocatorStats stats : statsMap.values()) {
-            statsCsv.append(stats.toString());
+            statsCsv.append(stats.toString()).append("\n");
         }
         System.out.println("Executed batches:");
         System.out.println(batchCsv);

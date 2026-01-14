@@ -3,5 +3,6 @@ package org.unina.data;
 public enum BatchStatus {
     ROBUST,
     FRAGILE,
-    OBSOLETE
+    OBSOLETE,
+    NOT_TESTED
 }

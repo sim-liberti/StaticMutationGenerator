@@ -14,4 +14,8 @@ public class TestExecution {
     public boolean isPassed() {
         return this.status == TestStatus.PASSED;
     }
+
+    public boolean isApplicable() {
+        return this.status != TestStatus.NOT_APPLICABLE;
+    }
 }

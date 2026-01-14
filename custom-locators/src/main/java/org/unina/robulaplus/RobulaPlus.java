@@ -74,8 +74,9 @@ public class RobulaPlus {
         List<element> elements = new ArrayList<>();
         elements.add(new element("NavSearch", "/html/body/angular-spotify-root/as-layout/as-nav-bar/ul/li[2]/a", "home.html"));
         elements.add(new element("SearchInput", "/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[1]/as-input/div/input", "search.html"));
-        elements.add(new element("ArtistCard", "/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[3]/div/as-card[1]/a", "search.html"));
-        elements.add(new element("ArtistName", "/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-artist/div/as-media-summary/div/h2", "artist.html"));
+        elements.add(new element("Song", "/html[1]/body[1]/angular-spotify-root[1]/as-layout[1]/as-main-view[1]/div[2]/as-search[1]/div[1]/div[2]/div[1]/as-album-track[1]/as-media-table-row[1]/as-track-main-info[1]", "search.html"));
+        elements.add(new element("NavHome", "/html[1]/body[1]/angular-spotify-root[1]/as-layout[1]/as-nav-bar[1]/ul[1]/li[1]/a[1]", "home.html"));
+        elements.add(new element("CurrentTrack", "/html[1]/body[1]/angular-spotify-root[1]/as-layout[1]/as-now-playing-bar[1]/footer[1]/div[1]/as-track-current-info[1]/div[2]/div[1]/a[1]", "home.html"));
 
         RobulaPlus robula = new RobulaPlus();
         for (element e: elements) {
@@ -95,12 +96,12 @@ public class RobulaPlus {
             }
         }
 
-        // Results:
+
+        // Test 1:
         //
-        // NavSearch     //*[@ng-reflect-router-link='/search']
-        // NavHome       //*[@ng-reflect-router-link='']
-        // SearchInput   //input
-        // PlayButton    //as-media-order[@ng-reflect-index='1']/div/as-play-button/button/svg-icon/svg
-        // NowPlaying    //*[@class='text-white hover:underline']
+        // elements.add(new element("NavSearch", "/html/body/angular-spotify-root/as-layout/as-nav-bar/ul/li[2]/a", "home.html"));
+        // elements.add(new element("SearchInput", "/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[1]/as-input/div/input", "search.html"));
+        // elements.add(new element("ArtistCard", "/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[3]/div/as-card[1]/a", "search.html"));
+        // elements.add(new element("ArtistName", "/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-artist/div/as-media-summary/div/h2", "artist.html"));
     }
 }

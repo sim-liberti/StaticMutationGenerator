@@ -4,7 +4,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.junit.Assert.assertEquals;
@@ -24,34 +23,25 @@ public class RobulaXPathTest extends BaseTest {
         // Search input
         WebElement searchInput = wait.until(
             ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//input")
+                    By.xpath("//input")
             )
         );
         searchInput.clear();
-        searchInput.sendKeys("Billie Jean");
+        searchInput.sendKeys("Michael Jackson");
         Thread.sleep(1000);
 
-        // Double click to start the song
-        WebElement song = wait.until(
-            ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//*[@ng-reflect-index='1']/*/as-track-main-info")
-            )
-        );
-        new Actions(driver).doubleClick(song).perform();
-
-        // Go back home to refresh the now playing bar
-        wait.until(
-            ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//*[@ng-reflect-router-link='']")
-            )
-        ).click();
-        Thread.sleep(1000);
+        // Click the artist
+        WebElement artistCardLink = wait.until(ExpectedConditions.presenceOfElementLocated(
+            By.xpath("//*[@_ngcontent-ng-c810943523='' and @ng-reflect-router-link='/artist/3fMbdgg4jU18AjLCKBhRSm']")
+        ));
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", artistCardLink);
 
         // Assert that the text of the current artist is the correct one
         String text = driver.findElement(
-            By.xpath("//*[@class='text-white hover:underline']")
+            By.xpath("//*[@x-test-hook-h2-4='']")
         ).getText();
-        assertEquals("Billie Jean", text);
+        assertEquals("Michael Jackson", text);
     }
 
 }

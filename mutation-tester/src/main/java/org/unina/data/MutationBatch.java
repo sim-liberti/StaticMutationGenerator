@@ -16,11 +16,14 @@ public class MutationBatch {
     }
 
     public BatchStatus getBatchStatus() {
-        long passedCount = executions.stream().filter(TestExecution::isPassed).count();
+        List<TestExecution> appliedExecutions = executions.stream().filter(TestExecution::isApplicable).toList();
+        long passedCount = appliedExecutions.stream().filter(TestExecution::isPassed).count();
 
-        if (passedCount == 0) {
+        if (appliedExecutions.isEmpty()) {
+            return BatchStatus.NOT_TESTED;
+        } else if (passedCount == 0) {
             return BatchStatus.OBSOLETE;
-        } else if (passedCount == executions.size()) {
+        } else if (passedCount == appliedExecutions.size()) {
             return BatchStatus.ROBUST;
         } else {
             return BatchStatus.FRAGILE;
