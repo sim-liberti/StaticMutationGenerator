@@ -15,7 +15,9 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.fail;
 
-public class BaseTest {
+public abstract class BaseTest {
+    public abstract String getLocator();
+
     public WebDriver driver;
     public String baseUrl;
     public boolean acceptNextAlert = true;
@@ -23,7 +25,7 @@ public class BaseTest {
     public WebDriverWait wait;
 
     @Before
-    public void setUp() {
+    public final void setUp() {
         baseUrl = "https://192.168.20.4:4200";
         driver = WebDriverFactory.getDriver();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -38,14 +40,14 @@ public class BaseTest {
     }
 
     @After
-    public void tearDown() {
+    public final void tearDown() {
         String verificationErrorString = verificationErrors.toString();
         if (!verificationErrorString.isEmpty()) {
             fail(verificationErrorString);
         }
     }
 
-    public void authenticate() throws RuntimeException {
+    public final void authenticate() throws RuntimeException {
         try {
             driver.get(baseUrl);
             // Username

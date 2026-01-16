@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static org.junit.Assert.assertEquals;
 
 public class RobulaXPathTest extends BaseTest {
+    @Override
+    public String getLocator() { return "ROBULAPLUS_XPATH"; }
 
     @Test
     public void testRobulaXPath() throws Exception {

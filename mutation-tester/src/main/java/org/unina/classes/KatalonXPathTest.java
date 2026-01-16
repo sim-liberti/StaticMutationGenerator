@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static org.junit.Assert.assertEquals;
 
 public class KatalonXPathTest extends BaseTest {
+    @Override
+    public String getLocator() { return "KATALON_XPATH"; }
 
     @Test
     public void testKatalonXPath() throws Exception {

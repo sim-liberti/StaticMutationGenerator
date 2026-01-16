@@ -6,11 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v131.network.Network;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 
+import java.time.Duration;
 import java.util.Optional;
-import java.util.concurrent.TimeUnit;
 
 public class WebDriverFactory {
     private static ChromeDriver driver;
@@ -27,21 +25,12 @@ public class WebDriverFactory {
                     "--no-sandbox",
                     "--ignore-certificate-errors");
             driver = new ChromeDriver(options);
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-            // driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
             DevTools devTools = driver.getDevTools();
             devTools.createSession();
             devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
             devTools.send(Network.setBlockedURLs(ImmutableList.of("*sentry*", "*ingest.sentry.io*")));
-
-            // Aggiunge un hook per chiudere il driver quando la JVM termina (tutti i test finiti)
-//            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-//                if (driver != null) {
-//                    driver.quit();
-//                    driver = null;
-//                }
-//            }));
         }
     }
 

@@ -91,7 +91,8 @@ public class TesterEngine {
                 if (!failures.isEmpty()) {
                     var failure = failures.get(0);
                     Throwable exception = failure.getException();
-                    execution.errorMessage = exception.getMessage();
+                    execution.errorMessage = exception.getMessage()
+                            .replace(",", " ");
                     execution.status = (exception instanceof java.lang.AssertionError ||
                             exception instanceof org.openqa.selenium.WebDriverException)
                             ? TestStatus.FAILED
@@ -112,12 +113,13 @@ public class TesterEngine {
     private static void saveTestResult(List<MutationBatch> batches) {
         Map<String, LocatorStats> statsMap = new HashMap<>();
         StringBuilder batchCsv = new StringBuilder();
+        batchCsv.append("Identificativo,Locatore,Tag,Stato,Errore");
 
         for (MutationBatch batch : batches) {
             BatchStatus status = batch.getBatchStatus();
 
             for (TestExecution exec : batch.getExecutions()) {
-                batchCsv.append(String.format("%s;%s;%s;%s;%s\n",
+                batchCsv.append(String.format("%s,%s,%s,%s,%s\n",
                         batch.batchId, exec.locatorName, exec.mutatedTag, exec.status.toString(), exec.errorMessage));
 
                 LocatorStats stats = statsMap.computeIfAbsent(
@@ -146,6 +148,7 @@ public class TesterEngine {
         }
 
         StringBuilder statsCsv = new StringBuilder();
+        statsCsv.append("Locatore,Test totali,Successi,Fragilità,Obsolescenza,Non testati\n");
         for (LocatorStats stats : statsMap.values()) {
             statsCsv.append(stats.toString()).append("\n");
         }

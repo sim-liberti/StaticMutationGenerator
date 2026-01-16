@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static org.junit.Assert.assertEquals;
 
 public class SeleniumXPathTest extends BaseTest {
+    @Override
+    public String getLocator() { return "SELENIUM_XPATH"; }
 
     @Test
     public void testSeleniumXPath() throws Exception {

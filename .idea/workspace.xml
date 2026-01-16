@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[feat] modified the automated test execution, fixed initialization bugs in WebDriverFactory and executed the first completed test on all mutations and locators">
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[feat] added new test status (not_applicable) for when the application tested does not recompile and created new test for searching song">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java" beforeDir="false" afterPath="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-tester/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/AbsoluteXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/AbsoluteXPathTest.java" afterDir="false" />
@@ -16,11 +17,9 @@
       <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RelativeXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RelativeXPathTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RobulaXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RobulaXPathTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SeleniumXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SeleniumXPathTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/BatchStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/BatchStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/LocatorStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/LocatorStats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/MutationBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/MutationBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/TestExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/TestExecution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/TestStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/TestStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/WebDriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/test/java/org/unina/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +105,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-tester-core/src/main/java/org/unina/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -136,6 +136,9 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.unina.data" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.unina" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MutationTester">
@@ -195,7 +198,7 @@
       <module name="mutation-tester" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.unina.classes.*" />
+          <option name="PATTERN" value="org.unina.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -211,7 +214,7 @@
       <module name="mutation-tester" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.unina.classes.*" />
+          <option name="PATTERN" value="org.unina.data.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -235,6 +238,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.App" />
       <item itemvalue="Application.RobulaPlus" />
       <item itemvalue="Application.MutationTester" />
       <item itemvalue="Application.StaticMutationGenerator" />
@@ -243,11 +247,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MutationTester" />
-        <item itemvalue="JUnit.HookTest.testHookXPath" />
-        <item itemvalue="Application.RobulaPlus" />
-        <item itemvalue="Application.StaticMutationGenerator" />
         <item itemvalue="JUnit.SearchSongTest.testSearchSong" />
+        <item itemvalue="JUnit.HookTest.testHookXPath" />
+        <item itemvalue="Application.StaticMutationGenerator" />
+        <item itemvalue="Application.RobulaPlus" />
+        <item itemvalue="Application.MutationTester" />
       </list>
     </recent_temporary>
   </component>
@@ -308,7 +312,8 @@
       <workItem from="1768129069535" duration="14734000" />
       <workItem from="1768233572427" duration="8000" />
       <workItem from="1768407792459" duration="75000" />
-      <workItem from="1768407876567" duration="10561000" />
+      <workItem from="1768407876567" duration="10641000" />
+      <workItem from="1768591416521" duration="6346000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -502,7 +507,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768150194216</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="[feat] added new test status (not_applicable) for when the application tested does not recompile and created new test for searching song">
+      <option name="closed" value="true" />
+      <created>1768423303997</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1768423303997</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +561,8 @@
     <MESSAGE value="[feat] Added .gitattributes" />
     <MESSAGE value="[feat] Added js as non-detectable language" />
     <MESSAGE value="[feat] modified the automated test execution, fixed initialization bugs in WebDriverFactory and executed the first completed test on all mutations and locators" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] modified the automated test execution, fixed initialization bugs in WebDriverFactory and executed the first completed test on all mutations and locators" />
+    <MESSAGE value="[feat] added new test status (not_applicable) for when the application tested does not recompile and created new test for searching song" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] added new test status (not_applicable) for when the application tested does not recompile and created new test for searching song" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -562,21 +576,6 @@
           <url>file://$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java</url>
           <line>60</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java</url>
-          <line>112</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java</url>
-          <line>106</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java</url>
-          <line>151</line>
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

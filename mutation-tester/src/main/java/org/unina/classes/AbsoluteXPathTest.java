@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static org.junit.Assert.assertEquals;
 
 public class AbsoluteXPathTest extends BaseTest {
+    @Override
+    public String getLocator() { return "ABSOLUTE_XPATH"; }
 
     @Test
     public void testAbsoluteXPath() throws Exception {

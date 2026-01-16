@@ -12,6 +12,7 @@
       <set>
         <option value="$PROJECT_DIR$/hook-injector/pom.xml" />
         <option value="$PROJECT_DIR$/locator-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/mutation-tester-core/pom.xml" />
       </set>
     </option>
   </component>

@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import static org.junit.Assert.assertEquals;
 
 public class RelativeXPathTest extends BaseTest {
+    @Override
+    public String getLocator() { return "RELATIVE_XPATH"; }
 
     @Test
     public void testRelativeXPath() throws Exception {
