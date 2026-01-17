@@ -1,6 +1,6 @@
 {
   "seed": "1234",
-  "repositoryRootPath": "/home/simon/Documents/Projects/angular-spotify/",
+  "repositoryRootPath": "/home/simon/Documents/Projects/angular-spotify",
   "mutations": [
     {
       "name": "NavbarSearch",

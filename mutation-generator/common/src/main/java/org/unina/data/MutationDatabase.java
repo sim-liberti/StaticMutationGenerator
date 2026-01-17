@@ -12,6 +12,7 @@ public class MutationDatabase {
         String masterTableSQL = "CREATE TABLE IF NOT EXISTS mutations (" +
                 "uuid TEXT PRIMARY KEY, " +
                 "element TEXT, " +
+                "mutation_name TEXT, " +
                 "mutation_type TEXT, " +
                 "mutation_id TEXT)";
 
@@ -64,6 +65,7 @@ public class MutationDatabase {
                 mutations.add(new Mutation(
                     rs.getString("uuid"),
                     rs.getString("element"),
+                    rs.getString("mutation_name"),
                     rs.getString("mutation_type"),
                     rs.getString("mutation_id")
                 ));
@@ -99,10 +101,10 @@ public class MutationDatabase {
         return mutatedFiles;
     }
 
-    public void saveMutation(String element, String mutation_type, String mutation_id, List<Document> mutatedDocuments) {
+    public void saveMutation(String element, String mutation_name, String mutation_type, String mutation_id, List<Document> mutatedDocuments) {
         String mutantUUID = java.util.UUID.randomUUID().toString();
 
-        String insertMutant = "INSERT INTO mutations(uuid, element, mutation_type, mutation_id) VALUES(?,?,?,?)";
+        String insertMutant = "INSERT INTO mutations(uuid, element, mutation_name, mutation_type, mutation_id) VALUES(?,?,?,?,?)";
         String insertFile   = "INSERT INTO mutated_files(uuid, target_file_path, mutated_code, mutation_uuid) VALUES(?,?,?,?)";
 
         try (Connection conn = DriverManager.getConnection(DB_URL)) {
@@ -110,8 +112,9 @@ public class MutationDatabase {
             try (PreparedStatement pstmtMutant = conn.prepareStatement(insertMutant)){
                 pstmtMutant.setString(1, mutantUUID);
                 pstmtMutant.setString(2, element);
-                pstmtMutant.setString(3, mutation_type);
-                pstmtMutant.setString(4, mutation_id);
+                pstmtMutant.setString(3, mutation_name);
+                pstmtMutant.setString(4, mutation_type);
+                pstmtMutant.setString(5, mutation_id);
                 pstmtMutant.executeUpdate();
 
                 for (Document doc : mutatedDocuments) {

@@ -24,7 +24,7 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class MutationEngine {
-    private static StringBuilder mutationCsv = new StringBuilder();
+    private static final StringBuilder mutationCsv = new StringBuilder();
     private static final List<MutationRule> mutationRules = new ArrayList<>();
     private static final Map<String, Integer> targetElements = new HashMap<>();
 
@@ -64,7 +64,7 @@ public class MutationEngine {
                 String htmlAfter = cloneDocument.html();
 
                 if (mutationResult.mutationApplied && !htmlBefore.equals(htmlAfter)){
-                    db.saveMutation(entry.getKey(), mutationRule.mutationName(), mutationRule.mutationId().name(), mutationResult.mutatedDocuments);
+                    db.saveMutation(entry.getKey(), mutation.name, mutationRule.mutationName(), mutationRule.mutationId().name(), mutationResult.mutatedDocuments);
                 }
                 mutationCsv.append(String.format("%s,%s,%s,%s,%s\n",
                         mutation.name, entry.getKey(), mutationRule.mutationId(), (mutationResult.mutationApplied ? "OK" : "KO"), mutationResult.failureMessage));

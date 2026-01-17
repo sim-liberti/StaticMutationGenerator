@@ -17,7 +17,7 @@ public class LocatorStats {
 
     @Override
     public String toString() {
-        return String.format("%s;%d;%d;%d;%d;%d",
+        return String.format("%s,%d,%d,%d,%d,%d",
                 locatorName, getTotalTests(), successCount, fragilityFailureCount, obsolescenceFailureCount, notTestedCount);
     }
 }

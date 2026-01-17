@@ -45,8 +45,12 @@ public class TesterEngine {
         List<MutationBatch> history = new ArrayList<>();
         Set<Mutation> mutationsToApply = db.getPendingMutations();
 
+        System.out.printf("Found %d to apply", (long) mutationsToApply.size());
+        int completed = 0;
         for (Mutation mut : mutationsToApply) {
+            System.out.printf("\n%d out of %d remaining.", completed, (long) mutationsToApply.size());
             MutationBatch batch = new MutationBatch();
+            batch.batchName = mut.name;
             batch.batchId = String.format("mutation_%s_%s_%s", mut.mutation_id, mut.mutation_type, mut.element);
             mut.mutatedFiles = db.getMutatedFiles(mut.uuid);
             mut.applyMutationToRepository();
@@ -60,11 +64,12 @@ public class TesterEngine {
                 System.out.println("Application recompiled successfully.");
 
             for (Class<? extends BaseTest> testClass : classes) {
-                TestExecution execution = new TestExecution(testClass.getSimpleName(), mut.element);
+                TestExecution execution = new TestExecution(mut.name, testClass.getSimpleName(), mut.element);
                 if (!recompiledOk){
                     execution.status = TestStatus.NOT_APPLICABLE;
                     execution.errorMessage = "Application did not recompile. Marking test as not applicable.";
                     batch.addExecution(execution);
+                    System.out.println("---------------------------------------------");
                     continue;
                 }
 
@@ -84,6 +89,7 @@ public class TesterEngine {
                     execution.status = TestStatus.PASSED;
                     batch.addExecution(execution);
                     System.out.println("Test ended: " + testClass.getSimpleName());
+                    System.out.println("---------------------------------------------");
                     continue;
                 }
 
@@ -100,6 +106,7 @@ public class TesterEngine {
                 }
                 batch.addExecution(execution);
                 System.out.println("Test ended: " + testClass.getSimpleName());
+                System.out.println("---------------------------------------------");
             }
             mut.revertMutations();
             history.add(batch);
@@ -113,14 +120,14 @@ public class TesterEngine {
     private static void saveTestResult(List<MutationBatch> batches) {
         Map<String, LocatorStats> statsMap = new HashMap<>();
         StringBuilder batchCsv = new StringBuilder();
-        batchCsv.append("Identificativo,Locatore,Tag,Stato,Errore");
+        batchCsv.append("Nome,Identificativo,Locatore,Tag,Stato,Errore");
 
         for (MutationBatch batch : batches) {
             BatchStatus status = batch.getBatchStatus();
 
             for (TestExecution exec : batch.getExecutions()) {
-                batchCsv.append(String.format("%s,%s,%s,%s,%s\n",
-                        batch.batchId, exec.locatorName, exec.mutatedTag, exec.status.toString(), exec.errorMessage));
+                batchCsv.append(String.format("%s,%s,%s,%s,%s,%s\n",
+                        batch.batchName, batch.batchId, exec.locatorName, exec.mutatedTag, exec.status.toString(), exec.errorMessage));
 
                 LocatorStats stats = statsMap.computeIfAbsent(
                         exec.locatorName,

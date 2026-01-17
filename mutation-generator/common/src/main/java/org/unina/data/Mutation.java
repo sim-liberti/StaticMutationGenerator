@@ -7,18 +7,22 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.FileTime;
-import java.util.ArrayList;import java.util.List;public class Mutation {
+import java.util.ArrayList;import java.util.List;
+
+public class Mutation {
     public String uuid;
     public String element;
+    public String name;
     public String mutation_type;
     public String mutation_id;
     public String error_log;
 
     public List<MutatedFile> mutatedFiles = new ArrayList<>();
 
-    public Mutation(String uuid, String element, String mutation_type, String mutation_id) {
+    public Mutation(String uuid, String element, String name, String mutation_type, String mutation_id) {
         this.uuid = uuid;
         this.element = element;
+        this.name = name;
         this.mutation_type = mutation_type;
         this.mutation_id = mutation_id;
     }

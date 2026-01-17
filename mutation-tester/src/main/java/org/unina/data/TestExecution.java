@@ -1,12 +1,14 @@
 package org.unina.data;
 
 public class TestExecution {
+    public String mutationName;
     public String locatorName;
     public String mutatedTag; // alpha, beta, gamma, delta, epsilon
     public TestStatus status;
     public String errorMessage;
 
-    public TestExecution(String locatorName, String mutatedTag) {
+    public TestExecution(String mutationName, String locatorName, String mutatedTag) {
+        this.mutationName = mutationName;
         this.locatorName = locatorName;
         this.mutatedTag = mutatedTag;
     }

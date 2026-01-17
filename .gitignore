@@ -39,5 +39,6 @@ build/
 .DS_Store
 
 ### Custom ###
+node_modules/
 tmp/
 mutations.db

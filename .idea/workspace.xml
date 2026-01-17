@@ -4,18 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[misc] minor edits">
-      <change afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationConfig.java" afterDir="false" />
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8598b012-1b1e-4ffb-880b-27208bb83878.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8598b012-1b1e-4ffb-880b-27208bb83878/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completed-tests/PlaySong/HookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/completed-tests/PlaySong/HookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generator-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/generator-config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/Mutation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/static-generator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/MutationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/MutationEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/AbsoluteXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/AbsoluteXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/HookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/HookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/KatalonXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/KatalonXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RelativeXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RelativeXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RobulaXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RobulaXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SeleniumXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SeleniumXPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/LocatorStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/LocatorStats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/MutationBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/MutationBatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/TestExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/TestExecution.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,52 +80,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.App (1).executor": "Debug",
-    "Application.App.executor": "Debug",
-    "Application.MutationTester.executor": "Debug",
-    "Application.RobulaPlus.executor": "Run",
-    "Application.StaticMutationGenerator.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JUnit.HookTest.testHookXPath.executor": "Debug",
-    "JUnit.MutationRulesTest.executor": "Run",
-    "JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor": "Run",
-    "JUnit.SearchSongTest.testSearchSong.executor": "Debug",
-    "JUnit.UntitledTestCase.testUntitledTestCase.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-tester/src/main/java/org/unina",
-    "last_opened_file_path": "/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-tester-core/src/main/java/org/unina/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App (1).executor&quot;: &quot;Debug&quot;,
+    &quot;Application.App.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.MutationTester.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RobulaPlus.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StaticMutationGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JUnit.HookTest.testHookXPath.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.MutationRulesTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MutationRulesTest.testApplyAttributeIdentifierModificationRule_shouldReturnTrue.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SearchSongTest.testSearchSong.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.UntitledTestCase.testUntitledTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-tester/src/main/java/org/unina&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/simon/Documents/Projects/Automatic-Angular-E2E-Testing-Suite/mutation-tester-core/src/main/java/org/unina/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -124,11 +135,11 @@
       <recent name="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/hooklocators" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/output/mutations/SearchSong" />
+      <recent name="$PROJECT_DIR$/output/mutations/Ricerca e riproduzione brano" />
       <recent name="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes" />
       <recent name="$PROJECT_DIR$/tmp" />
       <recent name="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java" />
-      <recent name="$PROJECT_DIR$/custom-locators/src/main/java/org/unina/hooklocators" />
-      <recent name="$PROJECT_DIR$/mutation-generator" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.unina.data" />
@@ -137,7 +148,7 @@
       <recent name="org.unina" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StaticMutationGenerator">
+  <component name="RunManager" selected="Application.MutationTester">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.unina.App" />
       <module name="hook-injector" />
@@ -243,8 +254,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StaticMutationGenerator" />
         <item itemvalue="Application.MutationTester" />
+        <item itemvalue="Application.StaticMutationGenerator" />
         <item itemvalue="JUnit.SearchSongTest.testSearchSong" />
         <item itemvalue="JUnit.HookTest.testHookXPath" />
         <item itemvalue="Application.RobulaPlus" />
@@ -311,6 +322,8 @@
       <workItem from="1768407876567" duration="10641000" />
       <workItem from="1768591416521" duration="6346000" />
       <workItem from="1768662024122" duration="5364000" />
+      <workItem from="1768676635454" duration="70000" />
+      <workItem from="1768676726394" duration="3154000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -573,11 +586,6 @@
           <url>file://$PROJECT_DIR$/custom-locators/src/main/java/org/unina/robulaplus/RobulaPlus.java</url>
           <line>60</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/MutationEngine.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.RuntimeException" package="java.lang" />

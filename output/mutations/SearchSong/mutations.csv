@@ -1,0 +1,133 @@
+Nome,Elemento,Mutazione,Stato,Errore
+NavbarSearch,alpha,a,KO,Target element has no attributes
+NavbarSearch,beta,a,KO,Target element has no attributes
+NavbarSearch,alpha,b,KO,Target element has no valid candidate attributes
+NavbarSearch,beta,b,KO,Target element has no valid candidate attributes
+NavbarSearch,alpha,c,KO,Target element has no id attribute
+NavbarSearch,beta,c,KO,Target element has no id attribute
+NavbarSearch,alpha,d,KO,Target element text content is empty
+NavbarSearch,beta,d,OK,
+NavbarSearch,alpha,e,KO,Target element text content is empty
+NavbarSearch,beta,e,OK,
+NavbarSearch,alpha,f,KO,The parent is null or empty
+NavbarSearch,beta,f,OK,
+NavbarSearch,alpha,g,OK,
+NavbarSearch,beta,g,OK,
+NavbarSearch,alpha,h,OK,
+NavbarSearch,beta,h,OK,
+NavbarSearch,alpha,i,OK,
+NavbarSearch,beta,i,OK,
+NavbarSearch,alpha,j,OK,
+NavbarSearch,beta,j,OK,
+NavbarSearch,alpha,k,OK,
+NavbarSearch,beta,k,OK,
+SearchInput,alpha,a,KO,Target element has no attributes
+SearchInput,delta,a,KO,Target element has no attributes
+SearchInput,beta,a,KO,Target element has no attributes
+SearchInput,alpha,b,KO,Target element has no valid candidate attributes
+SearchInput,delta,b,KO,Target element has no valid candidate attributes
+SearchInput,beta,b,KO,Target element has no valid candidate attributes
+SearchInput,alpha,c,KO,Target element has no id attribute
+SearchInput,delta,c,KO,Target element has no id attribute
+SearchInput,beta,c,KO,Target element has no id attribute
+SearchInput,alpha,d,OK,
+SearchInput,delta,d,KO,Target element text content is empty
+SearchInput,beta,d,KO,Target element text content is empty
+SearchInput,alpha,e,KO,Target element text content is empty
+SearchInput,delta,e,KO,Target element text content is empty
+SearchInput,beta,e,OK,
+SearchInput,alpha,f,OK,
+SearchInput,delta,f,OK,
+SearchInput,beta,f,KO,The parent is null or empty
+SearchInput,alpha,g,OK,
+SearchInput,delta,g,OK,
+SearchInput,beta,g,OK,
+SearchInput,alpha,h,OK,
+SearchInput,delta,h,OK,
+SearchInput,beta,h,OK,
+SearchInput,alpha,i,OK,
+SearchInput,delta,i,OK,
+SearchInput,beta,i,OK,
+SearchInput,alpha,j,OK,
+SearchInput,delta,j,OK,
+SearchInput,beta,j,OK,
+SearchInput,alpha,k,OK,
+SearchInput,delta,k,OK,
+SearchInput,beta,k,OK,
+SongCard,alpha,a,OK,
+SongCard,delta,a,OK,
+SongCard,beta,a,OK,
+SongCard,gamma,a,OK,
+SongCard,alpha,b,OK,
+SongCard,delta,b,OK,
+SongCard,beta,b,OK,
+SongCard,gamma,b,OK,
+SongCard,alpha,c,KO,Target element has no id attribute
+SongCard,delta,c,KO,Target element has no id attribute
+SongCard,beta,c,KO,Target element has no id attribute
+SongCard,gamma,c,KO,Target element has no id attribute
+SongCard,alpha,d,KO,Target element text content is empty
+SongCard,delta,d,KO,Target element text content is empty
+SongCard,beta,d,KO,Target element text content is empty
+SongCard,gamma,d,KO,Target element text content is empty
+SongCard,alpha,e,KO,Target element text content is empty
+SongCard,delta,e,KO,Target element text content is empty
+SongCard,beta,e,KO,Target element text content is empty
+SongCard,gamma,e,KO,Target element text content is empty
+SongCard,alpha,f,OK,
+SongCard,delta,f,OK,
+SongCard,beta,f,OK,
+SongCard,gamma,f,KO,The parent is null or empty
+SongCard,alpha,g,OK,
+SongCard,delta,g,OK,
+SongCard,beta,g,OK,
+SongCard,gamma,g,OK,
+SongCard,alpha,h,OK,
+SongCard,delta,h,OK,
+SongCard,beta,h,OK,
+SongCard,gamma,h,OK,
+SongCard,alpha,i,OK,
+SongCard,delta,i,OK,
+SongCard,beta,i,OK,
+SongCard,gamma,i,OK,
+SongCard,alpha,j,OK,
+SongCard,delta,j,OK,
+SongCard,beta,j,OK,
+SongCard,gamma,j,OK,
+SongCard,alpha,k,OK,
+SongCard,delta,k,OK,
+SongCard,beta,k,OK,
+SongCard,gamma,k,OK,
+NowPlaying,alpha,a,OK,
+NowPlaying,beta,a,KO,Target element has no attributes
+NowPlaying,gamma,a,KO,Target element has no attributes
+NowPlaying,alpha,b,OK,
+NowPlaying,beta,b,KO,Target element has no valid candidate attributes
+NowPlaying,gamma,b,KO,Target element has no valid candidate attributes
+NowPlaying,alpha,c,KO,Target element has no id attribute
+NowPlaying,beta,c,KO,Target element has no id attribute
+NowPlaying,gamma,c,KO,Target element has no id attribute
+NowPlaying,alpha,d,OK,
+NowPlaying,beta,d,KO,Target element text content is empty
+NowPlaying,gamma,d,KO,Target element text content is empty
+NowPlaying,alpha,e,OK,
+NowPlaying,beta,e,KO,Target element text content is empty
+NowPlaying,gamma,e,KO,Target element text content is empty
+NowPlaying,alpha,f,KO,The parent is null or empty
+NowPlaying,beta,f,OK,
+NowPlaying,gamma,f,OK,
+NowPlaying,alpha,g,OK,
+NowPlaying,beta,g,OK,
+NowPlaying,gamma,g,OK,
+NowPlaying,alpha,h,OK,
+NowPlaying,beta,h,OK,
+NowPlaying,gamma,h,OK,
+NowPlaying,alpha,i,OK,
+NowPlaying,beta,i,OK,
+NowPlaying,gamma,i,OK,
+NowPlaying,alpha,j,OK,
+NowPlaying,beta,j,OK,
+NowPlaying,gamma,j,OK,
+NowPlaying,alpha,k,OK,
+NowPlaying,beta,k,OK,
+NowPlaying,gamma,k,OK,

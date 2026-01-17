@@ -4,55 +4,43 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.junit.Assert.assertEquals;
 
 public class RelativeXPathTest extends BaseTest {
     @Override
-    public String getLocator() { return "RELATIVE_XPATH"; }
+    public String getLocator() { return "RELATIVE_LOCATOR"; }
 
     @Test
     public void testRelativeXPath() throws Exception {
         driver.get(baseUrl);
         // Search link in sidebar
-        wait.until(
-            ExpectedConditions.elementToBeClickable(
-                By.xpath("//a[normalize-space()='Search']")
-            )
+        wait.until(ExpectedConditions.elementToBeClickable(
+            By.xpath("//a[normalize-space()='Search']"))
         ).click();
 
         // Search input
         WebElement searchInput = wait.until(
             ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//input[@placeholder='Artists, songs, albums, or playlists'])")
+                By.xpath("//input[@placeholder='Artists, songs, albums, or playlists']")
             )
         );
         searchInput.clear();
-        searchInput.sendKeys("Billie Jean");
+        searchInput.sendKeys("Michael Jackson");
         Thread.sleep(1000);
 
-        // Double click to start the song
-        WebElement song = wait.until(
-            ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//as-album-track[1]//as-media-table-row[1]//as-track-main-info[1]")
-            )
-        );
-        new Actions(driver).doubleClick(song).perform();
-
-        // Go back home to refresh the now playing bar
-        wait.until(
-            ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//a[normalize-space()='Home']")
-            )
-        ).click();
-        Thread.sleep(1000);
+        // Click the artist
+        WebElement artistCardLink = wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.xpath("//as-card[@ng-reflect-title='Michael Jackson']//a[@class='card']")
+        ));
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click();", artistCardLink);
 
         // Assert that the text of the current artist is the correct one
         String text = driver.findElement(
-            By.xpath("//as-track-current-info/div[2]/div/a")
+                By.xpath("//h2[normalize-space()='Michael Jackson']")
         ).getText();
-        assertEquals("Billie Jean", text);
+        assertEquals("Michael Jackson", text);
     }
 }

@@ -1,0 +1,683 @@
+Nome,Identificativo,Locatore,Tag,Stato,ErroreSearchInput,mutation_k_tag_ins_mut_delta,SeleniumXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SearchInput,mutation_k_tag_ins_mut_delta,HookTest,delta,PASSED,null
+SearchInput,mutation_k_tag_ins_mut_delta,RobulaXPathTest,delta,PASSED,null
+SearchInput,mutation_k_tag_ins_mut_delta,KatalonXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SearchInput,mutation_k_tag_ins_mut_delta,RelativeXPathTest,delta,PASSED,null
+SearchInput,mutation_k_tag_ins_mut_delta,AbsoluteXPathTest,delta,FAILED,Expected condition failed: waiting for presence of element located by: By.xpath: /html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[3]/div/as-card[1]/a (tried for 10 second(s) with 500 milliseconds interval)
+SearchInput,mutation_f_tag_mov_container_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SearchInput,mutation_f_tag_mov_container_mut_alpha,HookTest,alpha,PASSED,null
+SearchInput,mutation_f_tag_mov_container_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+SearchInput,mutation_f_tag_mov_container_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SearchInput,mutation_f_tag_mov_container_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+SearchInput,mutation_f_tag_mov_container_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null
+SearchInput,mutation_f_tag_mov_container_mut_delta,SeleniumXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_f_tag_mov_container_mut_delta,HookTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_f_tag_mov_container_mut_delta,RobulaXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_f_tag_mov_container_mut_delta,KatalonXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_f_tag_mov_container_mut_delta,RelativeXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_f_tag_mov_container_mut_delta,AbsoluteXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_g_tag_mov_html_mut_gamma,SeleniumXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_g_tag_mov_html_mut_gamma,HookTest,gamma,PASSED,null
+SongCard,mutation_g_tag_mov_html_mut_gamma,RobulaXPathTest,gamma,PASSED,null
+SongCard,mutation_g_tag_mov_html_mut_gamma,KatalonXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_g_tag_mov_html_mut_gamma,RelativeXPathTest,gamma,PASSED,null
+SongCard,mutation_g_tag_mov_html_mut_gamma,AbsoluteXPathTest,gamma,PASSED,null
+NavbarSearch,mutation_i_tag_rem_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NavbarSearch,mutation_i_tag_rem_mut_alpha,HookTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //*[@x-test-tpl-html-1]//*[@x-test-hook-angular-spotify-root-29]//*[@x-test-tpl-as-nav-bar-1]//*[@x-test-tpl-ul-3]//*[@x-test-hook-li-4][2]//*[@x-test-hook-a-5] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_i_tag_rem_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+NavbarSearch,mutation_i_tag_rem_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NavbarSearch,mutation_i_tag_rem_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+NavbarSearch,mutation_i_tag_rem_mut_alpha,AbsoluteXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/angular-spotify-root/as-layout/as-nav-bar/ul/li[2]/a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_i_tag_rem_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SearchInput,mutation_i_tag_rem_mut_alpha,HookTest,alpha,PASSED,null
+SearchInput,mutation_i_tag_rem_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+SearchInput,mutation_i_tag_rem_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SearchInput,mutation_i_tag_rem_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+SearchInput,mutation_i_tag_rem_mut_alpha,AbsoluteXPathTest,alpha,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[1]/as-input/div/input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NowPlaying,mutation_k_tag_ins_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_k_tag_ins_mut_alpha,HookTest,alpha,PASSED,null
+NowPlaying,mutation_k_tag_ins_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+NowPlaying,mutation_k_tag_ins_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_k_tag_ins_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+NowPlaying,mutation_k_tag_ins_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null
+SongCard,mutation_h_tag_mov_temp_mut_delta,SeleniumXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_delta,HookTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_delta,RobulaXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_delta,KatalonXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_delta,RelativeXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_delta,AbsoluteXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_d_text_cont_mod_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SearchInput,mutation_d_text_cont_mod_mut_alpha,HookTest,alpha,PASSED,null
+SearchInput,mutation_d_text_cont_mod_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+SearchInput,mutation_d_text_cont_mod_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SearchInput,mutation_d_text_cont_mod_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+SearchInput,mutation_d_text_cont_mod_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null
+SongCard,mutation_h_tag_mov_temp_mut_gamma,SeleniumXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_gamma,HookTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_gamma,RobulaXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_gamma,KatalonXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_gamma,RelativeXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_gamma,AbsoluteXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_gamma,SeleniumXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_gamma,HookTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_gamma,RobulaXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_gamma,KatalonXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_gamma,RelativeXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_gamma,AbsoluteXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_alpha,SeleniumXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_alpha,HookTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_alpha,RobulaXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_alpha,KatalonXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_alpha,RelativeXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_alpha,AbsoluteXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_j_tag_type_mod_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_j_tag_type_mod_mut_beta,HookTest,beta,PASSED,null
+SongCard,mutation_j_tag_type_mod_mut_beta,RobulaXPathTest,beta,PASSED,null
+SongCard,mutation_j_tag_type_mod_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_j_tag_type_mod_mut_beta,RelativeXPathTest,beta,PASSED,null
+SongCard,mutation_j_tag_type_mod_mut_beta,AbsoluteXPathTest,beta,PASSED,null
+SongCard,mutation_j_tag_type_mod_mut_gamma,SeleniumXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_j_tag_type_mod_mut_gamma,HookTest,gamma,PASSED,null
+SongCard,mutation_j_tag_type_mod_mut_gamma,RobulaXPathTest,gamma,PASSED,null
+SongCard,mutation_j_tag_type_mod_mut_gamma,KatalonXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_j_tag_type_mod_mut_gamma,RelativeXPathTest,gamma,PASSED,null
+SongCard,mutation_j_tag_type_mod_mut_gamma,AbsoluteXPathTest,gamma,PASSED,null
+NavbarSearch,mutation_g_tag_mov_html_mut_alpha,SeleniumXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text() 'Search')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_g_tag_mov_html_mut_alpha,HookTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //*[@x-test-tpl-html-1]//*[@x-test-hook-angular-spotify-root-29]//*[@x-test-tpl-as-nav-bar-1]//*[@x-test-tpl-ul-3]//*[@x-test-hook-li-4][2]//*[@x-test-hook-a-5] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_g_tag_mov_html_mut_alpha,RobulaXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //*[@ng-reflect-router-link='/search'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_g_tag_mov_html_mut_alpha,KatalonXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::a[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_g_tag_mov_html_mut_alpha,RelativeXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //a[normalize-space()='Search'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_g_tag_mov_html_mut_alpha,AbsoluteXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/angular-spotify-root/as-layout/as-nav-bar/ul/li[2]/a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_g_tag_mov_html_mut_beta,SeleniumXPathTest,beta,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text() 'Search')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_g_tag_mov_html_mut_beta,HookTest,beta,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //*[@x-test-tpl-html-1]//*[@x-test-hook-angular-spotify-root-29]//*[@x-test-tpl-as-nav-bar-1]//*[@x-test-tpl-ul-3]//*[@x-test-hook-li-4][2]//*[@x-test-hook-a-5] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_g_tag_mov_html_mut_beta,RobulaXPathTest,beta,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //*[@ng-reflect-router-link='/search'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_g_tag_mov_html_mut_beta,KatalonXPathTest,beta,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::a[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_g_tag_mov_html_mut_beta,RelativeXPathTest,beta,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //a[normalize-space()='Search'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_g_tag_mov_html_mut_beta,AbsoluteXPathTest,beta,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/angular-spotify-root/as-layout/as-nav-bar/ul/li[2]/a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SongCard,mutation_i_tag_rem_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_i_tag_rem_mut_alpha,HookTest,alpha,PASSED,null
+SongCard,mutation_i_tag_rem_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+SongCard,mutation_i_tag_rem_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_i_tag_rem_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+SongCard,mutation_i_tag_rem_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null
+SearchInput,mutation_i_tag_rem_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SearchInput,mutation_i_tag_rem_mut_beta,HookTest,beta,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: //*[@x-test-tpl-html-1]//*[@x-test-hook-angular-spotify-root-29]//*[@x-test-tpl-as-main-view-3]//*[@x-test-tpl-div-2]//*[@x-test-tpl-div-1]//*[@x-test-hook-as-input-3]//*[@x-test-tpl-div-1]//*[@x-test-hook-input-4] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_i_tag_rem_mut_beta,RobulaXPathTest,beta,PASSED,null
+SearchInput,mutation_i_tag_rem_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SearchInput,mutation_i_tag_rem_mut_beta,RelativeXPathTest,beta,PASSED,null
+SearchInput,mutation_i_tag_rem_mut_beta,AbsoluteXPathTest,beta,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[1]/as-input/div/input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NowPlaying,mutation_h_tag_mov_temp_mut_alpha,SeleniumXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_h_tag_mov_temp_mut_alpha,HookTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_h_tag_mov_temp_mut_alpha,RobulaXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_h_tag_mov_temp_mut_alpha,KatalonXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_h_tag_mov_temp_mut_alpha,RelativeXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_h_tag_mov_temp_mut_alpha,AbsoluteXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_beta,SeleniumXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_beta,HookTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_beta,RobulaXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_beta,KatalonXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_beta,RelativeXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_beta,AbsoluteXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_i_tag_rem_mut_beta,SeleniumXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_i_tag_rem_mut_beta,HookTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_i_tag_rem_mut_beta,RobulaXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_i_tag_rem_mut_beta,KatalonXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_i_tag_rem_mut_beta,RelativeXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_i_tag_rem_mut_beta,AbsoluteXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_e_text_cont_rem_mut_beta,SeleniumXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_e_text_cont_rem_mut_beta,HookTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_e_text_cont_rem_mut_beta,RobulaXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_e_text_cont_rem_mut_beta,KatalonXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_e_text_cont_rem_mut_beta,RelativeXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_e_text_cont_rem_mut_beta,AbsoluteXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_h_tag_mov_temp_mut_delta,SeleniumXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_h_tag_mov_temp_mut_delta,HookTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_h_tag_mov_temp_mut_delta,RobulaXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_h_tag_mov_temp_mut_delta,KatalonXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_h_tag_mov_temp_mut_delta,RelativeXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_h_tag_mov_temp_mut_delta,AbsoluteXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_k_tag_ins_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SearchInput,mutation_k_tag_ins_mut_alpha,HookTest,alpha,PASSED,null
+SearchInput,mutation_k_tag_ins_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+SearchInput,mutation_k_tag_ins_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SearchInput,mutation_k_tag_ins_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+SearchInput,mutation_k_tag_ins_mut_alpha,AbsoluteXPathTest,alpha,FAILED,Expected condition failed: waiting for presence of element located by: By.xpath: /html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[3]/div/as-card[1]/a (tried for 10 second(s) with 500 milliseconds interval)
+NowPlaying,mutation_i_tag_rem_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_i_tag_rem_mut_alpha,HookTest,alpha,PASSED,null
+NowPlaying,mutation_i_tag_rem_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+NowPlaying,mutation_i_tag_rem_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_i_tag_rem_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+NowPlaying,mutation_i_tag_rem_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null
+NavbarSearch,mutation_h_tag_mov_temp_mut_alpha,SeleniumXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //a[contains(text() 'Search')] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_h_tag_mov_temp_mut_alpha,HookTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //*[@x-test-tpl-html-1]//*[@x-test-hook-angular-spotify-root-29]//*[@x-test-tpl-as-nav-bar-1]//*[@x-test-tpl-ul-3]//*[@x-test-hook-li-4][2]//*[@x-test-hook-a-5] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_h_tag_mov_temp_mut_alpha,RobulaXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //*[@ng-reflect-router-link='/search'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_h_tag_mov_temp_mut_alpha,KatalonXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Home'])[1]/following::a[1] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_h_tag_mov_temp_mut_alpha,RelativeXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: //a[normalize-space()='Search'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NavbarSearch,mutation_h_tag_mov_temp_mut_alpha,AbsoluteXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/angular-spotify-root/as-layout/as-nav-bar/ul/li[2]/a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NowPlaying,mutation_h_tag_mov_temp_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_h_tag_mov_temp_mut_beta,HookTest,beta,PASSED,null
+NowPlaying,mutation_h_tag_mov_temp_mut_beta,RobulaXPathTest,beta,PASSED,null
+NowPlaying,mutation_h_tag_mov_temp_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_h_tag_mov_temp_mut_beta,RelativeXPathTest,beta,PASSED,null
+NowPlaying,mutation_h_tag_mov_temp_mut_beta,AbsoluteXPathTest,beta,PASSED,null
+SearchInput,mutation_h_tag_mov_temp_mut_alpha,SeleniumXPathTest,alpha,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: //input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_h_tag_mov_temp_mut_alpha,HookTest,alpha,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: //*[@x-test-tpl-html-1]//*[@x-test-hook-angular-spotify-root-29]//*[@x-test-tpl-as-main-view-3]//*[@x-test-tpl-div-2]//*[@x-test-tpl-div-1]//*[@x-test-hook-as-input-3]//*[@x-test-tpl-div-1]//*[@x-test-hook-input-4] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_h_tag_mov_temp_mut_alpha,RobulaXPathTest,alpha,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: //input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_h_tag_mov_temp_mut_alpha,KatalonXPathTest,alpha,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: //input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_h_tag_mov_temp_mut_alpha,RelativeXPathTest,alpha,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: //input[@placeholder='Artists  songs  albums  or playlists'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_h_tag_mov_temp_mut_alpha,AbsoluteXPathTest,alpha,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[1]/as-input/div/input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NowPlaying,mutation_g_tag_mov_html_mut_gamma,SeleniumXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_g_tag_mov_html_mut_gamma,HookTest,gamma,PASSED,null
+NowPlaying,mutation_g_tag_mov_html_mut_gamma,RobulaXPathTest,gamma,PASSED,null
+NowPlaying,mutation_g_tag_mov_html_mut_gamma,KatalonXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_g_tag_mov_html_mut_gamma,RelativeXPathTest,gamma,PASSED,null
+NowPlaying,mutation_g_tag_mov_html_mut_gamma,AbsoluteXPathTest,gamma,PASSED,null
+SearchInput,mutation_h_tag_mov_temp_mut_beta,SeleniumXPathTest,beta,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: //input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_h_tag_mov_temp_mut_beta,HookTest,beta,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: //*[@x-test-tpl-html-1]//*[@x-test-hook-angular-spotify-root-29]//*[@x-test-tpl-as-main-view-3]//*[@x-test-tpl-div-2]//*[@x-test-tpl-div-1]//*[@x-test-hook-as-input-3]//*[@x-test-tpl-div-1]//*[@x-test-hook-input-4] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_h_tag_mov_temp_mut_beta,RobulaXPathTest,beta,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: //input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_h_tag_mov_temp_mut_beta,KatalonXPathTest,beta,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: //input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_h_tag_mov_temp_mut_beta,RelativeXPathTest,beta,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: //input[@placeholder='Artists  songs  albums  or playlists'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_h_tag_mov_temp_mut_beta,AbsoluteXPathTest,beta,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[1]/as-input/div/input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SongCard,mutation_h_tag_mov_temp_mut_alpha,SeleniumXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_alpha,HookTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_alpha,RobulaXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_alpha,KatalonXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_alpha,RelativeXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_h_tag_mov_temp_mut_alpha,AbsoluteXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_beta,SeleniumXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_beta,HookTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_beta,RobulaXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_beta,KatalonXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_beta,RelativeXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_beta,AbsoluteXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_h_tag_mov_temp_mut_gamma,SeleniumXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_h_tag_mov_temp_mut_gamma,HookTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_h_tag_mov_temp_mut_gamma,RobulaXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_h_tag_mov_temp_mut_gamma,KatalonXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_h_tag_mov_temp_mut_gamma,RelativeXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_h_tag_mov_temp_mut_gamma,AbsoluteXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_i_tag_rem_mut_gamma,SeleniumXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_i_tag_rem_mut_gamma,HookTest,gamma,PASSED,null
+NowPlaying,mutation_i_tag_rem_mut_gamma,RobulaXPathTest,gamma,PASSED,null
+NowPlaying,mutation_i_tag_rem_mut_gamma,KatalonXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_i_tag_rem_mut_gamma,RelativeXPathTest,gamma,PASSED,null
+NowPlaying,mutation_i_tag_rem_mut_gamma,AbsoluteXPathTest,gamma,PASSED,null
+SongCard,mutation_b_attr_rem_mut_gamma,SeleniumXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_b_attr_rem_mut_gamma,HookTest,gamma,PASSED,null
+SongCard,mutation_b_attr_rem_mut_gamma,RobulaXPathTest,gamma,PASSED,null
+SongCard,mutation_b_attr_rem_mut_gamma,KatalonXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_b_attr_rem_mut_gamma,RelativeXPathTest,gamma,PASSED,null
+SongCard,mutation_b_attr_rem_mut_gamma,AbsoluteXPathTest,gamma,PASSED,null
+SongCard,mutation_g_tag_mov_html_mut_alpha,SeleniumXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_g_tag_mov_html_mut_alpha,HookTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_g_tag_mov_html_mut_alpha,RobulaXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_g_tag_mov_html_mut_alpha,KatalonXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_g_tag_mov_html_mut_alpha,RelativeXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_g_tag_mov_html_mut_alpha,AbsoluteXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_j_tag_type_mod_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SearchInput,mutation_j_tag_type_mod_mut_beta,HookTest,beta,PASSED,null
+SearchInput,mutation_j_tag_type_mod_mut_beta,RobulaXPathTest,beta,PASSED,null
+SearchInput,mutation_j_tag_type_mod_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SearchInput,mutation_j_tag_type_mod_mut_beta,RelativeXPathTest,beta,PASSED,null
+SearchInput,mutation_j_tag_type_mod_mut_beta,AbsoluteXPathTest,beta,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[1]/as-input/div/input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SearchInput,mutation_g_tag_mov_html_mut_delta,SeleniumXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_delta,HookTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_delta,RobulaXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_delta,KatalonXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_delta,RelativeXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_g_tag_mov_html_mut_delta,AbsoluteXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_j_tag_type_mod_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SearchInput,mutation_j_tag_type_mod_mut_alpha,HookTest,alpha,PASSED,null
+SearchInput,mutation_j_tag_type_mod_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+SearchInput,mutation_j_tag_type_mod_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SearchInput,mutation_j_tag_type_mod_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+SearchInput,mutation_j_tag_type_mod_mut_alpha,AbsoluteXPathTest,alpha,FAILED,Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-search/div/div[1]/as-input/div/input (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+NowPlaying,mutation_j_tag_type_mod_mut_gamma,SeleniumXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_j_tag_type_mod_mut_gamma,HookTest,gamma,PASSED,null
+NowPlaying,mutation_j_tag_type_mod_mut_gamma,RobulaXPathTest,gamma,PASSED,null
+NowPlaying,mutation_j_tag_type_mod_mut_gamma,KatalonXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_j_tag_type_mod_mut_gamma,RelativeXPathTest,gamma,PASSED,null
+NowPlaying,mutation_j_tag_type_mod_mut_gamma,AbsoluteXPathTest,gamma,PASSED,null
+SongCard,mutation_i_tag_rem_mut_gamma,SeleniumXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_i_tag_rem_mut_gamma,HookTest,gamma,PASSED,null
+SongCard,mutation_i_tag_rem_mut_gamma,RobulaXPathTest,gamma,PASSED,null
+SongCard,mutation_i_tag_rem_mut_gamma,KatalonXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_i_tag_rem_mut_gamma,RelativeXPathTest,gamma,PASSED,null
+SongCard,mutation_i_tag_rem_mut_gamma,AbsoluteXPathTest,gamma,PASSED,null
+NowPlaying,mutation_f_tag_mov_container_mut_gamma,SeleniumXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_f_tag_mov_container_mut_gamma,HookTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_f_tag_mov_container_mut_gamma,RobulaXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_f_tag_mov_container_mut_gamma,KatalonXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_f_tag_mov_container_mut_gamma,RelativeXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_f_tag_mov_container_mut_gamma,AbsoluteXPathTest,gamma,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_j_tag_type_mod_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NavbarSearch,mutation_j_tag_type_mod_mut_alpha,HookTest,alpha,PASSED,null
+NavbarSearch,mutation_j_tag_type_mod_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+NavbarSearch,mutation_j_tag_type_mod_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NavbarSearch,mutation_j_tag_type_mod_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+NavbarSearch,mutation_j_tag_type_mod_mut_alpha,AbsoluteXPathTest,alpha,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/angular-spotify-root/as-layout/as-nav-bar/ul/li[2]/a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SongCard,mutation_i_tag_rem_mut_beta,SeleniumXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_i_tag_rem_mut_beta,HookTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_i_tag_rem_mut_beta,RobulaXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_i_tag_rem_mut_beta,KatalonXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_i_tag_rem_mut_beta,RelativeXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_i_tag_rem_mut_beta,AbsoluteXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_e_text_cont_rem_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_e_text_cont_rem_mut_alpha,HookTest,alpha,PASSED,null
+NowPlaying,mutation_e_text_cont_rem_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+NowPlaying,mutation_e_text_cont_rem_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_e_text_cont_rem_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+NowPlaying,mutation_e_text_cont_rem_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null
+SongCard,mutation_g_tag_mov_html_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_g_tag_mov_html_mut_beta,HookTest,beta,PASSED,null
+SongCard,mutation_g_tag_mov_html_mut_beta,RobulaXPathTest,beta,PASSED,null
+SongCard,mutation_g_tag_mov_html_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_g_tag_mov_html_mut_beta,RelativeXPathTest,beta,PASSED,null
+SongCard,mutation_g_tag_mov_html_mut_beta,AbsoluteXPathTest,beta,PASSED,null
+SongCard,mutation_j_tag_type_mod_mut_delta,SeleniumXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_j_tag_type_mod_mut_delta,HookTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_j_tag_type_mod_mut_delta,RobulaXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_j_tag_type_mod_mut_delta,KatalonXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_j_tag_type_mod_mut_delta,RelativeXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_j_tag_type_mod_mut_delta,AbsoluteXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_b_attr_rem_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_b_attr_rem_mut_alpha,HookTest,alpha,PASSED,null
+SongCard,mutation_b_attr_rem_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+SongCard,mutation_b_attr_rem_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_b_attr_rem_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+SongCard,mutation_b_attr_rem_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null
+SongCard,mutation_h_tag_mov_temp_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_h_tag_mov_temp_mut_beta,HookTest,beta,PASSED,null
+SongCard,mutation_h_tag_mov_temp_mut_beta,RobulaXPathTest,beta,PASSED,null
+SongCard,mutation_h_tag_mov_temp_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_h_tag_mov_temp_mut_beta,RelativeXPathTest,beta,PASSED,null
+SongCard,mutation_h_tag_mov_temp_mut_beta,AbsoluteXPathTest,beta,PASSED,null
+NavbarSearch,mutation_h_tag_mov_temp_mut_beta,SeleniumXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_h_tag_mov_temp_mut_beta,HookTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_h_tag_mov_temp_mut_beta,RobulaXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_h_tag_mov_temp_mut_beta,KatalonXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_h_tag_mov_temp_mut_beta,RelativeXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_h_tag_mov_temp_mut_beta,AbsoluteXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_a_attr_val_mod_mut_alpha,SeleniumXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_a_attr_val_mod_mut_alpha,HookTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_a_attr_val_mod_mut_alpha,RobulaXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_a_attr_val_mod_mut_alpha,KatalonXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_a_attr_val_mod_mut_alpha,RelativeXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_a_attr_val_mod_mut_alpha,AbsoluteXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_b_attr_rem_mut_delta,SeleniumXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_b_attr_rem_mut_delta,HookTest,delta,PASSED,null
+SongCard,mutation_b_attr_rem_mut_delta,RobulaXPathTest,delta,PASSED,null
+SongCard,mutation_b_attr_rem_mut_delta,KatalonXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_b_attr_rem_mut_delta,RelativeXPathTest,delta,PASSED,null
+SongCard,mutation_b_attr_rem_mut_delta,AbsoluteXPathTest,delta,PASSED,null
+SongCard,mutation_a_attr_val_mod_mut_delta,SeleniumXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_delta,HookTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_delta,RobulaXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_delta,KatalonXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_delta,RelativeXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_delta,AbsoluteXPathTest,delta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_k_tag_ins_mut_gamma,SeleniumXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_k_tag_ins_mut_gamma,HookTest,gamma,PASSED,null
+NowPlaying,mutation_k_tag_ins_mut_gamma,RobulaXPathTest,gamma,PASSED,null
+NowPlaying,mutation_k_tag_ins_mut_gamma,KatalonXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_k_tag_ins_mut_gamma,RelativeXPathTest,gamma,PASSED,null
+NowPlaying,mutation_k_tag_ins_mut_gamma,AbsoluteXPathTest,gamma,PASSED,null
+NowPlaying,mutation_j_tag_type_mod_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_j_tag_type_mod_mut_alpha,HookTest,alpha,PASSED,null
+NowPlaying,mutation_j_tag_type_mod_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+NowPlaying,mutation_j_tag_type_mod_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_j_tag_type_mod_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+NowPlaying,mutation_j_tag_type_mod_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null
+SongCard,mutation_a_attr_val_mod_mut_alpha,SeleniumXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_alpha,HookTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_alpha,RobulaXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_alpha,KatalonXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_alpha,RelativeXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_alpha,AbsoluteXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_alpha,SeleniumXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_alpha,HookTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_alpha,RobulaXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_alpha,KatalonXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_alpha,RelativeXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_g_tag_mov_html_mut_alpha,AbsoluteXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_i_tag_rem_mut_delta,SeleniumXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_i_tag_rem_mut_delta,HookTest,delta,PASSED,null
+SongCard,mutation_i_tag_rem_mut_delta,RobulaXPathTest,delta,PASSED,null
+SongCard,mutation_i_tag_rem_mut_delta,KatalonXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_i_tag_rem_mut_delta,RelativeXPathTest,delta,PASSED,null
+SongCard,mutation_i_tag_rem_mut_delta,AbsoluteXPathTest,delta,PASSED,null
+SongCard,mutation_k_tag_ins_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_k_tag_ins_mut_beta,HookTest,beta,PASSED,null
+SongCard,mutation_k_tag_ins_mut_beta,RobulaXPathTest,beta,PASSED,null
+SongCard,mutation_k_tag_ins_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_k_tag_ins_mut_beta,RelativeXPathTest,beta,PASSED,null
+SongCard,mutation_k_tag_ins_mut_beta,AbsoluteXPathTest,beta,PASSED,null
+NowPlaying,mutation_j_tag_type_mod_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_j_tag_type_mod_mut_beta,HookTest,beta,PASSED,null
+NowPlaying,mutation_j_tag_type_mod_mut_beta,RobulaXPathTest,beta,PASSED,null
+NowPlaying,mutation_j_tag_type_mod_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_j_tag_type_mod_mut_beta,RelativeXPathTest,beta,PASSED,null
+NowPlaying,mutation_j_tag_type_mod_mut_beta,AbsoluteXPathTest,beta,PASSED,null
+SongCard,mutation_k_tag_ins_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_k_tag_ins_mut_alpha,HookTest,alpha,PASSED,null
+SongCard,mutation_k_tag_ins_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+SongCard,mutation_k_tag_ins_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_k_tag_ins_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+SongCard,mutation_k_tag_ins_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null
+SongCard,mutation_f_tag_mov_container_mut_delta,SeleniumXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_f_tag_mov_container_mut_delta,HookTest,delta,PASSED,null
+SongCard,mutation_f_tag_mov_container_mut_delta,RobulaXPathTest,delta,PASSED,null
+SongCard,mutation_f_tag_mov_container_mut_delta,KatalonXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_f_tag_mov_container_mut_delta,RelativeXPathTest,delta,PASSED,null
+SongCard,mutation_f_tag_mov_container_mut_delta,AbsoluteXPathTest,delta,PASSED,null
+NavbarSearch,mutation_d_text_cont_mod_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NavbarSearch,mutation_d_text_cont_mod_mut_beta,HookTest,beta,PASSED,null
+NavbarSearch,mutation_d_text_cont_mod_mut_beta,RobulaXPathTest,beta,PASSED,null
+NavbarSearch,mutation_d_text_cont_mod_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NavbarSearch,mutation_d_text_cont_mod_mut_beta,RelativeXPathTest,beta,PASSED,null
+NavbarSearch,mutation_d_text_cont_mod_mut_beta,AbsoluteXPathTest,beta,PASSED,null
+SearchInput,mutation_i_tag_rem_mut_delta,SeleniumXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SearchInput,mutation_i_tag_rem_mut_delta,HookTest,delta,PASSED,null
+SearchInput,mutation_i_tag_rem_mut_delta,RobulaXPathTest,delta,PASSED,null
+SearchInput,mutation_i_tag_rem_mut_delta,KatalonXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SearchInput,mutation_i_tag_rem_mut_delta,RelativeXPathTest,delta,PASSED,null
+SearchInput,mutation_i_tag_rem_mut_delta,AbsoluteXPathTest,delta,PASSED,null
+NowPlaying,mutation_b_attr_rem_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_b_attr_rem_mut_alpha,HookTest,alpha,PASSED,null
+NowPlaying,mutation_b_attr_rem_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+NowPlaying,mutation_b_attr_rem_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_b_attr_rem_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+NowPlaying,mutation_b_attr_rem_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null
+NavbarSearch,mutation_k_tag_ins_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NavbarSearch,mutation_k_tag_ins_mut_beta,HookTest,beta,PASSED,null
+NavbarSearch,mutation_k_tag_ins_mut_beta,RobulaXPathTest,beta,PASSED,null
+NavbarSearch,mutation_k_tag_ins_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NavbarSearch,mutation_k_tag_ins_mut_beta,RelativeXPathTest,beta,PASSED,null
+NavbarSearch,mutation_k_tag_ins_mut_beta,AbsoluteXPathTest,beta,PASSED,null
+SongCard,mutation_b_attr_rem_mut_beta,SeleniumXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_b_attr_rem_mut_beta,HookTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_b_attr_rem_mut_beta,RobulaXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_b_attr_rem_mut_beta,KatalonXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_b_attr_rem_mut_beta,RelativeXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_b_attr_rem_mut_beta,AbsoluteXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_g_tag_mov_html_mut_delta,SeleniumXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_g_tag_mov_html_mut_delta,HookTest,delta,PASSED,null
+SongCard,mutation_g_tag_mov_html_mut_delta,RobulaXPathTest,delta,PASSED,null
+SongCard,mutation_g_tag_mov_html_mut_delta,KatalonXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_g_tag_mov_html_mut_delta,RelativeXPathTest,delta,PASSED,null
+SongCard,mutation_g_tag_mov_html_mut_delta,AbsoluteXPathTest,delta,PASSED,null
+NavbarSearch,mutation_e_text_cont_rem_mut_beta,SeleniumXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_e_text_cont_rem_mut_beta,HookTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_e_text_cont_rem_mut_beta,RobulaXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_e_text_cont_rem_mut_beta,KatalonXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_e_text_cont_rem_mut_beta,RelativeXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NavbarSearch,mutation_e_text_cont_rem_mut_beta,AbsoluteXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SearchInput,mutation_k_tag_ins_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SearchInput,mutation_k_tag_ins_mut_beta,HookTest,beta,PASSED,null
+SearchInput,mutation_k_tag_ins_mut_beta,RobulaXPathTest,beta,PASSED,null
+SearchInput,mutation_k_tag_ins_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SearchInput,mutation_k_tag_ins_mut_beta,RelativeXPathTest,beta,PASSED,null
+SearchInput,mutation_k_tag_ins_mut_beta,AbsoluteXPathTest,beta,PASSED,null
+NowPlaying,mutation_k_tag_ins_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_k_tag_ins_mut_beta,HookTest,beta,PASSED,null
+NowPlaying,mutation_k_tag_ins_mut_beta,RobulaXPathTest,beta,PASSED,null
+NowPlaying,mutation_k_tag_ins_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_k_tag_ins_mut_beta,RelativeXPathTest,beta,PASSED,null
+NowPlaying,mutation_k_tag_ins_mut_beta,AbsoluteXPathTest,beta,PASSED,null
+SearchInput,mutation_j_tag_type_mod_mut_delta,SeleniumXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SearchInput,mutation_j_tag_type_mod_mut_delta,HookTest,delta,PASSED,null
+SearchInput,mutation_j_tag_type_mod_mut_delta,RobulaXPathTest,delta,PASSED,null
+SearchInput,mutation_j_tag_type_mod_mut_delta,KatalonXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SearchInput,mutation_j_tag_type_mod_mut_delta,RelativeXPathTest,delta,PASSED,null
+SearchInput,mutation_j_tag_type_mod_mut_delta,AbsoluteXPathTest,delta,FAILED,no such element: Unable to locate element: {"method":"xpath" "selector":"/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-artist/div/as-media-summary/div/h2"}
+  (Session info: chrome=143.0.7499.192)
+For documentation on this error  please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a47a1f8d0b1373836c6add7d7006ea61  findElement {value=/html/body/angular-spotify-root/as-layout/as-main-view/div[2]/as-artist/div/as-media-summary/div/h2  using=xpath}]
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SongCard,mutation_j_tag_type_mod_mut_alpha,SeleniumXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_j_tag_type_mod_mut_alpha,HookTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_j_tag_type_mod_mut_alpha,RobulaXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_j_tag_type_mod_mut_alpha,KatalonXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_j_tag_type_mod_mut_alpha,RelativeXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_j_tag_type_mod_mut_alpha,AbsoluteXPathTest,alpha,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_k_tag_ins_mut_gamma,SeleniumXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_k_tag_ins_mut_gamma,HookTest,gamma,PASSED,null
+SongCard,mutation_k_tag_ins_mut_gamma,RobulaXPathTest,gamma,PASSED,null
+SongCard,mutation_k_tag_ins_mut_gamma,KatalonXPathTest,gamma,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_k_tag_ins_mut_gamma,RelativeXPathTest,gamma,PASSED,null
+SongCard,mutation_k_tag_ins_mut_gamma,AbsoluteXPathTest,gamma,PASSED,null
+NowPlaying,mutation_i_tag_rem_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_i_tag_rem_mut_beta,HookTest,beta,PASSED,null
+NowPlaying,mutation_i_tag_rem_mut_beta,RobulaXPathTest,beta,PASSED,null
+NowPlaying,mutation_i_tag_rem_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_i_tag_rem_mut_beta,RelativeXPathTest,beta,PASSED,null
+NowPlaying,mutation_i_tag_rem_mut_beta,AbsoluteXPathTest,beta,PASSED,null
+NavbarSearch,mutation_k_tag_ins_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NavbarSearch,mutation_k_tag_ins_mut_alpha,HookTest,alpha,PASSED,null
+NavbarSearch,mutation_k_tag_ins_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+NavbarSearch,mutation_k_tag_ins_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NavbarSearch,mutation_k_tag_ins_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+NavbarSearch,mutation_k_tag_ins_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null
+NavbarSearch,mutation_j_tag_type_mod_mut_beta,SeleniumXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NavbarSearch,mutation_j_tag_type_mod_mut_beta,HookTest,beta,PASSED,null
+NavbarSearch,mutation_j_tag_type_mod_mut_beta,RobulaXPathTest,beta,PASSED,null
+NavbarSearch,mutation_j_tag_type_mod_mut_beta,KatalonXPathTest,beta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NavbarSearch,mutation_j_tag_type_mod_mut_beta,RelativeXPathTest,beta,PASSED,null
+NavbarSearch,mutation_j_tag_type_mod_mut_beta,AbsoluteXPathTest,beta,FAILED,Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/angular-spotify-root/as-layout/as-nav-bar/ul/li[2]/a (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.27.0'  revision: 'd6e718d134'
+System info: os.name: 'Linux'  os.arch: 'amd64'  os.version: '6.18.5-200.fc43.x86_64'  java.version: '25.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false  browserName: chrome  browserVersion: 143.0.7499.192  chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45...  userDataDir: /tmp/.org.chromium.Chromium...}  fedcm:accounts: true  goog:chromeOptions: {debuggerAddress: localhost:39261}  goog:processID: 25518  networkConnectionEnabled: false  pageLoadStrategy: normal  platformName: linux  proxy: Proxy()  se:cdp: ws://localhost:39261/devtoo...  se:cdpVersion: 143.0.7499.192  setWindowRect: true  strictFileInteractability: false  timeouts: {implicit: 0  pageLoad: 300000  script: 30000}  unhandledPromptBehavior: dismiss and notify  webauthn:extension:credBlob: true  webauthn:extension:largeBlob: true  webauthn:extension:minPinLength: true  webauthn:extension:prf: true  webauthn:virtualAuthenticators: true}
+Session ID: a47a1f8d0b1373836c6add7d7006ea61
+SongCard,mutation_k_tag_ins_mut_delta,SeleniumXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+SongCard,mutation_k_tag_ins_mut_delta,HookTest,delta,PASSED,null
+SongCard,mutation_k_tag_ins_mut_delta,RobulaXPathTest,delta,PASSED,null
+SongCard,mutation_k_tag_ins_mut_delta,KatalonXPathTest,delta,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+SongCard,mutation_k_tag_ins_mut_delta,RelativeXPathTest,delta,PASSED,null
+SongCard,mutation_k_tag_ins_mut_delta,AbsoluteXPathTest,delta,PASSED,null
+SongCard,mutation_a_attr_val_mod_mut_beta,SeleniumXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_beta,HookTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_beta,RobulaXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_beta,KatalonXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_beta,RelativeXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+SongCard,mutation_a_attr_val_mod_mut_beta,AbsoluteXPathTest,beta,NOT_APPLICABLE,Application did not recompile. Marking test as not applicable.
+NowPlaying,mutation_d_text_cont_mod_mut_alpha,SeleniumXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Songs]>
+NowPlaying,mutation_d_text_cont_mod_mut_alpha,HookTest,alpha,PASSED,null
+NowPlaying,mutation_d_text_cont_mod_mut_alpha,RobulaXPathTest,alpha,PASSED,null
+NowPlaying,mutation_d_text_cont_mod_mut_alpha,KatalonXPathTest,alpha,FAILED,expected:<[Michael Jackson]> but was:<[Billy Joel]>
+NowPlaying,mutation_d_text_cont_mod_mut_alpha,RelativeXPathTest,alpha,PASSED,null
+NowPlaying,mutation_d_text_cont_mod_mut_alpha,AbsoluteXPathTest,alpha,PASSED,null

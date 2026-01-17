@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MutationBatch {
+    public String batchName;
     public String batchId; // e.g.: mutation_a_attribute_beta
     private final List<TestExecution> executions = new ArrayList<>();
 
