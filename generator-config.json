@@ -1,10 +1,42 @@
 {
   "seed": "1234",
-  "inputFile": "/home/simon/Documents/Projects/angular-spotify/libs/web/search/feature/src/lib/search.component.html",
   "repositoryRootPath": "/home/simon/Documents/Projects/angular-spotify/",
-  "matcher": {
-    "type": "class",
-    "key": "",
-    "value": "search-input-container"
-  }
+  "mutations": [
+    {
+      "name": "NavbarSearch",
+      "file_path": "/home/simon/Documents/Projects/angular-spotify/libs/web/shell/ui/nav-bar/src/lib/nav-bar.component.html",
+      "target_matcher": {
+        "type": "class",
+        "key": "",
+        "value": "nav-link-container"
+      }
+    },
+    {
+      "name": "SearchInput",
+      "file_path": "/home/simon/Documents/Projects/angular-spotify/libs/web/search/feature/src/lib/search.component.html",
+      "target_matcher": {
+        "type": "class",
+        "key": "",
+        "value": "search-input-container"
+      }
+    },
+    {
+      "name": "SongCard",
+      "file_path": "/home/simon/Documents/Projects/angular-spotify/libs/web/album/ui/album-track/src/lib/album-track.component.html",
+      "target_matcher": {
+        "type": "attribute",
+        "key": "[isPlaying]",
+        "value": "isPlaying"
+      }
+    },
+    {
+      "name": "NowPlaying",
+      "file_path": "/home/simon/Documents/Projects/angular-spotify/libs/web/shared/ui/track-current-info/src/lib/track-current-info.component.html",
+      "target_matcher": {
+        "type": "class",
+        "key": "",
+        "value": "text-white"
+      }
+    }
+  ]
 }

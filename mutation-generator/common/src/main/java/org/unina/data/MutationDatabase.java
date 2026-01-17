@@ -13,22 +13,12 @@ public class MutationDatabase {
                 "uuid TEXT PRIMARY KEY, " +
                 "element TEXT, " +
                 "mutation_type TEXT, " +
-                "mutation_id TEXT, " +
-                "status TEXT DEFAULT 'PENDING')"; // PENDING, RUNNING, COMPLETED
-//                "error_log TEXT)";
+                "mutation_id TEXT)";
 
         String filesTableSQL = "CREATE TABLE IF NOT EXISTS mutated_files (" +
                 "uuid TEXT PRIMARY KEY, " +
                 "target_file_path TEXT NOT NULL, " +
                 "mutated_code TEXT NOT NULL, " +
-                "mutation_uuid TEXT NOT NULL, " +
-                "FOREIGN KEY(mutation_uuid) REFERENCES mutants(uuid) ON DELETE CASCADE)";
-
-        String testResultTableSQL = "CREATE TABLE IF NOT EXISTS test_results (" +
-                "uuid TEXT PRIMARY KEY, " +
-                "test_name TEXT NOT NULL, " +
-                "status TEXT NOT NULL, " + // PASSED, FAILED, BROKEN
-                "error_log TEXT NOT NULL, " +
                 "mutation_uuid TEXT NOT NULL, " +
                 "FOREIGN KEY(mutation_uuid) REFERENCES mutants(uuid) ON DELETE CASCADE)";
 
@@ -41,7 +31,6 @@ public class MutationDatabase {
                 stmt.execute("PRAGMA foreign_keys = ON;");
                 stmt.execute(masterTableSQL);
                 stmt.execute(filesTableSQL);
-                stmt.execute(testResultTableSQL);
                 connection.commit();
             } catch (SQLException e) {
                 connection.rollback();

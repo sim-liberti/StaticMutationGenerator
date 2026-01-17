@@ -4,22 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[feat] added new test status (not_applicable) for when the application tested does not recompile and created new test for searching song">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="b12d682f-6111-484c-bcef-cc6fdc79eaea" name="Changes" comment="[misc] minor edits">
+      <change afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/generator-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/common/src/main/java/org/unina/data/MutationDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/static-generator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/MutationEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/MutationEngine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mutation-tester/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/TesterEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/AbsoluteXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/AbsoluteXPathTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/HookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/HookTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/KatalonXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/KatalonXPathTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RelativeXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RelativeXPathTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RobulaXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/RobulaXPathTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SeleniumXPathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/classes/SeleniumXPathTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/mutation-tester/src/main/java/org/unina/data/WebDriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mutation-tester/src/test/java/org/unina/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +28,8 @@
         <option value="Interface" />
         <option value="JavaScript File" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -141,7 +137,7 @@
       <recent name="org.unina" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MutationTester">
+  <component name="RunManager" selected="Application.StaticMutationGenerator">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.unina.App" />
       <module name="hook-injector" />
@@ -247,19 +243,19 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StaticMutationGenerator" />
+        <item itemvalue="Application.MutationTester" />
         <item itemvalue="JUnit.SearchSongTest.testSearchSong" />
         <item itemvalue="JUnit.HookTest.testHookXPath" />
-        <item itemvalue="Application.StaticMutationGenerator" />
         <item itemvalue="Application.RobulaPlus" />
-        <item itemvalue="Application.MutationTester" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.240" />
       </set>
     </attachedChunks>
   </component>
@@ -314,6 +310,7 @@
       <workItem from="1768407792459" duration="75000" />
       <workItem from="1768407876567" duration="10641000" />
       <workItem from="1768591416521" duration="6346000" />
+      <workItem from="1768662024122" duration="5364000" />
     </task>
     <task id="LOCAL-00001" summary="[initial] caricamento di file di progetto">
       <option name="closed" value="true" />
@@ -577,6 +574,15 @@
           <line>60</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/mutation-generator/static-generator/src/main/java/org/unina/MutationEngine.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="10" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

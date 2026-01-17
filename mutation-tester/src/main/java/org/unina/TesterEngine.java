@@ -157,8 +157,8 @@ public class TesterEngine {
         System.out.println("\nTest results:");
         System.out.println(statsCsv);
 
-        saveCsv(batchCsv, Paths.get("output/batches.csv").toString());
-        saveCsv(statsCsv, Paths.get("output/stats.csv").toString());
+        saveCsv(batchCsv, Paths.get("output/tests/batches.csv").toString());
+        saveCsv(statsCsv, Paths.get("output/tests/stats.csv").toString());
     }
 
     private static void saveCsv(StringBuilder content, String path) {

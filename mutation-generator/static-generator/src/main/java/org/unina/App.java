@@ -4,6 +4,7 @@ import org.unina.data.Config;
 import org.unina.util.ComponentIndexer;
 import org.unina.util.RandomSelector;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
@@ -11,17 +12,15 @@ import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
-        // Load configuration
-        Path jsonPath = Paths.get("generator-config.json");
-        if (args.length > 0 && args[0].startsWith("--config="))
-            jsonPath = Paths.get(args[0].substring("--config=".length()));
+        ObjectMapper mapper = new ObjectMapper();
+        Config config = new Config();
 
-        if (!jsonPath.toFile().exists()) {
-            System.err.println("Configuration file not found. Make sure to provide a valid path or to create a config file in the same directory as the jar file.");
-            return;
+        try {
+            File jsonFile = new File("generator-config.json");
+            config = mapper.readValue(jsonFile, Config.class);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        Config jsonConfig = Config.loadConfiguration(jsonPath);
-        if (jsonConfig == null) throw new RuntimeException("Error initializing configuration object");
 
         // Ensure the database file exists
         Path dbPath = Paths.get("mutations.db");
@@ -36,14 +35,14 @@ public class App {
         }
 
         // Initialize utilities
-        if (jsonConfig.seed.isEmpty())
+        if (config.seed.isEmpty())
             RandomSelector.initialize();
         else
-            RandomSelector.initialize(Integer.parseInt(jsonConfig.seed));
+            RandomSelector.initialize(Integer.parseInt(config.seed));
 
         ComponentIndexer.initialize();
         try {
-            ComponentIndexer.getInstance().buildSelectorMap(new File(jsonConfig.repositoryRootPath).toPath());
+            ComponentIndexer.getInstance().buildSelectorMap(new File(config.repositoryRootPath).toPath());
         } catch (IOException e) {
             System.err.println("Error initializing Component Indexer: " + e.getMessage());
             return;
@@ -52,7 +51,7 @@ public class App {
         System.out.println("Configuration loaded. Running the mutation engine.\n");
 
         try {
-            MutationEngine.Run(jsonConfig);
+            MutationEngine.Run(config);
         } catch(IOException e) {
             System.err.println(e.getMessage());
         }

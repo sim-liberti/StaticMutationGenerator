@@ -6,14 +6,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.Map;
 
 public class Config {
     public String seed;
-    public String inputFile;
     public String repositoryRootPath;
-    public String outputDirectory;
-    public Map<String, String> matcher;
+    public List<MutationConfig> mutations;
 
     public static Config loadConfiguration(Path jsonPath) {
         try {
@@ -38,8 +37,6 @@ public class Config {
                 return "Seed must be an integer value";
             }
         }
-        if (config.inputFile.isEmpty()) return "Must provide an input file";
-        if (!Files.exists(Paths.get(config.inputFile))) return "Input file not found";
 
         return "";
     }
