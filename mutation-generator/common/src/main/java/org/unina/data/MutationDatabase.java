@@ -42,20 +42,10 @@ public class MutationDatabase {
         }
     }
 
-    public void resetMutations() {
-        String sql = "UPDATE mutants SET status = 'PENDING'";
-        try (Connection conn = DriverManager.getConnection(DB_URL);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
     public Set<Mutation> getPendingMutations() {
         Set<Mutation> mutations = new HashSet<>();
 
-        String sql = "SELECT * FROM mutations"; //LIMIT 1
+        String sql = "SELECT * FROM mutations ORDER BY mutation_name ASC"; //LIMIT 1
 
         try (Connection conn = DriverManager.getConnection(DB_URL);
              PreparedStatement pstmt = conn.prepareStatement(sql);

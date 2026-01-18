@@ -49,6 +49,8 @@ public class TesterEngine {
         int completed = 0;
         for (Mutation mut : mutationsToApply) {
             System.out.printf("\n%d out of %d remaining.", completed, (long) mutationsToApply.size());
+            completed++;
+
             MutationBatch batch = new MutationBatch();
             batch.batchName = mut.name;
             batch.batchId = String.format("mutation_%s_%s_%s", mut.mutation_id, mut.mutation_type, mut.element);
@@ -174,9 +176,8 @@ public class TesterEngine {
             writer.write(content.toString());
             System.out.println("File saved: " + path);
 
-        } catch (IOException e) {
+        } catch (IOException unused) {
             System.err.println("Error while saving " + path);
-            e.printStackTrace();
         }
     }
 

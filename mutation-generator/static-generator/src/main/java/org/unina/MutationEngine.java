@@ -41,7 +41,7 @@ public class MutationEngine {
             generateMutations(mutation, parser, db);
             System.out.println("================================");
         }
-        saveCsv(mutationCsv, Paths.get("output/mutations/mutations.csv").toString());
+        saveCsv(Paths.get("output/mutations/mutations.csv").toString());
     }
 
     public static void generateMutations(MutationConfig mutation, Parser parser, MutationDatabase db) throws IOException {
@@ -116,15 +116,14 @@ public class MutationEngine {
                 .orElseThrow(() -> new RuntimeException("No target tag found"));
     }
 
-    private static void saveCsv(StringBuilder content, String path) {
+    private static void saveCsv(String path) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(path, StandardCharsets.UTF_8))) {
 
-            writer.write(content.toString());
+            writer.write(MutationEngine.mutationCsv.toString());
             System.out.println("File saved: " + path);
 
-        } catch (IOException e) {
+        } catch (IOException unused) {
             System.err.println("Error while saving " + path);
-            e.printStackTrace();
         }
     }
 }
